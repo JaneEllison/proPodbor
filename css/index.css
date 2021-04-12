@@ -1,10 +1,10 @@
 * {
   color: #fff;
-  font-family: Ubuntu;
+  font-family: Ubuntu, sans-serif;
 }
 
 body {
-  background-color: black;
+  background-color: #0B0B0B;
 }
 
 .header {
@@ -22,8 +22,11 @@ body {
   text-decoration: none;
   margin-right: 30px;
   font-size: 16px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.1rem;
   line-height: 24px;
+}
+.header__navigation_link:last-child {
+  margin-right: 0;
 }
 .header__company_info {
   display: flex;
@@ -36,6 +39,54 @@ body {
   font-weight: 500;
   text-decoration: none;
   line-height: 38px;
+}
+
+.main {
+  position: relative;
+}
+.main__bg {
+  position: absolute;
+  width: 730px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  z-index: -1;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  margin-top: 180px;
+  padding-left: 100px;
+}
+.information__title {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 68px;
+  margin: 0;
+}
+.information__title-color {
+  color: #F44D34;
+}
+.information__subtitle {
+  width: 453px;
+  color: #CCCCCC;
+  margin: 50px 0;
+  font-size: 24px;
+}
+.information__button {
+  width: 453px;
+  padding: 20px 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.02rem;
+  color: #F44D34;
+  border: 2px solid #F44D34;
+  background: transparent;
 }
 
 /*# sourceMappingURL=index.css.map */
