@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   color: #fff;
   font-family: Ubuntu, sans-serif;
@@ -138,6 +139,119 @@ body {
 .description__item_info_text {
   line-height: 30px;
   color: #CCCCCC;
+}
+
+.description__wrapper {
+  width: 1208px;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  background: #ffffff;
+}
+.description__header {
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+}
+.description__header_title {
+  margin: 0 0 40px 0;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 50px;
+  color: #131313;
+}
+.description__header_subtitle {
+  font-size: 16px;
+  line-height: 30px;
+  color: #4D4D4D;
+  margin: 0;
+}
+.description__info {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 40px;
+}
+.description__info-part {
+  margin-top: 50px;
+}
+.description__info_image {
+  margin: 0 4px;
+  width: 458px;
+  height: 650px;
+}
+.description__info_item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  width: 368px;
+  border-top: 1px solid rgba(77, 77, 77, 0.3);
+}
+.description__info_item:last-child {
+  border-bottom: 1px solid rgba(77, 77, 77, 0.3);
+}
+.description__info_item input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.description__info_item input:checked ~ .description__info_item_content {
+  max-height: 100vh;
+}
+.description__info_item label {
+  color: #131313;
+  position: relative;
+  display: flex;
+  padding: 26px 0 20px 0;
+  background: #ffffff;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+}
+.description__info_item_content {
+  max-height: 0;
+  margin-bottom: 26px;
+  overflow: hidden;
+  background: #ffffff;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+.description__info_item_content p {
+  color: #000;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0;
+  width: 336px;
+}
+
+/* Icon */
+.description__info_item label::after {
+  position: absolute;
+  right: 0;
+  display: block;
+  text-align: center;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.description__info_item input[type=checkbox] + label::after {
+  content: "+";
+}
+.description__info_item input[type=radio] + label::after {
+  content: "▼";
+}
+.description__info_item input[type=checkbox]:checked + label::after {
+  transform: rotate(315deg);
+}
+.description__info_item input[type=radio]:checked + label::after {
+  transform: rotateX(180deg);
 }
 
 /*# sourceMappingURL=index.css.map */
