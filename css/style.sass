@@ -1,6 +1,7 @@
 *
   color: #fff
   font-family: Ubuntu, sans-serif
+  box-sizing: border-box
 
 body
   background-color: #0B0B0B
@@ -172,12 +173,12 @@ body
       width: 458px
       height: 650px
 
-    &_item
+    &_item, .price__item_description
       position: relative
       overflow: hidden
       display: flex
       flex-direction: column
-      color: #000000
+      color: #131313
       width: 368px
       border-top: 1px solid rgba(77, 77, 77, 0.3)
 
@@ -211,14 +212,14 @@ body
         -o-transition: max-height .35s
         transition: max-height .35s
         & p
-          color: #000
+          color: #131313
           font-size: 16px
           line-height: 30px
           margin: 0
           width: 336px
 
 /* Icon */
-.description__info_item
+.description__info_item, .price__item_description
   & label::after
     position: absolute
     right: 0
@@ -239,3 +240,123 @@ body
 
   & input[type=radio]:checked + label::after
     transform: rotateX(180deg)
+
+.price
+  width: 100%
+  padding: 120px 0
+
+  &__wrapper
+    width: 1208px
+    margin: 0 auto
+
+  &__header
+    margin: 0
+    font-weight: 500
+    font-size: 38px
+    line-height: 50px
+
+  &__item
+    margin-top: 60px
+
+    &_description
+      color: #fff
+      width: 100%
+      border-top: 1px solid rgba(204, 204, 204, 0.5)
+
+      &:last-child
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5)
+
+      & input
+        position: absolute
+        opacity: 0
+        z-index: -1
+
+        &:checked ~ .price__item_description_content
+          max-height: 100vh
+
+      & label
+        color: #ffffff
+        position: relative
+        display: flex
+        padding: 30px 0 40px 0
+        font-weight: 500
+        font-size: 24px
+        line-height: 38px
+
+      &_content
+        display: flex
+        flex-direction: column
+        max-height: 0
+        overflow: hidden
+        -webkit-transition: max-height .35s
+        -o-transition: max-height .35s
+        transition: max-height .35s
+
+.price__list
+  display: flex
+  justify-content: space-between
+  width: 960px
+  margin-bottom: 60px
+
+  &_part
+    display: flex
+    flex-direction: column
+    width: 450px
+
+    & ul
+      margin: 0
+      padding: 0
+
+    & li
+      position: relative
+      font-size: 16px
+      line-height: 30px
+      color: #CCCCCC
+      list-style-type: none
+      padding-left: 18px
+      margin-bottom: 10px
+
+      &:before
+        position: absolute
+        content: "\2B24"
+        left: 0px
+
+.price__order
+  width: 960px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 60px
+
+  &_coast
+    display: flex
+    flex-direction: column
+
+    &_title
+      font-size: 16px
+      color: rgba(255, 255, 255, 0.5)
+
+    &_subtitle
+      font-weight: bold
+      font-size: 38px
+      line-height: 50px
+
+  &_button
+    width: 450px
+    padding: 20px 0
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: bold
+    font-size: 24px
+    line-height: 38px
+    text-align: center
+    letter-spacing: 0.02em
+    color: #F44D34
+    background: transparent
+    border: 1px solid #F44D34
+
+    &:hover
+      color: #FFFFFF
+      background: #F44D34
+      border: 1px solid #F44D34
