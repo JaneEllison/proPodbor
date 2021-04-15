@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
+  <script src="https://unpkg.com/imask"></script>
   <script src="js/main.js" defer></script>
 </head>
 
@@ -382,6 +383,27 @@
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact__wrapper">
+        <h2 class="contact__title">
+          Оставьте заявку на подбор автомобиля
+          и получите бесплатную консультацию
+        </h2>
+        <form id="contact-form_1" method="POST" class="contact-form">
+          <div class="contact-form__input-wrapper">
+            <input name="name" type="text" class="contact-form__input contact-form__input_name" placeholder="Ваше имя">
+            <div class="contact-form__error contact-form__error_name"></div>
+          </div>
+          <div class="contact-form__input-wrapper">
+            <input name="tel" type="tel" class="contact-form__input contact-form__input_tel" placeholder="Ваш номер телефона">
+            <!-- add mask for tel -->
+            <div class="contact-form__error contact-form__error_tel"></div>
+          </div>
+          <button class="contact-form__button" type="submit"> Отправить </button>
+        </form>
+        <span class="contact__subttile">Отправляя форму вы даете согласие на обработку персональных данных</span>
       </div>
     </section>
   </main>

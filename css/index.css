@@ -88,8 +88,14 @@ body {
   line-height: 38px;
   letter-spacing: 0.02rem;
   color: #F44D34;
-  border: 2px solid #F44D34;
+  border: 1px solid #F44D34;
   background: transparent;
+}
+.information__button:hover {
+  color: #FFFFFF;
+  background: #F44D34;
+  border: 1px solid #F44D34;
+  cursor: pointer;
 }
 
 .advantages {
@@ -376,6 +382,69 @@ body {
   color: #FFFFFF;
   background: #F44D34;
   border: 1px solid #F44D34;
+  cursor: pointer;
+}
+
+.contact {
+  width: 100%;
+  padding: 120px 0;
+  background: #fff;
+}
+.contact__wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+.contact__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 50px;
+  color: #131313;
+}
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0 40px 0;
+  align-items: flex-end;
+}
+.contact-form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form__input {
+  padding: 7px 2px;
+  width: 370px;
+  border: none;
+  border-bottom: 1px solid #131313;
+  color: #131313;
+}
+.contact-form__input::placeholder {
+  font-size: 16px;
+  line-height: 30px;
+  color: rgba(77, 77, 77, 0.4);
+}
+.contact-form__button {
+  width: 300px;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #F44D34;
+  padding: 20px 0;
+  background: transparent;
+  border: 2px solid #F44D34;
+}
+.contact-form__button:hover {
+  color: #FFFFFF;
+  background: #F44D34;
+  border: 2px solid #F44D34;
+  cursor: pointer;
+}
+.contact__subttile {
+  font-size: 12px;
+  line-height: 19px;
+  color: #4D4D4D;
 }
 
 /*# sourceMappingURL=index.css.map */
