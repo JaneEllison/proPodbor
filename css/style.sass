@@ -3,6 +3,9 @@
   font-family: Ubuntu, sans-serif
   box-sizing: border-box
 
+label, button
+  cursor: pointer
+
 body
   background-color: #0B0B0B
 
@@ -237,6 +240,8 @@ body
 
   & input[type=checkbox] + label::after
     content: "+"
+    font-size: 24px
+    font-weight: normal
 
   & input[type=radio] + label::after
     content: "\25BC"
@@ -428,3 +433,91 @@ body
     font-size: 12px
     line-height: 19px
     color: #4D4D4D
+
+.questions
+  width: 100%
+  padding: 120px 0
+  background: #fff
+
+  &__wrapper
+    margin: 0 auto
+    width: 1200px
+
+  &__title
+    margin: 0
+    font-weight: bold
+    font-size: 38px
+    line-height: 50px
+    color: #131313
+
+  &__items
+    margin-top: 60px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    row-gap: 40px
+    column-gap: 54px
+
+.question__item
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 364px
+  height: fit-content
+  border: 1px solid #CCCCCC
+  padding: 26px 0
+
+  & input
+    position: absolute
+    opacity: 0
+    z-index: -1
+
+    &:checked ~ .question__item_content
+      max-height: 100vh
+
+  & label
+    width: 304px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-weight: bold
+    font-size: 16px
+    line-height: 26px
+    color: #131313
+
+  &_content
+    display: flex
+    flex-direction: column
+    max-height: 0
+    overflow: hidden
+    -webkit-transition: max-height .35s
+    -o-transition: max-height .35s
+    transition: max-height .35s
+
+    & p
+      color: #131313
+      margin: 20px 0 0 0
+      width: 304px
+
+.question__item
+  & label::after
+    margin-left: 30px
+    text-align: center
+    -webkit-transition: all .35s
+    -o-transition: all .35s
+    transition: all .35s
+
+  & input[type=checkbox] + label::after
+    font-size: 24px
+    font-weight: normal
+    content: "+"
+
+  & input[type=radio] + label::after
+    content: "\25BC"
+
+  & input[type=checkbox]:checked + label::after
+    transform: rotate(315deg)
+
+  & input[type=radio]:checked + label::after
+    transform: rotateX(180deg)
