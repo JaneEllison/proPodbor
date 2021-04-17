@@ -10,7 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
-  <script src="https://unpkg.com/imask"></script>
+  <script src="https://unpkg.com/imask" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 
@@ -413,11 +415,52 @@
         <div class="examples__content_item">
           <div class="examples__content">
             <div class="examples__content_slider">
-              sllider
+              <div id="primary-slider" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-2.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-3.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-4.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-5.jpg">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="secondary-slider" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-2.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-3.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-4.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/first-car-5.jpg">
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div>
               <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Задача: </span>машина для девушки до 34 000 BYN, <br>
+                <p><span class="examples__description_text-color">Задача: </span>машина для девушки до 34 000 BYN,
                   не старше 7 – 10 лет</p>
               </div>
               <div class="examples__description_item">
@@ -433,25 +476,54 @@
               <div class="examples__description_item">
                 <p><span class="examples__description_text-color">Экономия: </span>3 400 BYN</p>
               </div>
+              <h3 class="examples__subtitle">Отзыв клиента</h3>
+              <p class="examples__text">
+                Долго мечтала о машине-зажигалке, самостоятельно определиться
+                с выбором не отважилась, друг посоветовал обратиться за помощью к этой фирме,
+                которая ему подбирала машину.<br> Через 3 дня после заключения договора поступил
+                долгожданный звонок: «Есть идеальный вариант для вас!». Пригласили на дополнительный
+                просмотр и вот ключи от жука в моих руках. Спасибо большое, обнимаю :*
+              </p>
+              <div class="examples__customer">
+                <p class="examples__customer_info_name">Гертруда</p>
+                <p class="examples__customer_info_name">Минск, 29 марта 2020 года</p>
+              </div>
             </div>
-          </div>
-          <h3 class="examples__subtitle">Отзыв клиента</h3>
-          <p class="examples__text">
-            Долго мечтала о машине-зажигалке, самостоятельно определиться
-            с выбором не отважилась, друг посоветовал обратиться за помощью к этой фирме,
-            которая ему подбирала машину.<br> Через 3 дня после заключения договора поступил
-            долгожданный звонок: «Есть идеальный вариант для вас!». Пригласили на дополнительный
-            просмотр и вот ключи от жука в моих руках. Спасибо большое, обнимаю :*
-          </p>
-          <div class="examples__customer">
-            <p class="examples__customer_info_name">Гертруда</p>
-            <p class="examples__customer_info_name">Минск, 29 марта 2020 года</p>
           </div>
         </div>
         <div class="examples__content_item">
           <div class="examples__content">
             <div class="examples__content_slider">
-              sllider
+              <div id="primary-slider-2" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./images/slides/second-car-1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/second-car-2.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/second-car-3.jpg">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="secondary-slider-2" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./images/slides/second-car-1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/second-car-2.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/second-car-3.jpg">
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="examples__content_description">
               <div class="examples__description_item">
@@ -471,22 +543,63 @@
               <div class="examples__description_item">
                 <p><span class="examples__description_text-color">Экономия: </span>9 000 BYN</p>
               </div>
+              <h3 class="examples__subtitle">Отзыв клиента</h3>
+              <p class="examples__text">Родился у нас второй ребенок и появилась необходимость в большой
+                машине, рассматривал вояджер, джиэлку и мазду CX9, так как вариантов было много, а времени
+                у меня на выбор слишком мало решил обратиться за помощь. <br> Бонусом был получен от продавца
+                комплект двадцати дюймовых оригинальных литых дисков с летней резиной.</p>
+              <div class="examples__customer">
+                <p class="examples__customer_info_name">Максим</p>
+                <p class="examples__customer_info_name">Минск, 29 марта, 2020 года</p>
+              </div>
             </div>
-          </div>
-          <h3 class="examples__subtitle">Отзыв клиента</h3>
-          <p class="examples__text">Родился у нас второй ребенок и появилась необходимость в большой
-            машине, рассматривал вояджер, джиэлку и мазду CX9, так как вариантов было много, а времени
-            у меня на выбор слишком мало решил обратиться за помощь. <br> Бонусом был получен от продавца
-            комплект двадцати дюймовых оригинальных литых дисков с летней резиной.</p>
-          <div class="examples__customer">
-            <p class="examples__customer_info_name">Максим</p>
-            <p class="examples__customer_info_name">Минск, 29 марта, 2020 года</p>
           </div>
         </div>
         <div class="examples__content_item">
           <div class="examples__content">
             <div class="examples__content_slider">
-              sllider
+              <div id="primary-slider-3" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-2.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-3.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-4.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-5.jpg">
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="secondary-slider-3" class="splide">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-1.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-2.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-3.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-4.jpg">
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./images/slides/third-car-5.jpg">
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="examples__content_description">
               <div class="examples__description_item">
@@ -508,16 +621,16 @@
               <div class="examples__description_item">
                 <p><span class="examples__description_text-color">Экономия: </span>1 000 BYN</p>
               </div>
+              <h3 class="examples__subtitle">Отзыв клиента</h3>
+              <p class="examples__text">После Peugeot 308 хотелось машину побольше, так как подрастает
+                будущее поколение, но в то же время такую же неприхотливую как мой львенок. Парни молодцы,
+                нашли машину за пару дней, немного не вписались в бюджет, но оно того стоило, я даже не
+                думала, что мой новый Равик я так сильно полюблю.</p>
+              <div class="examples__customer">
+                <p>Таня</p>
+                <p>Минск, 29 марта 2020 года</p>
+              </div>
             </div>
-          </div>
-          <h3 class="examples__subtitle">Отзыв клиента</h3>
-          <p class="examples__text">После Peugeot 308 хотелось машину побольше, так как подрастает
-            будущее поколение, но в то же время такую же неприхотливую как мой львенок. Парни молодцы,
-            нашли машину за пару дней, немного не вписались в бюджет, но оно того стоило, я даже не
-            думала, что мой новый Равик я так сильно полюблю.</p>
-          <div class="examples__customer">
-            <p>Таня</p>
-            <p>Минск, 29 марта 2020 года</p>
           </div>
         </div>
         <div class="social">
@@ -653,7 +766,8 @@
               <!-- add mask for tel -->
               <!-- <div class="question__form-error"></div> -->
             </div>
-            <span class="contact__subttile footer__contact_subtitle">Отправляя форму вы даете согласие на обработку персональных данных</span>
+            <span class="contact__subttile footer__contact_subtitle">Отправляя форму вы даете согласие на обработку
+              персональных данных</span>
             <button class="question__form_button" type="submit"> ОТПРАВИТЬ</button>
           </form>
         </div>
