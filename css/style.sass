@@ -716,7 +716,6 @@ body
       background: #F44D34
       color: #FFFFFF
 
-
 .splide__track
   margin-top: 12px
 
@@ -726,3 +725,17 @@ body
 .splide__slide img
   width: 100%
   height: auto
+
+.splide__arrow
+  background: transparent !important
+  border: 3px solid #fff !important
+  opacity: 1 !important
+
+svg
+  fill: #fff !important
+
+.secondary>.splide__track>.splide__list>.splide__slide.is-active
+  border-color: #F44D34 !important
+
+.splide__arrow:disabled
+  opacity: 0.4 !important

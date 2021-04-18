@@ -758,4 +758,22 @@ body {
   height: auto;
 }
 
+.splide__arrow {
+  background: transparent !important;
+  border: 3px solid #fff !important;
+  opacity: 1 !important;
+}
+
+svg {
+  fill: #fff !important;
+}
+
+.secondary > .splide__track > .splide__list > .splide__slide.is-active {
+  border-color: #F44D34 !important;
+}
+
+.splide__arrow:disabled {
+  opacity: 0.4 !important;
+}
+
 /*# sourceMappingURL=index.css.map */
