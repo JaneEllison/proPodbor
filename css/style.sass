@@ -467,10 +467,14 @@ body
     line-height: 50px
 
   &__content_item
+    position: relative
     display: flex
     flex-direction: column
     border-bottom: 1px solid #4D4D4D
-    padding: 45px 0 40px 0
+    padding: 45px 0 85px 0
+
+    &:nth-child(4)
+      padding: 45px 0 115px 0
 
   &__content
     display: flex
@@ -479,8 +483,11 @@ body
     &_slider
       margin-right: 60px
 
+    &_items
+      width: 570px
+
   &__description_item
-    margin-bottom: 20px
+    margin-bottom: 10px
     font-size: 16px
     line-height: 30px
     display: flex
@@ -513,6 +520,18 @@ body
 .examples__description_text-color
   color: #F44D34
   margin-right: 3px
+
+.comment__wrapper
+  position: absolute
+  width: 570px
+  top: 225px
+  right: 0
+
+.second
+  top: 255px
+
+.third
+  top: 310px
 
 .social
   display: flex
@@ -679,8 +698,8 @@ body
   text-decoration: none
 
 .social__footer_icon
-  width: 42px
-  height: 42px
+  width: 50px
+  height: 50px
   margin-right: 17px
   margin-top: 5px
 
@@ -785,6 +804,31 @@ svg
   .phone__number
     font-size: 18px
 
+  .comment__wrapper
+    position: relative
+    width: 100%
+    top: 0
+
+  .examples__content_item
+    padding: 45px 0 40px 0
+
+    &:nth-child(4)
+      padding: 45px 0 40px 0
+
+  .examples__description_item
+    margin-bottom: 20px
+
+  .footer
+    padding: 100px 0 20px 0
+
+    &__contacts
+      margin-top: 50px
+
+      &_form
+        padding: 50px 20px 42px 30px
+        width: 450px
+        height: fit-content
+
 @media (max-width: 1024px)
   .main__bg
     top: 0
@@ -829,8 +873,12 @@ svg
 
   .description__info
     justify-content: space-between
+
     &_item
       width: 450px
+
+    &-part
+      margin-top: 0
 
   .description__info_item label
     padding-bottom: 10px
@@ -841,8 +889,11 @@ svg
   .price
     padding: 100px 0
 
-  .price__item
-    margin-top: 50px
+    &__list
+      margin-bottom: 40px
+
+    &__item
+      margin-top: 50px
 
   .contact
     padding: 100px 0
@@ -852,7 +903,7 @@ svg
       margin: 18px 0 0 0
 
     &__subttile
-      margin-bottom: 40px
+      margin-bottom: 30px
 
   .contact-form__info_input
     margin-top: 50px
@@ -877,20 +928,12 @@ svg
 
   //   & label
   //     width: 410px
-  
-  .footer
-    padding: 100px 0 20px 0
-    
-    &__contacts
-      margin-top: 50px
-
-      &_form
-        padding: 50px 20px 42px 30px
-        width: 450px
 
   .question__form_button
     margin-top: 10px
     padding: 14px 0
+    font-size: 16px
+    line-height: 24px
 
   .phone__number
     display: none
