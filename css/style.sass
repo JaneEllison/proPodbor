@@ -9,6 +9,13 @@ label, button
 body
   background-color: #0B0B0B
 
+.main
+  overflow: hidden
+
+.wrapper
+  margin: 0 auto
+  width: 1200px
+
 .header
   display: flex
   align-items: center
@@ -39,24 +46,33 @@ body
   text-decoration: none
   line-height: 38px
 
+  &-image
+    display: none
+    width: 60px
+    height: 60px
+    cursor: pointer
+
 .main
   position: relative
   margin: 0 auto
 
   &__bg
     position: absolute
-    width: 730px
+    width: 860px
     transform: matrix(-1, 0, 0, 1, 0, 0)
     z-index: -1
     right: 0
-    top: 0
+    top: 218px
     background-color: transparent
 
 .information
   display: flex
-  flex-direction: column
-  margin-top: 180px
-  padding-left: 100px
+  margin: 0 auto
+  position: relative
+
+  &__wrapper
+    flex-direction: column
+    padding-top: 180px
 
   &__title
     display: flex
@@ -95,10 +111,13 @@ body
 .advantages
   margin: 0 auto
   margin-top: 285px
-  width: 1208px
-  padding-bottom: 120px
-  display: flex
-  flex-direction: column
+
+  &__wrapper
+    display: flex
+    width: 1208px
+    padding-bottom: 120px
+    display: flex
+    flex-direction: column
 
   &__title
     margin: 0 0 60px 0
@@ -140,15 +159,12 @@ body
       line-height: 30px
       color: #CCCCCC
 
-.description__wrapper
-  width: 1208px
-  margin: 0 auto
-  padding: 120px 0
-  display: flex
-  flex-direction: column
-
 .description
   background: #ffffff
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  padding: 100px 0
 
   &__header
     max-width: 570px
@@ -180,7 +196,6 @@ body
     &_image
       margin: 0 4px
       width: 458px
-      height: 650px
 
     &_item, .price__item_description
       position: relative
@@ -255,10 +270,6 @@ body
 .price
   width: 100%
   padding: 120px 0
-
-  &__wrapper
-    width: 1208px
-    margin: 0 auto
 
   &__header
     margin: 0
@@ -378,10 +389,6 @@ body
   padding: 120px 0
   background: #fff
 
-  &__wrapper
-    margin: 0 auto
-    width: 1200px
-
   &__title
     margin: 0
     font-weight: bold
@@ -393,7 +400,7 @@ body
     display: flex
     justify-content: space-between
     margin: 18px 0 40px 0
-    align-items: flex-end
+    align-items: flex-start
 
     &__input-wrapper
       display: flex
@@ -422,6 +429,7 @@ body
       padding: 20px 0
       background: transparent
       border: 2px solid #F44D34
+      margin-top: 10px
 
       &:hover
         color: #FFFFFF
@@ -434,13 +442,22 @@ body
     line-height: 19px
     color: #4D4D4D
 
+.contact-form__info
+  display: flex
+  flex-direction: column
+
+  &_input
+    display: flex
+    justify-content: space-between
+    margin-bottom: 50px
+    margin-top: 60px
+
+.contact-form__input-wrapper:first-child
+  margin-right: 50px
+
 .examples
   width: 100%
   padding: 100px 0
-
-  &__wrapper
-    margin: 0 auto
-    width: 1200px
 
   &__title
     margin: 0
@@ -519,10 +536,6 @@ body
   width: 100%
   padding: 120px 0
   background: #fff
-
-  &__wrapper
-    margin: 0 auto
-    width: 1200px
 
   &__title
     margin: 0
@@ -606,10 +619,6 @@ body
 .footer
   width: 100%
   padding: 120px 0 30px 0
-
-  &__wrapper
-    margin: 0 auto
-    width: 1200px
 
   &__header
     margin: 0
@@ -739,3 +748,155 @@ svg
 
 .splide__arrow:disabled
   opacity: 0.4 !important
+
+@media (max-width: 1240px)
+  .question__item
+    width: 450px
+    column-gap: 60px
+
+    &_content p
+      width: 420px
+
+    & label
+      width: 420px
+
+@media (max-width: 1190px)
+  .wrapper
+    width: 972px
+
+  .description__info_image
+    width: 40%
+
+  .information__title
+    font-size: 40px
+
+  .advantages__description
+    column-gap: 0px
+
+  .description__item
+    width: 450px
+
+  .description__info_item
+    width: 290px
+
+  .contact-form__input
+    width: 300px
+
+  .phone__number
+    font-size: 18px
+
+@media (max-width: 1024px)
+  .main__bg
+    top: 0
+    right: -240px
+
+  .information__wrapper
+    padding: 100px 0
+
+  .information__title
+    font-size: 38px
+
+  .information__subtitle
+    margin: 40px 0
+    font-size: 16px
+
+  .information__button
+    width: 310px
+    padding: 14px 0
+    font-size: 16px
+
+  .advantages
+    margin: 0
+
+    &__wrapper
+      padding-bottom: 100px
+
+  .advantages__title
+    margin-top: 50px
+
+  .description__item_image
+    width: 100px
+    height: 100px
+
+  .advantages__description
+    column-gap: 60px
+
+  .description__header_title
+    margin-bottom: 20px
+
+  .description__info_image
+    display: none
+
+  .description__info
+    justify-content: space-between
+    &_item
+      width: 450px
+
+  .description__info_item label
+    padding-bottom: 10px
+
+  .description__info_item_content p
+    width: 90%
+
+  .price
+    padding: 100px 0
+
+  .price__item
+    margin-top: 50px
+
+  .contact
+    padding: 100px 0
+
+    &-form
+      flex-direction: column
+      margin: 18px 0 0 0
+
+    &__subttile
+      margin-bottom: 40px
+
+  .contact-form__info_input
+    margin-top: 50px
+    margin-bottom: 30px
+
+  .contact-form__input
+    width: 450px
+
+  .contact-form__button
+    width: 270px
+    padding: 14px 0
+
+  .questions
+    padding: 100px 0
+
+  // .question__item
+  //   width: 450px
+  //   column-gap: 60px
+
+  //   &_content p
+  //     width: 410px
+
+  //   & label
+  //     width: 410px
+  
+  .footer
+    padding: 100px 0 20px 0
+    
+    &__contacts
+      margin-top: 50px
+
+      &_form
+        padding: 50px 20px 42px 30px
+        width: 450px
+
+  .question__form_button
+    margin-top: 10px
+    padding: 14px 0
+
+  .phone__number
+    display: none
+
+    &-image
+      display: flex
+
+  .phone__discription
+    display: none
