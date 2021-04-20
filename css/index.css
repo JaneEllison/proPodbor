@@ -47,6 +47,9 @@ ul {
 .header__navigation_link:last-child {
   margin-right: 0;
 }
+.header__navigation_link-mobile {
+  display: none;
+}
 .header__company_info {
   display: flex;
   flex-direction: column;
@@ -1161,6 +1164,9 @@ svg {
     color: #F44D34;
     margin-right: 0;
     margin-bottom: 30px;
+  }
+  .header__navigation_link-mobile {
+    display: flex;
   }
 
   .menu-toggle {
