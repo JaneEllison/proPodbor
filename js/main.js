@@ -25,6 +25,10 @@ const secondarySliderOptions = {
     '1024': {
       fixedWidth: 60,
       fixedHeight: 50,
+    },
+    '980': {
+      fixedWidth: 60,
+      fixedHeight: 50,
     }
   },
 };
@@ -42,6 +46,11 @@ const primarySliderOptions = {
     '1024': {
       fixedWidth: 450,
       fixedHeight: 288,
+    },
+    '980': {
+      fixedWidth: '100%',
+      height: '50%',
+      focus: 'center',
     }
   },
 };
