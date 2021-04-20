@@ -89,6 +89,10 @@ ul
   backface-visibility: hidden
   transition-duration: 0.5s
 
+.phone__discription:hover
+  color: #F44D34
+  cursor: pointer
+
 .phone__number
   font-size: 24px
   font-weight: 500
@@ -122,6 +126,31 @@ ul
     right: 0
     top: 218px
     background-color: transparent
+
+.contact__popap
+  position: fixed
+  width: 100%
+  height: 100%
+  background: #fff
+  z-index: 999
+  top: 0
+  margin: auto
+  display: flex
+  align-items: center
+  justify-content: center
+
+.wrapper__popap
+  width: 1200px
+  position: relative
+
+.close-popap_icon
+  position: absolute
+  right: 0
+  top: -80px
+  z-index: 1000
+
+.hide__popup
+  display: none
 
 .information
   display: flex
@@ -771,7 +800,7 @@ label.description__add_items
       &_subtitle
         display: flex
         flex-direction: column
-        margin-bottom: 30px
+        margin: 30px 0
 
       & span
         font-weight: normal
@@ -843,7 +872,9 @@ label.description__add_items
     border-bottom: 1px solid #FFFFFF
     font-size: 16px
     line-height: 30px
-    margin-bottom: 30px
+
+    &:first-child
+      margin-top: 30px
 
     &::placeholder
       color: rgba(204, 204, 204, 0.3)
@@ -865,6 +896,12 @@ label.description__add_items
     &:hover
       background: #F44D34
       color: #FFFFFF
+
+.form-error
+  font-size: 12px
+  line-height: 19px
+  color: #F44D34
+  margin-bottom: 6px
 
 .splide__track
   margin-top: 12px

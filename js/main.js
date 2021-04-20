@@ -4,6 +4,69 @@ const descriptionDownArrow = document.querySelector('.description_down-arrow');
 const toggleMenu = document.querySelector('.menu-toggle');
 const headerNav = document.querySelector('.header__navigation');
 
+const phone = document.querySelectorAll('.phone');
+const phoneForm = document.querySelectorAll('.phone__form');
+const questionsButtons = document.querySelectorAll('.send-phone__button');
+const questionFormError = document.querySelectorAll('.form-error');
+
+const closePopapIcon = document.querySelector('.close-popap_icon');
+const askToPhoneBtn = document.querySelector('.phone__discription');
+const contactPopap = document.querySelector('.contact__popap');
+const popupButton = document.querySelectorAll('.price__order_button');
+
+const priceOrderButtons = document.querySelectorAll('.price__order_button');
+const contactTitle = document.querySelector('.contact__title_popup');
+
+const pattern = new RegExp('^[+]375 [0-9]{2} *[0-9]{3} *[0-9]{2} *[0-9]{2}$');
+
+popupButton.forEach((button) => {
+  button.addEventListener('click', () => {
+    switch (button.className) {
+      case "price__order_button first__price_button":
+        contactTitle.innerText = 'Оставьте заявку на пакет «Охотник» и мы свяжемся с вами в ближайшее время'
+
+        console.log(contactTitle.innerText)
+        break;
+      case "price__order_button second__price_button":
+        contactTitle.innerText = 'Оставьте заявку на пакет «Дневной дозор» и мы свяжемся с вами в ближайшее время'
+        break;
+      case "price__order_button third__price_button":
+        contactTitle.innerText = 'Оставьте заявку на пакет «All inclusive v1.0» и мы свяжемся с вами в ближайшее время'
+        break;
+      case "price__order_button fourth__price_button":
+        contactTitle.innerText = 'Оставьте заявку на пакет «All inclusive v2.0» и мы свяжемся с вами в ближайшее время'
+        break;
+      default:
+        contactTitle.innerText = 'Оставьте заявку на подбор автомобиля  и мы свяжемся с вами в ближайшее время'
+    }
+    contactPopap.classList.remove('hide__popup');
+  })
+});
+
+phone.forEach((input) => {
+  input.addEventListener('focus', () => {
+    input.value = '+375 '
+  });
+
+  input.addEventListener('change', () => {
+    const check = pattern.test(input.value);
+
+    if (!check) {
+      console.log(questionFormError)
+      questionFormError.forEach((error) => error.innerText = 'Номер телефона введен некорректно');
+      input.style.borderBottomColor = '#F44D34';
+    }
+  });
+});
+
+askToPhoneBtn.addEventListener('click', () => {
+  contactPopap.classList.remove('hide__popup');
+});
+
+closePopapIcon.addEventListener('click', () => {
+  contactPopap.classList.add('hide__popup');
+});
+
 const secondarySliderOptions = {
   rewind: true,
   fixedWidth: 90,
@@ -133,7 +196,7 @@ toggleMenu.addEventListener('click', (event) => {
   toggleMenu.classList.toggle('on');
   headerNav.classList.toggle('on');
 
-  if(event.target.closest('.on')){
+  if (event.target.closest('.on')) {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = 'auto';

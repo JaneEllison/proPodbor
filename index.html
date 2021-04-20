@@ -44,6 +44,32 @@
   </header>
   <main class="main">
     <img src="./images/bg-main.png" alt="bg" class="main__bg">
+    <section class="contact__popap hide__popup">
+      <div class="wrapper__popap">
+        <img src="./images/cross-icon.svg" class="close-popap_icon" alt="close_popap">
+        <h2 class="contact__title contact__title_popup">
+          Оставьте заявку на подбор автомобиля
+          и получите бесплатную консультацию
+        </h2>
+        <form id="contact-form_1" class="contact-form">
+          <div class="contact-form__info">
+            <div class="contact-form__info_input">
+              <div class="contact-form__input-wrapper">
+                <input name="name" type="text" class="contact-form__input contact-form__input_name phone__popup"
+                  placeholder="Ваше имя">
+              </div>
+              <div class="contact-form__input-wrapper">
+                <input name="tel" type="tel" class="phone contact-form__input contact-form__input_tel" required
+                  pattern='^[+]375 [0-9]{2} *[0-9]{3} *[0-9]{2} *[0-9]{2}$' placeholder="Ваш номер телефона">
+                <div class="form-error"></div>
+              </div>
+            </div>
+            <span class="contact__subttile">Отправляя форму вы даете согласие на обработку персональных данных</span>
+          </div>
+          <button class="contact-form__button questions_button" type="submit"> ОТПРАВИТЬ </button>
+        </form>
+      </div>
+    </section>
     <section class="information">
       <div class="wrapper information__wrapper">
         <h1 class="information__title">
@@ -57,7 +83,7 @@
         <p class="information__subtitle">
           Поможем найти тот самый автомобиль и сэкономить ваше время
         </p>
-        <button class="information__button">
+        <button class="information__button price__order_button">
           ЗАКАЗАТЬ ПОДБОР
         </button>
       </div>
@@ -125,7 +151,7 @@
           </div>
         </div>
         <div class="advantages__description_desktop">
-          <ul class=" advantages__description">
+          <div class=" advantages__description">
             <div class="description__item">
               <img src="./images/advantages/time-icon.svg" alt="time-icon" class="description__item_image">
               <div class="description__item_info">
@@ -179,7 +205,7 @@
                 </span>
               </div>
             </div>
-          </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -438,7 +464,7 @@
                   <span class="price__order_coast_title">Стоимость:</span>
                   <span class="price__order_coast_subtitle">75 BYN</span>
                 </div>
-                <button class="price__order_button">ЗАКАЗАТЬ ПОДБОР</button>
+                <button class="price__order_button first__price_button">ЗАКАЗАТЬ ПОДБОР</button>
               </div>
             </div>
           </div>
@@ -476,7 +502,7 @@
                   <span class="price__order_coast_title">Стоимость:</span>
                   <span class="price__order_coast_subtitle">280 BYN</span>
                 </div>
-                <button class="price__order_button">ЗАКАЗАТЬ ПОДБОР</button>
+                <button class="price__order_button second__price_button">ЗАКАЗАТЬ ПОДБОР</button>
               </div>
             </div>
           </div>
@@ -516,7 +542,7 @@
                   <span class="price__order_coast_title">Стоимость:</span>
                   <span class="price__order_coast_subtitle">680 BYN</span>
                 </div>
-                <button class="price__order_button">ЗАКАЗАТЬ ПОДБОР</button>
+                <button class="price__order_button third__price_button">ЗАКАЗАТЬ ПОДБОР</button>
               </div>
             </div>
           </div>
@@ -556,7 +582,7 @@
                   <span class="price__order_coast_title">Стоимость:</span>
                   <span class="price__order_coast_subtitle">850 BYN</span>
                 </div>
-                <button class="price__order_button">ЗАКАЗАТЬ ПОДБОР</button>
+                <button class="price__order_button fourth__price_button">ЗАКАЗАТЬ ПОДБОР</button>
               </div>
             </div>
           </div>
@@ -569,19 +595,17 @@
           Оставьте заявку на подбор автомобиля
           и получите бесплатную консультацию
         </h2>
-        <form id="contact-form_1" method="POST" class="contact-form">
+        <form id="contact-form_1" class="contact-form">
           <div class="contact-form__info">
             <div class="contact-form__info_input">
               <div class="contact-form__input-wrapper">
                 <input name="name" type="text" class="contact-form__input contact-form__input_name"
                   placeholder="Ваше имя">
-                <div class="contact-form__error contact-form__error_name"></div>
               </div>
               <div class="contact-form__input-wrapper">
-                <input name="tel" type="tel" class="contact-form__input contact-form__input_tel"
-                  placeholder="Ваш номер телефона">
-                <!-- add mask for tel -->
-                <div class="contact-form__error contact-form__error_tel"></div>
+                <input name="tel" type="tel" required pattern='^[+]375 [0-9]{2} *[0-9]{3} *[0-9]{2} *[0-9]{2}$'
+                  class="phone contact-form__input contact-form__input_tel" placeholder="Ваш номер телефона">
+                <div class="form-error"></div>
               </div>
             </div>
             <span class="contact__subttile">Отправляя форму вы даете согласие на обработку персональных данных</span>
@@ -1006,19 +1030,18 @@
             Оставьте заявку и мы свяжемся с вами в кратчайшие сроки
           </span>
 
-          <form id="contact-form_question" method="POST" class="question__form">
+          <form id="contact-form_question" class="question__form">
             <div class="question__form_input-wrapper">
               <input name="name" type="text" class="question__form_input" placeholder="Имя">
-              <!-- <div class="contact-form-error"></div> -->
             </div>
-            <div class="question__form_input-wrapper">
-              <input name="tel" type="tel" class="question__form_input" placeholder="Номер телефона">
-              <!-- add mask for tel -->
-              <!-- <div class="question__form-error"></div> -->
+            <div class="question__form_input-wrapper phone__form">
+              <input name="tel" type="tel" class="phone question__form_input" required
+                pattern='^[+]375 [0-9]{2} *[0-9]{3} *[0-9]{2} *[0-9]{2}$' placeholder="Номер телефона">
+              <div class="form-error"></div>
             </div>
             <span class="contact__subttile footer__contact_subtitle">Отправляя форму вы даете согласие на обработку
               персональных данных</span>
-            <button class="question__form_button" type="submit"> ОТПРАВИТЬ</button>
+            <button class="send-phone__button question__form_button" type="submit"> ОТПРАВИТЬ</button>
           </form>
         </div>
       </div>
