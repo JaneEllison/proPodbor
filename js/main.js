@@ -139,3 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
   advantagesSlider.mount();
   questionsSlider.mount();
 });
+
+const changeDescriptionAddItems = () => {
+  if (window.matchMedia("(max-width: 980px)").matches) {
+    descriptionInfoItems.forEach((item) => {
+      item.classList.add('description__info_item-hide');
+    });
+    descriptionDownArrow.classList.add('description_down-arrow-hide')
+  };
+}
+
+changeDescriptionAddItems();
+window.addEventListener('resize', () => changeDescriptionAddItems);

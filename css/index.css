@@ -294,7 +294,7 @@ ul {
   color: #131313;
 }
 .description__info_item-hide, .description__info .price__item_description-hide {
-  display: none;
+  display: flex;
 }
 .description__info_item_content, .description__info .price__item_description_content {
   max-height: 0;
@@ -1132,6 +1132,10 @@ svg {
 
   .wrapper {
     width: 700px;
+  }
+
+  .description__info_item-hide {
+    display: none;
   }
 
   .information__wrapper, .description, .price, .contact, .examples, .questions, .footer {
