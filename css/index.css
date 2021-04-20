@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
-label, button {
+label, button, input {
   cursor: pointer;
+  outline: none;
 }
 
 body {
@@ -43,12 +44,16 @@ ul {
   font-size: 16px;
   letter-spacing: 0.1rem;
   line-height: 24px;
+  transition: 0.5s linear;
 }
 .header__navigation_link:last-child {
   margin-right: 0;
 }
 .header__navigation_link-mobile {
   display: none;
+}
+.header__navigation_link:hover {
+  color: #F44D34;
 }
 .header__company_info {
   display: flex;
@@ -90,7 +95,7 @@ ul {
   background: white;
   margin: 6px auto;
   backface-visibility: hidden;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
 }
 
 .phone__number {
@@ -98,12 +103,21 @@ ul {
   font-weight: 500;
   text-decoration: none;
   line-height: 38px;
+  transition: 0.5s linear;
+}
+.phone__number:hover {
+  transform: scale(1.1);
+  color: #F44D34;
 }
 .phone__number-image {
   display: none;
   width: 60px;
   height: 60px;
   cursor: pointer;
+  transition: 0.5s linear;
+}
+.phone__number-image:hover {
+  transform: scale(1.1);
 }
 
 .main {
@@ -156,6 +170,7 @@ ul {
   color: #F44D34;
   border: 1px solid #F44D34;
   background: transparent;
+  transition: 0.5s linear;
 }
 .information__button:hover {
   color: #FFFFFF;
@@ -300,9 +315,9 @@ ul {
   max-height: 0;
   overflow: hidden;
   background: #ffffff;
-  -webkit-transition: max-height 0.35s;
-  -o-transition: max-height 0.35s;
-  transition: max-height 0.35s;
+  -webkit-transition: max-height 0.7s;
+  -o-transition: max-height 0.7s;
+  transition: max-height 0.7s;
 }
 .description__info_item_content p, .description__info .price__item_description_content p {
   color: #131313;
@@ -326,7 +341,7 @@ label.description__add_items img {
   border-bottom: 1px solid rgba(77, 77, 77, 0.3);
 }
 
-.description__info_item input[type=checkbox] + label::after {
+.description__add_items-block input[type=checkbox] + label::after {
   display: none;
 }
 
@@ -352,9 +367,9 @@ label.description__add_items img {
   right: 0;
   display: block;
   text-align: center;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
 }
 .description__info_item input[type=checkbox] + label::after, .price__item_description input[type=checkbox] + label::after {
   content: "+";
@@ -414,9 +429,9 @@ label.description__add_items img {
   flex-direction: column;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.35s;
-  -o-transition: max-height 0.35s;
-  transition: max-height 0.35s;
+  -webkit-transition: max-height 0.7s;
+  -o-transition: max-height 0.7s;
+  transition: max-height 0.7s;
 }
 
 .price__list {
@@ -483,6 +498,7 @@ label.description__add_items img {
   color: #F44D34;
   background: transparent;
   border: 1px solid #F44D34;
+  transition: 0.5s linear;
 }
 .price__order_button:hover {
   color: #FFFFFF;
@@ -537,6 +553,7 @@ label.description__add_items img {
   background: transparent;
   border: 2px solid #F44D34;
   margin-top: 10px;
+  transition: 0.5s linear;
 }
 .contact-form__button:hover {
   color: #FFFFFF;
@@ -665,6 +682,10 @@ label.description__add_items img {
 .social__icon {
   margin-right: 15px;
   cursor: pointer;
+  transition: 0.3s linear;
+}
+.social__icon:hover {
+  transform: scale(1.2);
 }
 
 .questions {
@@ -721,9 +742,9 @@ label.description__add_items img {
   flex-direction: column;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.35s;
-  -o-transition: max-height 0.35s;
-  transition: max-height 0.35s;
+  -webkit-transition: max-height 0.7s;
+  -o-transition: max-height 0.7s;
+  transition: max-height 0.7s;
 }
 .question__item_content p {
   color: #131313;
@@ -734,9 +755,9 @@ label.description__add_items img {
 .question__item label::after {
   margin-left: 30px;
   text-align: center;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: all 0.7s;
+  -o-transition: all 0.7s;
+  transition: all 0.7s;
 }
 .question__item input[type=checkbox] + label::after {
   font-size: 24px;
@@ -882,6 +903,7 @@ label.description__add_items img {
   border: 2px solid #F44D34;
   background: transparent;
   margin-top: 50px;
+  transition: 0.5s linear;
 }
 .question__form_button:hover {
   background: #F44D34;
@@ -915,8 +937,8 @@ svg {
   border-color: #F44D34 !important;
 }
 
-.splide__arrow:disabled {
-  opacity: 0.4 !important;
+.splide__arrow svg:hover {
+  fill: #F44D34 !important;
 }
 
 @media (max-width: 1240px) {
@@ -1168,12 +1190,16 @@ svg {
     color: #000;
     margin-right: 0;
     margin-bottom: 30px;
+    transition: 0.5s linear;
   }
   .header__navigation_link:hover {
     color: #F44D34;
   }
   .header__navigation_link-mobile {
     display: flex;
+  }
+  .header__navigation_link-mobile:hover {
+    transform: scale(1.2);
   }
 
   .menu-toggle {

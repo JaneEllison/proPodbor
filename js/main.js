@@ -11,7 +11,7 @@ const secondarySliderOptions = {
   gap: 12,
   focus: 'left',
   arrows: false,
-  easing: 'linear',
+  easing: 'cubic-bezier(.17,.67,.83,.67)',
   pagination: false,
   pauseOnHover: true,
   drag: true,
@@ -42,6 +42,7 @@ const primarySliderOptions = {
   arrows: true,
   cover: true,
   isNavigation: true,
+  perMove: 1,
   breakpoints: {
     '1024': {
       fixedWidth: 450,
@@ -69,6 +70,9 @@ const advantagesSliderOptions = {
   drag: true,
   isNavigation: true,
   direction: 'ltr',
+  autoplay: true,
+  interval: '10000',
+  perMove: 1,
   padding: {
     bottom: '10px',
   },
@@ -91,6 +95,8 @@ const questionsSliderOptions = {
   drag: true,
   isNavigation: true,
   direction: 'ltr',
+  autoplay: true,
+  interval: '10000',
   classes: {
     pagination: 'splide__pagination advantages-pagination',
   }

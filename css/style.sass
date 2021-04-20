@@ -3,8 +3,9 @@
   font-family: Ubuntu, sans-serif
   box-sizing: border-box
 
-label, button
+label, button, input
   cursor: pointer
+  outline: none
 
 body
   background-color: #0B0B0B
@@ -29,18 +30,23 @@ ul
     display: flex
     align-items: center
     justify-content: center
+
     &_link
       text-decoration: none
       margin-right: 30px
       font-size: 16px
       letter-spacing: 0.1rem
       line-height: 24px
+      transition: 0.5s linear
 
       &:last-child
         margin-right: 0
 
       &-mobile
         display: none
+
+      &:hover
+        color: #F44D34
 
   &__company_info
     display: flex
@@ -81,19 +87,28 @@ ul
   background: white
   margin: 6px auto
   backface-visibility: hidden
-  transition-duration: 0.3s
+  transition-duration: 0.5s
 
 .phone__number
   font-size: 24px
   font-weight: 500
   text-decoration: none
   line-height: 38px
+  transition: 0.5s linear
+
+  &:hover
+    transform: scale(1.1)
+    color: #F44D34
 
   &-image
     display: none
     width: 60px
     height: 60px
     cursor: pointer
+    transition: 0.5s linear
+
+    &:hover
+      transform: scale(1.1)
 
 .main
   position: relative
@@ -144,6 +159,7 @@ ul
     color: #F44D34
     border: 1px solid #F44D34
     background: transparent
+    transition: 0.5s linear
 
     &:hover
       color: #FFFFFF
@@ -284,9 +300,9 @@ ul
         max-height: 0
         overflow: hidden
         background: #ffffff
-        -webkit-transition: max-height .35s
-        -o-transition: max-height .35s
-        transition: max-height .35s
+        -webkit-transition: max-height .7s
+        -o-transition: max-height .7s
+        transition: max-height .7s
         & p
           color: #131313
           font-size: 16px
@@ -306,7 +322,7 @@ label.description__add_items
   display: none
   border-bottom: 1px solid rgba(77, 77, 77, 0.3)
 
-.description__info_item input[type=checkbox] + label::after
+.description__add_items-block input[type=checkbox] + label::after
   display: none
 
 .description__number
@@ -330,9 +346,9 @@ label.description__add_items
     right: 0
     display: block
     text-align: center
-    -webkit-transition: all .35s
-    -o-transition: all .35s
-    transition: all .35s
+    -webkit-transition: all .7s
+    -o-transition: all .7s
+    transition: all .7s
 
   & input[type=checkbox] + label::after
     content: "+"
@@ -391,9 +407,9 @@ label.description__add_items
         flex-direction: column
         max-height: 0
         overflow: hidden
-        -webkit-transition: max-height .35s
-        -o-transition: max-height .35s
-        transition: max-height .35s
+        -webkit-transition: max-height .7s
+        -o-transition: max-height .7s
+        transition: max-height .7s
 
 .price__list
   display: flex
@@ -458,6 +474,7 @@ label.description__add_items
     color: #F44D34
     background: transparent
     border: 1px solid #F44D34
+    transition: 0.5s linear
 
     &:hover
       color: #FFFFFF
@@ -511,6 +528,7 @@ label.description__add_items
       background: transparent
       border: 2px solid #F44D34
       margin-top: 10px
+      transition: 0.5s linear
 
       &:hover
         color: #FFFFFF
@@ -631,6 +649,10 @@ label.description__add_items
   &__icon
     margin-right: 15px
     cursor: pointer
+    transition: 0.3s linear
+
+    &:hover
+      transform: scale(1.2)
 
 .questions
   width: 100%
@@ -685,9 +707,9 @@ label.description__add_items
     flex-direction: column
     max-height: 0
     overflow: hidden
-    -webkit-transition: max-height .35s
-    -o-transition: max-height .35s
-    transition: max-height .35s
+    -webkit-transition: max-height .7s
+    -o-transition: max-height .7s
+    transition: max-height .7s
 
     & p
       color: #131313
@@ -698,9 +720,9 @@ label.description__add_items
   & label::after
     margin-left: 30px
     text-align: center
-    -webkit-transition: all .35s
-    -o-transition: all .35s
-    transition: all .35s
+    -webkit-transition: all .7s
+    -o-transition: all .7s
+    transition: all .7s
 
   & input[type=checkbox] + label::after
     font-size: 24px
@@ -838,6 +860,7 @@ label.description__add_items
     border: 2px solid #F44D34
     background: transparent
     margin-top: 50px
+    transition: 0.5s linear
 
     &:hover
       background: #F44D34
@@ -864,8 +887,9 @@ svg
 .secondary>.splide__track>.splide__list>.splide__slide.is-active
   border-color: #F44D34 !important
 
-.splide__arrow:disabled
-  opacity: 0.4 !important
+.splide__arrow
+  & svg:hover
+    fill: #F44D34 !important
 
 @media (max-width: 1240px)
   .question__item
@@ -1072,12 +1096,16 @@ svg
     color: #000
     margin-right: 0
     margin-bottom: 30px
+    transition: 0.5s linear
 
     &:hover
       color: #F44D34
 
     &-mobile
       display: flex
+
+      &:hover
+        transform: scale(1.2)
 
   .menu-toggle
     display: block
