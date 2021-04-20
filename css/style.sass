@@ -43,6 +43,42 @@ ul
     flex-direction: column
     align-items: flex-end
 
+.menu-toggle
+  z-index: 99
+  display: none
+  width: 40px
+  height: 30px
+  position: absolute
+  top: 20px
+  right: 25px
+  cursor: pointer
+
+  &.on
+    .one
+      transform: (rotate(45deg) translate(4px, 6px))
+      background: #000
+      width: 50%
+      height: 2px
+
+    .two
+      opacity: 0
+
+    .three
+      transform: (rotate(-45deg) translate(7px, -10px))
+      background: #0B0B0B
+      width: 50%
+      height: 2px
+
+.one,
+.two,
+.three
+  width: 100%
+  height: 5px
+  background: white
+  margin: 6px auto
+  backface-visibility: hidden
+  transition-duration: 0.3s
+
 .phone__number
   font-size: 24px
   font-weight: 500
@@ -376,7 +412,7 @@ label.description__add_items
       line-height: 30px
       color: #CCCCCC
       list-style-type: none
-      padding-left: 18px
+      padding-left: 20px
       margin-bottom: 10px
 
       &:before
@@ -676,6 +712,13 @@ label.description__add_items
   & input[type=radio]:checked + label::after
     transform: rotateX(180deg)
 
+#questions-slider
+  display: none
+
+.splide__slide__container
+  display: flex
+  flex-direction: column
+
 .footer
   width: 100%
   padding: 120px 0 30px 0
@@ -743,6 +786,17 @@ label.description__add_items
   height: 50px
   margin-right: 17px
   margin-top: 5px
+
+.mobile__footer
+  display: none
+  justify-content: space-between
+  align-items: flex-end
+  margin-top: 30px
+  margin-bottom: 60px
+
+  & span
+    line-height: 30px
+    color: #CCCCCC
 
 .rights
   margin-top: 63px
@@ -988,6 +1042,36 @@ svg
   .information__wrapper, .description, .price, .contact, .examples, .questions, .footer
     padding: 80px 0
 
+  .header
+    justify-content: space-between
+
+  .header__company_info, .header__navigation
+    display: none
+
+  .header__navigation.on
+    display: flex
+    flex-direction: column
+    z-index: 10
+    background-color: #fff
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+
+  .header__navigation_link
+    font-weight: 500
+    font-size: 24px
+    line-height: 38px
+    color: #F44D34
+    margin-right: 0
+    margin-bottom: 30px
+
+  .menu-toggle
+    display: block
+
+  .logo
+    margin-left: 20px
+
   .footer
     padding-bottom: 20px
 
@@ -1044,6 +1128,145 @@ svg
   .description__info_item.description__add_items-block
     display: flex
 
+  .price__header
+    font-size: 28px
+    line-height: 36px
+
+  .price__item
+    margin-top: 40px
+
+  .price__item_description label
+    padding: 26px 0
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 38px
+
+  .price__text
+    width: 80%
+
+  .price__list
+    flex-direction: column
+    margin-top: -6px
+
+    &_part
+      width: 90%
+
+  .price__order
+    width: 100%
+    margin-bottom: 40px
+
+    &_coast_subtitle
+      font-size: 24px
+      line-height: 38px
+
+    &_button
+      width: 280px
+      font-size: 16px
+      line-height: 24px
+
+  .contact__title
+    font-size: 28px
+    line-height: 36px
+
+  .contact-form
+    margin-top: 0
+
+    &__info
+      width: 100%
+
+      &_input
+        margin-bottom: 0
+
+    &__input
+      width: 100%
+
+      &-wrapper:first-child
+        margin-right: 0
+
+      &:first-child
+        margin-bottom: 30px
+
+  .contact-form__info_input
+    flex-direction: column
+    margin-top: 40px
+
+  .contact__subttile
+    font-size: 14px
+
+  .contact-form__button
+    width: 100%
+    padding: 20px 0
+    font-size: 16px
+    line-height: 24px
+
+  #questions-slider
+    display: flex
+
+  .questions__items
+    display: none
+
+  .questions__title
+    font-size: 28px
+    line-height: 36px
+
+  .description__item_info_title
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    margin-bottom: 10px
+
+  .description__item_info_text
+    font-size: 14px
+    line-height: 22px
+    color: #666666
+
+  .footer__contacts_social
+    display: none
+
+  .footer__contacts_form
+    display: none
+
+  .footer__contacts_link
+    font-size: 16px
+    line-height: 26px
+
+  .footer__contacts_info
+    width: 100%
+    flex-wrap: wrap
+    justify-content: space-between
+    row-gap: 20px
+    column-gap: 40px
+    flex-direction: row
+
+    &_subtitle
+      margin-bottom: 2px
+      width: 280px
+
+      &:nth-child(1)
+        order: 1
+
+      &:nth-child(2)
+        order: 3
+
+      &:nth-child(3)
+        order: 4
+
+      &:nth-child(4)
+        order: 2
+
+  .mobile__footer
+    display: flex
+
+  .social__footer_icon
+    margin-right: 10px
+
+  .information__button_footer
+    width: 280px
+    padding: 20px 0
+    line-height: 24px
+    height: fit-content
+
 .splide__slide img
   width: 80px !important
   height: 80px !important
@@ -1053,3 +1276,10 @@ svg
 
 #advantages-slider>.splide__track>.splide__list>.splide__slide.is-active
   border-color: transparent !important
+
+#questions-slider>.splide__track>.splide__list>.splide__slide.is-active
+  border-color: transparent !important
+
+@media (max-width: 720px)
+  .wrapper
+    width: 600px

@@ -1,6 +1,8 @@
 const descriptionAddItemsButton = document.querySelector('.description__add_items-block');
 const descriptionInfoItems = document.querySelectorAll('.hidden-item');
 const descriptionDownArrow = document.querySelector('.description_down-arrow');
+const toggleMenu = document.querySelector('.menu-toggle');
+const headerNav = document.querySelector('.header__navigation');
 
 const secondarySliderOptions = {
   rewind: true,
@@ -61,17 +63,33 @@ const advantagesSliderOptions = {
   padding: {
     bottom: '10px',
   },
-  breakpoints: {
-    640: {
-      perPage: 3,
-    },
-  },
   classes: {
     pagination: 'splide__pagination advantages-pagination',
   }
-}
+};
+
+const questionsSliderOptions = {
+  rewind: true,
+  fixedWidth: 560,
+  fixedHeight: 82,
+  gap: 10,
+  focus: 'left',
+  trimSpace: false,
+  arrows: false,
+  easing: 'linear',
+  pagination: true,
+  pauseOnHover: true,
+  drag: true,
+  isNavigation: true,
+  direction: 'ltr',
+  classes: {
+    pagination: 'splide__pagination advantages-pagination',
+  }
+};
 
 const advantagesSlider = new Splide('#advantages-slider', advantagesSliderOptions);
+const questionsSlider = new Splide('#questions-slider', questionsSliderOptions);
+
 const createExampleSlider = () => {
   var secondarySlider = new Splide('#secondary-slider', secondarySliderOptions).mount();
   var primarySlider = new Splide('#primary-slider', primarySliderOptions);
@@ -89,14 +107,26 @@ const createExampleSlider = () => {
   primarySlider3.sync(secondarySlider3).mount();
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-  createExampleSlider();
-  advantagesSlider.mount()
-});
-
 descriptionAddItemsButton.addEventListener('click', () => {
   descriptionInfoItems.forEach((item) => {
     item.classList.toggle('description__info_item-hide');
   });
   descriptionDownArrow.classList.toggle('description_down-arrow-hide')
-})
+});
+
+toggleMenu.addEventListener('click', (event) => {
+  toggleMenu.classList.toggle('on');
+  headerNav.classList.toggle('on');
+
+  if(event.target.closest('.on')){
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'auto';
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  createExampleSlider();
+  advantagesSlider.mount();
+  questionsSlider.mount();
+});

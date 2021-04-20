@@ -21,6 +21,11 @@
     <a href="./index.html" class="header__logo">
       <img src="./images/logo.png" alt="ProPodbor" class="logo">
     </a>
+    <div class="menu-toggle">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
     <nav class="header__navigation">
       <a href="" class="header__navigation_link">ВЫГОДЫ</a>
       <a href="" class="header__navigation_link">ЧТО МЫ ПРОВЕРЯЕМ</a>
@@ -62,15 +67,13 @@
         <div id="advantages-slider" class="splide">
           <div class="splide__track advantages__splide_track">
             <ul class="splide__list advantages__description">
-              <li class="splide__slide ">
-                <div class="description__item splide__slide__container">
-                  <img src="./images/advantages/time-icon.png" alt="time-icon" class="description__item_image">
-                  <div class="description__item_info">
-                    <h3 class="description__item_info_title">Экономия вашего времени</h3>
-                    <span class="description__item_info_text">
-                      мы сделаем все, чтобы в кратчайшие сроки найти для вас подходящий автомобиль
-                    </span>
-                  </div>
+              <li class="splide__slide description__item">
+                <img src="./images/advantages/time-icon.png" alt="time-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Экономия вашего времени</h3>
+                  <span class="description__item_info_text">
+                    мы сделаем все, чтобы в кратчайшие сроки найти для вас подходящий автомобиль
+                  </span>
                 </div>
               </li>
               <li class="splide__slide description__item">
@@ -283,10 +286,10 @@
                 <span>
                   Смотреть ещё
                 </span>
-                <img src="./images/down-arrow.svg" alt="down-arrow" class="description_down-arrow">
+                <img src="./images/down-arrow.svg" alt="down-arrow" class="description_down-arrow description_down-arrow-hide">
               </label>
             </div>
-            <div class="description__info_item hidden-item">
+            <div class="description__info_item hidden-item description__info_item-hide">
               <input id="left_item-six" type="checkbox" name="items">
               <label for="left_item-six">
                 <span class="description__number">
@@ -306,7 +309,7 @@
           </div>
           <img src="./images/description-bg.png" alt="car" class="description__info_image">
           <div class="description__info-part">
-            <div class="description__info_item hidden-item">
+            <div class="description__info_item hidden-item description__info_item-hide">
               <input id="right_item-one" type="checkbox" name="items">
               <label for="right_item-one">
                 <span class="description__number">
@@ -323,7 +326,7 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item hidden-item">
+            <div class="description__info_item hidden-item description__info_item-hide">
               <input id="right_item-two" type="checkbox" name="items">
               <label for="right_item-two">
                 <span class="description__number">
@@ -340,7 +343,7 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item hidden-item">
+            <div class="description__info_item hidden-item description__info_item-hide">
               <input id="right_item-three" type="checkbox" name="items">
               <label for="right_item-three">
                 <span class="description__number">
@@ -357,7 +360,7 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item hidden-item">
+            <div class="description__info_item hidden-item description__info_item-hide">
               <input id="right_item-four" type="checkbox" name="items">
               <label for="right_item-four">
                 <span class="description__number">
@@ -374,7 +377,7 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item hidden-item">
+            <div class="description__info_item hidden-item description__info_item-hide">
               <input id="right_item-five" type="checkbox" name="items">
               <label for="right_item-five">
                 <span class="description__number">
@@ -401,7 +404,11 @@
         <div class="price__item">
           <div class="price__item_description">
             <input id="price-one" type="checkbox" name="price">
-            <label for="price-one">Пакет «ОХОТНИК» (разовая проверка)</label>
+            <label for="price-one">
+              <span class="price__text">
+                Пакет «ОХОТНИК» (разовая проверка)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -435,7 +442,11 @@
           </div>
           <div class="price__item_description">
             <input id="price-two" type="checkbox" name="price">
-            <label for="price-two">Пакет «ДНЕВНОЙ ДОЗОР» (специалист на день)</label>
+            <label for="price-two">
+              <span class="price__text">
+                Пакет «ДНЕВНОЙ ДОЗОР» (специалист на день)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -469,7 +480,11 @@
           </div>
           <div class="price__item_description">
             <input id="price-three" type="checkbox" name="price">
-            <label for="price-three">Пакет «ALL INCLUSIVE v1.0» (подбор под ключ авто объемом до 2,5 л)</label>
+            <label for="price-three">
+              <span class="price__text">
+                Пакет «ALL INCLUSIVE v1.0» (подбор под ключ авто объемом до 2,5 л)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -505,7 +520,11 @@
           </div>
           <div class="price__item_description">
             <input id="price-four" type="checkbox" name="price">
-            <label for="price-four">Пакет «ALL INCLUSIVE v2.0» (подбор под ключ авто объемом от 2,5 л)</label>
+            <label for="price-four">
+              <span class="price__text">
+                Пакет «ALL INCLUSIVE v2.0» (подбор под ключ авто объемом от 2,5 л)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -876,6 +895,64 @@
             </div>
           </div>
         </div>
+        <div id="questions-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Можете ли вы осмотреть авто без моего присутствия?</h3>
+                  <span class="description__item_info_text">
+                    — да, конечно, мы досконально осмотрим авто и по итогу предоставим вам 
+                    подробные отчет (фото и техническая часть).
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Сколько времени занимает подбор автомобиля?</h3>
+                  <span class="description__item_info_text">
+                    — исходя из нашей практики поиск и подбор авто может занимать от 1 – 2 дней 
+                    до 2 – 3 недель, все зависит от популярности модели.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Я не знаю какое авто хочу. Поможете?</h3>
+                  <span class="description__item_info_text">
+                    — во время консультации мы выясним у вас потребности, желания, бюджет,
+                    на основании этого предложим для вас наиболее подходящие варианты.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Требуемое авто не в Минске, как быть?</h3>
+                  <span class="description__item_info_text">
+                    — любой вопрос решаем, мы всегда можем выехать в любую точку Беларуси для осмотра конкретного
+                    автомобиля.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Какие бонусы я могу получить после обращения к вам?</h3>
+                  <span class="description__item_info_text">
+                    — периодически мы проводим различные акции, о которых вы можете узнать в наших социальных сетях.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Вы заключаете договор с заказчиком?</h3>
+                  <span class="description__item_info_text">
+                    — да, мы работаем в соответствии с законодательством Республики Беларусь.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -901,9 +978,9 @@
             <span>Время работы:</span>
             <p class="footer__contacts_link">Ежедневно с 9:00 до 21:00</p>
           </div>
-          <div class="footer__contacts_info_subtitle">
+          <div class="footer__contacts_info_subtitle footer__contacts_social">
             <span>Присоединяйся к нам:</span>
-            <div class="social__icons ">
+            <div class="social__icons">
               <a href="#"><img src="./images/social/insta-icon.png" alt="instagram"
                   class="social__icon social__footer_icon"></a>
               <a href="#"><img src="./images/social/tik-tok-icon.png" alt="tik-tok"
@@ -939,6 +1016,25 @@
             <button class="question__form_button" type="submit"> ОТПРАВИТЬ</button>
           </form>
         </div>
+      </div>
+      <div class="mobile__footer">
+        <div class="mobile__footer_contacts">
+          <span>Присоединяйся к нам:</span>
+          <div class="social__icons">
+            <a href="#"><img src="./images/social/insta-icon.png" alt="instagram"
+                class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/tik-tok-icon.png" alt="tik-tok"
+                class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/vk-icon.png" alt="vk" class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/youTube-icon.png" alt="youTube"
+                class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/facebook-icon.png" alt="facebook"
+                class="social__icon social__footer_icon"></a>
+          </div>
+        </div>
+        <button class="information__button information__button_footer">
+          ЗАКАЗАТЬ ПОДБОР
+        </button>
       </div>
       <span class="rights">
         PROpodbor.by 2021. Все права защищены.
