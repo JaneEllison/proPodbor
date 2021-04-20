@@ -3,11 +3,15 @@
   font-family: Ubuntu, sans-serif
   box-sizing: border-box
 
-label, button
+label, button, input
   cursor: pointer
+  outline: none
 
 body
   background-color: #0B0B0B
+
+ul
+  padding: 0
 
 .main
   overflow: hidden
@@ -26,31 +30,85 @@ body
     display: flex
     align-items: center
     justify-content: center
+
     &_link
       text-decoration: none
       margin-right: 30px
       font-size: 16px
       letter-spacing: 0.1rem
       line-height: 24px
+      transition: 0.5s linear
+
       &:last-child
         margin-right: 0
+
+      &-mobile
+        display: none
+
+      &:hover
+        color: #F44D34
 
   &__company_info
     display: flex
     flex-direction: column
     align-items: flex-end
 
+.menu-toggle
+  z-index: 99
+  display: none
+  width: 40px
+  height: 30px
+  position: absolute
+  top: 20px
+  right: 25px
+  cursor: pointer
+
+  &.on
+    .one
+      transform: (rotate(45deg) translate(4px, 6px))
+      background: #000
+      width: 50%
+      height: 2px
+
+    .two
+      opacity: 0
+
+    .three
+      transform: (rotate(-45deg) translate(7px, -10px))
+      background: #0B0B0B
+      width: 50%
+      height: 2px
+
+.one,
+.two,
+.three
+  width: 100%
+  height: 5px
+  background: white
+  margin: 6px auto
+  backface-visibility: hidden
+  transition-duration: 0.5s
+
 .phone__number
   font-size: 24px
   font-weight: 500
   text-decoration: none
   line-height: 38px
+  transition: 0.5s linear
+
+  &:hover
+    transform: scale(1.1)
+    color: #F44D34
 
   &-image
     display: none
     width: 60px
     height: 60px
     cursor: pointer
+    transition: 0.5s linear
+
+    &:hover
+      transform: scale(1.1)
 
 .main
   position: relative
@@ -101,12 +159,16 @@ body
     color: #F44D34
     border: 1px solid #F44D34
     background: transparent
+    transition: 0.5s linear
 
     &:hover
       color: #FFFFFF
       background: #F44D34
       border: 1px solid #F44D34
       cursor: pointer
+
+#advantages-slider
+  display: none
 
 .advantages
   margin: 0 auto
@@ -189,6 +251,7 @@ body
     justify-content: center
     align-items: start
     margin-top: 40px
+    flex-direction: row
 
     &-part
       margin-top: 50px
@@ -218,7 +281,6 @@ body
           max-height: 100vh
 
       & label
-        color: #131313
         position: relative
         display: flex
         padding: 26px 0
@@ -226,14 +288,21 @@ body
         font-weight: 500
         font-size: 24px
         line-height: 38px
+        color: #131313
+
+        & span
+          color: #131313
+
+      &-hide
+        display: flex
 
       &_content
         max-height: 0
         overflow: hidden
         background: #ffffff
-        -webkit-transition: max-height .35s
-        -o-transition: max-height .35s
-        transition: max-height .35s
+        -webkit-transition: max-height .7s
+        -o-transition: max-height .7s
+        transition: max-height .7s
         & p
           color: #131313
           font-size: 16px
@@ -242,6 +311,34 @@ body
           width: 336px
           margin-bottom: 26px
 
+label.description__add_items
+  align-items: center
+  justify-content: center
+
+  & img
+    margin-left: 22px
+
+.description__add_items-block
+  display: none
+  border-bottom: 1px solid rgba(77, 77, 77, 0.3)
+
+.description__add_items-block input[type=checkbox] + label::after
+  display: none
+
+.description__number
+  margin-right: 20px
+  font-weight: normal
+  font-size: 14px
+  line-height: 22px
+  color: #322F37
+  display: none
+
+.description_down-arrow
+  transform: rotateX(180deg)
+
+  &-hide
+    transform: rotateX(360deg)
+
 /* Icon */
 .description__info_item, .price__item_description
   & label::after
@@ -249,9 +346,9 @@ body
     right: 0
     display: block
     text-align: center
-    -webkit-transition: all .35s
-    -o-transition: all .35s
-    transition: all .35s
+    -webkit-transition: all .7s
+    -o-transition: all .7s
+    transition: all .7s
 
   & input[type=checkbox] + label::after
     content: "+"
@@ -310,9 +407,9 @@ body
         flex-direction: column
         max-height: 0
         overflow: hidden
-        -webkit-transition: max-height .35s
-        -o-transition: max-height .35s
-        transition: max-height .35s
+        -webkit-transition: max-height .7s
+        -o-transition: max-height .7s
+        transition: max-height .7s
 
 .price__list
   display: flex
@@ -335,7 +432,7 @@ body
       line-height: 30px
       color: #CCCCCC
       list-style-type: none
-      padding-left: 18px
+      padding-left: 20px
       margin-bottom: 10px
 
       &:before
@@ -377,6 +474,7 @@ body
     color: #F44D34
     background: transparent
     border: 1px solid #F44D34
+    transition: 0.5s linear
 
     &:hover
       color: #FFFFFF
@@ -430,6 +528,7 @@ body
       background: transparent
       border: 2px solid #F44D34
       margin-top: 10px
+      transition: 0.5s linear
 
       &:hover
         color: #FFFFFF
@@ -467,10 +566,14 @@ body
     line-height: 50px
 
   &__content_item
+    position: relative
     display: flex
     flex-direction: column
     border-bottom: 1px solid #4D4D4D
-    padding: 45px 0 40px 0
+    padding: 45px 0 85px 0
+
+    &:nth-child(4)
+      padding: 45px 0 115px 0
 
   &__content
     display: flex
@@ -479,8 +582,11 @@ body
     &_slider
       margin-right: 60px
 
+    &_items
+      width: 570px
+
   &__description_item
-    margin-bottom: 20px
+    margin-bottom: 10px
     font-size: 16px
     line-height: 30px
     display: flex
@@ -514,6 +620,18 @@ body
   color: #F44D34
   margin-right: 3px
 
+.comment__wrapper
+  position: absolute
+  width: 570px
+  top: 225px
+  right: 0
+
+.second
+  top: 255px
+
+.third
+  top: 310px
+
 .social
   display: flex
   justify-content: start
@@ -531,6 +649,10 @@ body
   &__icon
     margin-right: 15px
     cursor: pointer
+    transition: 0.3s linear
+
+    &:hover
+      transform: scale(1.2)
 
 .questions
   width: 100%
@@ -585,9 +707,9 @@ body
     flex-direction: column
     max-height: 0
     overflow: hidden
-    -webkit-transition: max-height .35s
-    -o-transition: max-height .35s
-    transition: max-height .35s
+    -webkit-transition: max-height .7s
+    -o-transition: max-height .7s
+    transition: max-height .7s
 
     & p
       color: #131313
@@ -598,9 +720,9 @@ body
   & label::after
     margin-left: 30px
     text-align: center
-    -webkit-transition: all .35s
-    -o-transition: all .35s
-    transition: all .35s
+    -webkit-transition: all .7s
+    -o-transition: all .7s
+    transition: all .7s
 
   & input[type=checkbox] + label::after
     font-size: 24px
@@ -615,6 +737,13 @@ body
 
   & input[type=radio]:checked + label::after
     transform: rotateX(180deg)
+
+#questions-slider
+  display: none
+
+.splide__slide__container
+  display: flex
+  flex-direction: column
 
 .footer
   width: 100%
@@ -679,10 +808,21 @@ body
   text-decoration: none
 
 .social__footer_icon
-  width: 42px
-  height: 42px
+  width: 50px
+  height: 50px
   margin-right: 17px
   margin-top: 5px
+
+.mobile__footer
+  display: none
+  justify-content: space-between
+  align-items: flex-end
+  margin-top: 30px
+  margin-bottom: 60px
+
+  & span
+    line-height: 30px
+    color: #CCCCCC
 
 .rights
   margin-top: 63px
@@ -720,6 +860,7 @@ body
     border: 2px solid #F44D34
     background: transparent
     margin-top: 50px
+    transition: 0.5s linear
 
     &:hover
       background: #F44D34
@@ -746,8 +887,9 @@ svg
 .secondary>.splide__track>.splide__list>.splide__slide.is-active
   border-color: #F44D34 !important
 
-.splide__arrow:disabled
-  opacity: 0.4 !important
+.splide__arrow
+  & svg:hover
+    fill: #F44D34 !important
 
 @media (max-width: 1240px)
   .question__item
@@ -785,7 +927,35 @@ svg
   .phone__number
     font-size: 18px
 
-@media (max-width: 1024px)
+  .comment__wrapper
+    position: relative
+    width: 100%
+    top: 0
+
+  .examples__content_item
+    padding: 45px 0 40px 0
+
+    &:nth-child(4)
+      padding: 45px 0 40px 0
+
+  .examples__description_item
+    margin-bottom: 20px
+
+  .footer
+    padding: 100px 0 20px 0
+
+    &__contacts
+      margin-top: 50px
+
+      &_form
+        padding: 50px 20px 42px 30px
+        width: 450px
+        height: fit-content
+
+@media (max-width: 1190px)
+  .wrapper
+    width: 972px
+
   .main__bg
     top: 0
     right: -240px
@@ -829,11 +999,12 @@ svg
 
   .description__info
     justify-content: space-between
+
     &_item
       width: 450px
 
-  .description__info_item label
-    padding-bottom: 10px
+    &-part
+      margin-top: 0
 
   .description__info_item_content p
     width: 90%
@@ -841,8 +1012,11 @@ svg
   .price
     padding: 100px 0
 
-  .price__item
-    margin-top: 50px
+    &__list
+      margin-bottom: 40px
+
+    &__item
+      margin-top: 50px
 
   .contact
     padding: 100px 0
@@ -852,7 +1026,7 @@ svg
       margin: 18px 0 0 0
 
     &__subttile
-      margin-bottom: 40px
+      margin-bottom: 30px
 
   .contact-form__info_input
     margin-top: 50px
@@ -868,29 +1042,11 @@ svg
   .questions
     padding: 100px 0
 
-  // .question__item
-  //   width: 450px
-  //   column-gap: 60px
-
-  //   &_content p
-  //     width: 410px
-
-  //   & label
-  //     width: 410px
-  
-  .footer
-    padding: 100px 0 20px 0
-    
-    &__contacts
-      margin-top: 50px
-
-      &_form
-        padding: 50px 20px 42px 30px
-        width: 450px
-
   .question__form_button
     margin-top: 10px
     padding: 14px 0
+    font-size: 16px
+    line-height: 24px
 
   .phone__number
     display: none
@@ -900,3 +1056,289 @@ svg
 
   .phone__discription
     display: none
+
+@media (max-width: 980px)
+  .advantages__description_desktop
+    display: none
+
+  #advantages-slider
+    display: flex
+
+  .wrapper
+    width: 700px
+
+  .description__info_item-hide
+    display: none
+
+  .information__wrapper, .description, .price, .contact, .examples, .questions, .footer
+    padding: 80px 0
+
+  .header
+    justify-content: space-between
+
+  .header__company_info, .header__navigation
+    display: none
+
+  .header__navigation.on
+    display: flex
+    flex-direction: column
+    z-index: 10
+    background-color: #fff
+    height: 100%
+    width: 100%
+    position: absolute
+    top: 0
+
+  .header__navigation_link
+    font-weight: 500
+    font-size: 24px
+    line-height: 38px
+    color: #000
+    margin-right: 0
+    margin-bottom: 30px
+    transition: 0.5s linear
+
+    &:hover
+      color: #F44D34
+
+    &-mobile
+      display: flex
+
+      &:hover
+        transform: scale(1.2)
+
+  .menu-toggle
+    display: block
+
+  .logo
+    margin-left: 20px
+
+  .footer
+    padding-bottom: 20px
+
+  .advantages__wrapper
+    padding-bottom: 80px
+
+  .information__title
+    font-size: 30px
+    line-height: 50px
+
+  .information__subtitle
+    margin: 30px 0
+
+  .information__subtitle
+    line-height: 24px
+
+  .main__bg
+    opacity: 0.7
+
+  .advantages__title
+    margin: 0
+    margin-bottom: 30px
+    font-size: 28px
+    line-height: 36px
+
+  .description__item_image
+    width: 80px
+    height: 80px
+
+  .description__item_info_title
+    font-size: 16px
+    line-height: 26px
+    margin-bottom: 5px
+
+  .description__item_info_text
+    font-size: 14px
+    line-height: 22px
+
+  .advantages__description
+    column-gap: 40px
+
+  .description__info
+    flex-direction: column
+
+  .description__header_subtitle
+    width: 100%
+
+  .description__info_item
+    width: 100%
+
+  .description__number
+    display: flex
+
+  .description__info_item.description__add_items-block
+    display: flex
+
+  .price__header
+    font-size: 28px
+    line-height: 36px
+
+  .price__item
+    margin-top: 40px
+
+  .price__item_description label
+    padding: 26px 0
+    font-style: normal
+    font-weight: normal
+    font-size: 24px
+    line-height: 38px
+
+  .price__text
+    width: 80%
+
+  .price__list
+    flex-direction: column
+    margin-top: -6px
+
+    &_part
+      width: 90%
+
+  .price__order
+    width: 100%
+    margin-bottom: 40px
+
+    &_coast_subtitle
+      font-size: 24px
+      line-height: 38px
+
+    &_button
+      width: 280px
+      font-size: 16px
+      line-height: 24px
+
+  .examples__content
+    flex-direction: column
+    border-bottom: 1px solid #4D4D4D
+
+    &_slider
+      margin: 0
+
+  .examples__content_description
+    margin-top: 30px
+
+  .social
+    flex-direction: column
+    align-items: start
+
+    &__header
+      margin-bottom: 20px
+      font-size: 22px
+
+  .contact__title
+    font-size: 28px
+    line-height: 36px
+
+  .contact-form
+    margin-top: 0
+
+    &__info
+      width: 100%
+
+      &_input
+        margin-bottom: 0
+
+    &__input
+      width: 100%
+
+      &-wrapper:first-child
+        margin-right: 0
+
+      &:first-child
+        margin-bottom: 30px
+
+  .contact-form__info_input
+    flex-direction: column
+    margin-top: 40px
+
+  .contact__subttile
+    font-size: 14px
+
+  .contact-form__button
+    width: 100%
+    padding: 20px 0
+    font-size: 16px
+    line-height: 24px
+
+  #questions-slider
+    display: flex
+
+  .questions__items
+    display: none
+
+  .questions__title
+    font-size: 28px
+    line-height: 36px
+
+  .description__item_info_title
+    font-weight: 500
+    font-size: 18px
+    line-height: 28px
+    margin-bottom: 10px
+
+  .description__item_info_text
+    font-size: 14px
+    line-height: 22px
+    color: #666666
+
+  .footer__contacts_social
+    display: none
+
+  .footer__contacts_form
+    display: none
+
+  .footer__contacts_link
+    font-size: 16px
+    line-height: 26px
+
+  .footer__contacts_info
+    width: 100%
+    flex-wrap: wrap
+    justify-content: space-between
+    row-gap: 20px
+    column-gap: 40px
+    flex-direction: row
+
+    &_subtitle
+      margin-bottom: 2px
+      width: 280px
+
+      &:nth-child(1)
+        order: 1
+
+      &:nth-child(2)
+        order: 3
+
+      &:nth-child(3)
+        order: 4
+
+      &:nth-child(4)
+        order: 2
+
+  .mobile__footer
+    display: flex
+
+  .social__footer_icon
+    margin-right: 10px
+
+  .information__button_footer
+    width: 280px
+    padding: 20px 0
+    line-height: 24px
+    height: fit-content
+
+.splide__slide img
+  width: 80px !important
+  height: 80px !important
+
+.advantages-pagination
+  bottom: -48px !important
+
+#advantages-slider>.splide__track>.splide__list>.splide__slide.is-active
+  border-color: transparent !important
+
+#questions-slider>.splide__track>.splide__list>.splide__slide.is-active
+  border-color: transparent !important
+
+@media (max-width: 720px)
+  .wrapper
+    width: 600px

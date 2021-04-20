@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -19,19 +19,25 @@
 <body>
   <header class="header">
     <a href="./index.html" class="header__logo">
-      <img src="./images/logo.png" alt="ProPodbor" class="logo">
+      <img src="./images/logo.svg" alt="ProPodbor" class="logo">
     </a>
+    <div class="menu-toggle">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+    </div>
     <nav class="header__navigation">
-      <a href="" class="header__navigation_link">ВЫГОДЫ</a>
-      <a href="" class="header__navigation_link">ЧТО МЫ ПРОВЕРЯЕМ</a>
-      <a href="" class="header__navigation_link">СТОИМОСТЬ</a>
-      <a href="" class="header__navigation_link">О НАС</a>
-      <a href="" class="header__navigation_link">КОНТАКТЫ</a>
+      <a href="#advantages" class="header__navigation_link">ВЫГОДЫ</a>
+      <a href="#description" class="header__navigation_link">ЧТО МЫ ПРОВЕРЯЕМ</a>
+      <a href="#price" class="header__navigation_link">СТОИМОСТЬ</a>
+      <a href="#examples" class="header__navigation_link">О НАС</a>
+      <a href="#contacts" class="header__navigation_link">КОНТАКТЫ</a>
+      <a href="tel:+375293286060" class="header__navigation_link header__navigation_link-mobile"> +375 29 328-60-60 </a>
     </nav>
     <div class="header__company_info">
       <a href="tel:+375293286060" class="phone__number"> +375 29 328-60-60 </a>
       <a href="tel:+375293286060">
-        <img src="./images/tel-icon.png" class="phone__number-image" alt="tel">
+        <img src="./images/tel-icon.svg" class="phone__number-image" alt="tel">
       </a>
       <span class="phone__discription">Заказать звонок</span>
     </div>
@@ -56,68 +62,129 @@
         </button>
       </div>
     </section>
-    <section class="advantages">
+    <section id="advantages" class="advantages">
       <div class="advantages__wrapper wrapper">
         <h2 class="advantages__title">Почему работать с нами выгодно</h2>
-        <div class="advantages__description">
-          <div class="description__item">
-            <img src="./images/advantages/time-icon.png" alt="time-icon" class="description__item_image">
-            <div class="description__item_info">
-              <h3 class="description__item_info_title">Экономия вашего времени</h3>
-              <span class="description__item_info_text">
-                мы сделаем все, чтобы в кратчайшие сроки найти для вас подходящий автомобиль
-              </span>
-            </div>
+        <div id="advantages-slider" class="splide">
+          <div class="splide__track advantages__splide_track">
+            <ul class="splide__list advantages__description">
+              <li class="splide__slide description__item">
+                <img src="./images/advantages/time-icon.svg" alt="time-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Экономия вашего времени</h3>
+                  <span class="description__item_info_text">
+                    мы сделаем все, чтобы в кратчайшие сроки найти для вас подходящий автомобиль
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="./images/advantages/belarus-icon.svg" alt="belarus-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Работаем по всей Беларуси</h3>
+                  <span class="description__item_info_text">
+                    выезжаем в любую точку Беларуси, <br>
+                    чтобы найти для вас лучший вариант
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="./images/advantages/guarantee-icon.svg" alt="guarantee-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Даем 2 месяца гарантии</h3>
+                  <span class="description__item_info_text">
+                    на основные узлы и агрегаты подобранного нами авто
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="./images/advantages/money-icon.svg" alt="money-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Переговоры с продавцом</h3>
+                  <span class="description__item_info_text">
+                    сделаем все возможное, чтобы сэкономить ваши деньги
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="./images/advantages/service-icon.svg" alt="service-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Диагностика на СТО</h3>
+                  <span class="description__item_info_text">от партнерских до диллерских на выбор заказчика</span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="./images/advantages/documents-icon.svg" alt="documents-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Отчетность</h3>
+                  <span class="description__item_info_text">
+                    предоставляем подробный отчет на выбранный автомобиль
+                  </span>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="description__item">
-            <img src="./images/advantages/belarus-icon.png" alt="belarus-icon" class="description__item_image">
-            <div class="description__item_info">
-              <h3 class="description__item_info_title">Работаем по всей Беларуси</h3>
-              <span class="description__item_info_text">
-                выезжаем в любую точку Беларуси, <br>
-                чтобы найти для вас лучший вариант
-              </span>
+        </div>
+        <div class="advantages__description_desktop">
+          <ul class=" advantages__description">
+            <div class="description__item">
+              <img src="./images/advantages/time-icon.svg" alt="time-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Экономия вашего времени</h3>
+                <span class="description__item_info_text">
+                  мы сделаем все, чтобы в кратчайшие сроки найти для вас подходящий автомобиль
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="description__item">
-            <img src="./images/advantages/guarantee-icon.png" alt="guarantee-icon" class="description__item_image">
-            <div class="description__item_info">
-              <h3 class="description__item_info_title">Даем 2 месяца гарантии</h3>
-              <span class="description__item_info_text">
-                на основные узлы и агрегаты подобранного нами авто
-              </span>
+            <div class="description__item">
+              <img src="./images/advantages/belarus-icon.svg" alt="belarus-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Работаем по всей Беларуси</h3>
+                <span class="description__item_info_text">
+                  выезжаем в любую точку Беларуси, <br>
+                  чтобы найти для вас лучший вариант
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="description__item">
-            <img src="./images/advantages/money-icon.png" alt="money-icon" class="description__item_image">
-            <div class="description__item_info">
-              <h3 class="description__item_info_title">Переговоры с продавцом</h3>
-              <span class="description__item_info_text">
-                сделаем все возможное, чтобы сэкономить ваши деньги
-              </span>
+            <div class="description__item">
+              <img src="./images/advantages/guarantee-icon.svg" alt="guarantee-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Даем 2 месяца гарантии</h3>
+                <span class="description__item_info_text">
+                  на основные узлы и агрегаты подобранного нами авто
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="description__item">
-            <img src="./images/advantages/service-icon.png" alt="service-icon" class="description__item_image">
-            <div class="description__item_info">
-              <h3 class="description__item_info_title">Диагностика на СТО</h3>
-              <span class="description__item_info_text">от партнерских до диллерских на выбор заказчика</span>
+            <div class="description__item">
+              <img src="./images/advantages/money-icon.svg" alt="money-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Переговоры с продавцом</h3>
+                <span class="description__item_info_text">
+                  сделаем все возможное, чтобы сэкономить ваши деньги
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="description__item">
-            <img src="./images/advantages/documents-icon.png" alt="documents-icon" class="description__item_image">
-            <div class="description__item_info">
-              <h3 class="description__item_info_title">Отчетность</h3>
-              <span class="description__item_info_text">
-                предоставляем подробный отчет на выбранный автомобиль
-              </span>
+            <div class="description__item">
+              <img src="./images/advantages/service-icon.svg" alt="service-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Диагностика на СТО</h3>
+                <span class="description__item_info_text">от партнерских до диллерских на выбор заказчика</span>
+              </div>
             </div>
-          </div>
+            <div class="description__item">
+              <img src="./images/advantages/documents-icon.svg" alt="documents-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Отчетность</h3>
+                <span class="description__item_info_text">
+                  предоставляем подробный отчет на выбранный автомобиль
+                </span>
+              </div>
+            </div>
+          </ul>
         </div>
       </div>
     </section>
-    <section class="description">
-      <div class="wrapper ">
+    <section id="description" class="description">
+      <div class="wrapper">
         <div class="description__header">
           <h2 class="description__header_title">
             Что мы проверяем?
@@ -132,7 +199,14 @@
           <div class="description__info-part">
             <div class="description__info_item">
               <input id="left_item-one" type="checkbox" name="items">
-              <label for="left_item-one">Двигатель</label>
+              <label for="left_item-one">
+                <span class="description__number">
+                  01
+                </span>
+                <span>
+                  Двигатель
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка внешнего вида двигателя на наличие видимых запотеваний
@@ -143,7 +217,14 @@
             </div>
             <div class="description__info_item">
               <input id="left_item-two" type="checkbox" name="items">
-              <label for="left_item-two">КПП</label>
+              <label for="left_item-two">
+                <span class="description__number">
+                  02
+                </span>
+                <span>
+                  КПП
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка уровня жидкости и выявление ошибок по КПП путем компьютерной диагностики.
@@ -152,7 +233,14 @@
             </div>
             <div class="description__info_item">
               <input id="left_item-three" type="checkbox" name="items">
-              <label for="left_item-three">Рулевое управление</label>
+              <label for="left_item-three">
+                <span class="description__number">
+                  03
+                </span>
+                <span>
+                  Рулевое управление
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Наличие люфтов, течей, стуков в рулевом управлении. Уровень рабочей жидкости,
@@ -162,7 +250,14 @@
             </div>
             <div class="description__info_item">
               <input id="left_item-four" type="checkbox" name="items">
-              <label for="left_item-four">Амортизаторы</label>
+              <label for="left_item-four">
+                <span class="description__number">
+                  04
+                </span>
+                <span>
+                  Амортизаторы
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка работоспособности пружинной/пневмо/гидро подвески, целостность элементов.
@@ -171,7 +266,14 @@
             </div>
             <div class="description__info_item">
               <input id="left_item-five" type="checkbox" name="items">
-              <label for="left_item-five">Колёса и шины</label>
+              <label for="left_item-five">
+                <span class="description__number">
+                  05
+                </span>
+                <span>
+                  Колёса и шины
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка на наличие царапин, а также визуальный осмотр дисков.
@@ -180,9 +282,25 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item">
+            <div class="description__info_item description__add_items-block">
+              <label class="description__add_items">
+                <span>
+                  Смотреть ещё
+                </span>
+                <img src="./images/down-arrow.svg" alt="down-arrow"
+                  class="description_down-arrow description_down-arrow-hide">
+              </label>
+            </div>
+            <div class="description__info_item hidden-item">
               <input id="left_item-six" type="checkbox" name="items">
-              <label for="left_item-six">Тормоза</label>
+              <label for="left_item-six">
+                <span class="description__number">
+                  06
+                </span>
+                <span>
+                  Тормоза
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка состояния тормозных дисков, колодок, работоспособности
@@ -193,9 +311,16 @@
           </div>
           <img src="./images/description-bg.png" alt="car" class="description__info_image">
           <div class="description__info-part">
-            <div class="description__info_item">
+            <div class="description__info_item hidden-item">
               <input id="right_item-one" type="checkbox" name="items">
-              <label for="right_item-one">Кузов</label>
+              <label for="right_item-one">
+                <span class="description__number">
+                  07
+                </span>
+                <span>
+                  Кузов
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка кузова на наличие повреждений, неоригинальных и
@@ -203,9 +328,16 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item">
+            <div class="description__info_item hidden-item">
               <input id="right_item-two" type="checkbox" name="items">
-              <label for="right_item-two">Салон</label>
+              <label for="right_item-two">
+                <span class="description__number">
+                  08
+                </span>
+                <span>
+                  Салон
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка состояния салона на возможные восстановленные/перешитые элементы сидений,
@@ -213,9 +345,16 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item">
+            <div class="description__info_item hidden-item">
               <input id="right_item-three" type="checkbox" name="items">
-              <label for="right_item-three">Приборы</label>
+              <label for="right_item-three">
+                <span class="description__number">
+                  09
+                </span>
+                <span>
+                  Приборы
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка правильной работы всех приборов, а также работоспособность индикаторов
@@ -223,9 +362,16 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item">
+            <div class="description__info_item hidden-item">
               <input id="right_item-four" type="checkbox" name="items">
-              <label for="right_item-four">АКБ</label>
+              <label for="right_item-four">
+                <span class="description__number">
+                  10
+                </span>
+                <span>
+                  АКБ
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Проверка вздутие и деформацию корпуса батареи из-за ее износа
@@ -233,9 +379,16 @@
                 </p>
               </div>
             </div>
-            <div class="description__info_item">
+            <div class="description__info_item hidden-item">
               <input id="right_item-five" type="checkbox" name="items">
-              <label for="right_item-five">Компьютерная диагностика</label>
+              <label for="right_item-five">
+                <span class="description__number">
+                  11
+                </span>
+                <span>
+                  Компьютерная диагностика
+                </span>
+              </label>
               <div class="description__info_item_content">
                 <p>
                   Компьютерная диагностика оборудованных электронных систем на наличие
@@ -247,13 +400,17 @@
         </div>
       </div>
     </section>
-    <section class="price">
+    <section id="price" class="price">
       <div class="wrapper">
         <h2 class="price__header">Стоимость услуг</h2>
         <div class="price__item">
           <div class="price__item_description">
             <input id="price-one" type="checkbox" name="price">
-            <label for="price-one">Пакет «ОХОТНИК» (разовая проверка)</label>
+            <label for="price-one">
+              <span class="price__text">
+                Пакет «ОХОТНИК» (разовая проверка)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -287,7 +444,11 @@
           </div>
           <div class="price__item_description">
             <input id="price-two" type="checkbox" name="price">
-            <label for="price-two">Пакет «ДНЕВНОЙ ДОЗОР» (специалист на день)</label>
+            <label for="price-two">
+              <span class="price__text">
+                Пакет «ДНЕВНОЙ ДОЗОР» (специалист на день)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -321,7 +482,11 @@
           </div>
           <div class="price__item_description">
             <input id="price-three" type="checkbox" name="price">
-            <label for="price-three">Пакет «ALL INCLUSIVE v1.0» (подбор под ключ авто объемом до 2,5 л)</label>
+            <label for="price-three">
+              <span class="price__text">
+                Пакет «ALL INCLUSIVE v1.0» (подбор под ключ авто объемом до 2,5 л)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -357,7 +522,11 @@
           </div>
           <div class="price__item_description">
             <input id="price-four" type="checkbox" name="price">
-            <label for="price-four">Пакет «ALL INCLUSIVE v2.0» (подбор под ключ авто объемом от 2,5 л)</label>
+            <label for="price-four">
+              <span class="price__text">
+                Пакет «ALL INCLUSIVE v2.0» (подбор под ключ авто объемом от 2,5 л)
+              </span>
+            </label>
             <div class="price__item_description_content">
               <div class="price__list">
                 <div class="price__list_part">
@@ -404,7 +573,8 @@
           <div class="contact-form__info">
             <div class="contact-form__info_input">
               <div class="contact-form__input-wrapper">
-                <input name="name" type="text" class="contact-form__input contact-form__input_name" placeholder="Ваше имя">
+                <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                  placeholder="Ваше имя">
                 <div class="contact-form__error contact-form__error_name"></div>
               </div>
               <div class="contact-form__input-wrapper">
@@ -420,7 +590,7 @@
         </form>
       </div>
     </section>
-    <section class="examples">
+    <section id="examples" class="examples">
       <div class="wrapper">
         <h2 class="examples__title">Недавно решенные задачи</h2>
         <div class="examples__content_item">
@@ -430,19 +600,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-1.jpg">
+                      <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-2.jpg">
+                      <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-3.jpg">
+                      <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-4.jpg">
+                      <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-5.jpg">
+                      <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
                     </li>
                   </ul>
                 </div>
@@ -451,54 +621,59 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-1.jpg">
+                      <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-2.jpg">
+                      <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-3.jpg">
+                      <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-4.jpg">
+                      <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/first-car-5.jpg">
+                      <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Задача: </span>машина для девушки до 34 000 BYN,
-                  не старше 7 – 10 лет</p>
+            <div class="examples__content_items">
+              <div class="examples__content_description">
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Задача: </span>машина для девушки до 34 000 BYN,
+                    не старше 7 – 10 лет</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Результат: </span>Nissan Juke Nismo 2013 года
+                    выпуска,
+                    объем 1.6 турбо бензин</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Начальная цена: </span>28 400 BYN</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Конечная цена: </span>25 000 BYN</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Экономия: </span>3 400 BYN</p>
+                </div>
               </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Результат: </span>Nissan Juke Nismo 2013 года выпуска,
-                  объем 1.6 турбо бензин</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Начальная цена: </span>28 400 BYN</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Конечная цена: </span>25 000 BYN</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Экономия: </span>3 400 BYN</p>
-              </div>
-              <h3 class="examples__subtitle">Отзыв клиента</h3>
-              <p class="examples__text">
-                Долго мечтала о машине-зажигалке, самостоятельно определиться
-                с выбором не отважилась, друг посоветовал обратиться за помощью к этой фирме,
-                которая ему подбирала машину.<br> Через 3 дня после заключения договора поступил
-                долгожданный звонок: «Есть идеальный вариант для вас!». Пригласили на дополнительный
-                просмотр и вот ключи от жука в моих руках. Спасибо большое, обнимаю :*
-              </p>
-              <div class="examples__customer">
-                <p class="examples__customer_info_name">Гертруда</p>
-                <p class="examples__customer_info_name">Минск, 29 марта 2020 года</p>
-              </div>
+            </div>
+          </div>
+          <div class="comment__wrapper first">
+            <h3 class="examples__subtitle">Отзыв клиента</h3>
+            <p class="examples__text">
+              Долго мечтала о машине-зажигалке, самостоятельно определиться
+              с выбором не отважилась, друг посоветовал обратиться за помощью к этой фирме,
+              которая ему подбирала машину.<br> Через 3 дня после заключения договора поступил
+              долгожданный звонок: «Есть идеальный вариант для вас!». Пригласили на дополнительный
+              просмотр и вот ключи от жука в моих руках. Спасибо большое, обнимаю :*
+            </p>
+            <div class="examples__customer">
+              <p class="examples__customer_info_name">Гертруда</p>
+              <p class="examples__customer_info_name">Минск, 29 марта 2020 года</p>
             </div>
           </div>
         </div>
@@ -509,13 +684,13 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="./images/slides/second-car-1.jpg">
+                      <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/second-car-2.jpg">
+                      <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/second-car-3.jpg">
+                      <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
                     </li>
                   </ul>
                 </div>
@@ -524,45 +699,49 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="./images/slides/second-car-1.jpg">
+                      <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/second-car-2.jpg">
+                      <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/second-car-3.jpg">
+                      <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="examples__content_description">
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Задача: </span>большая семейная машина
-                  в отличном состоянии на сумму до 52 000 BYN</p>
+            <div class="examples__content_items">
+              <div class="examples__content_description">
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Задача: </span>большая семейная машина
+                    в отличном состоянии на сумму до 52 000 BYN</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Результат: </span>Mercedes-Benz GL 350
+                    2010 года выпуска, дизель</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Начальная цена: </span>46 800 BYN</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Конечная цена: </span>37 800 BYN</p>
+                </div>
+                <div class="examples__description_item">
+                  <p><span class="examples__description_text-color">Экономия: </span>9 000 BYN</p>
+                </div>
               </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Результат: </span>Mercedes-Benz GL 350
-                  2010 года выпуска, дизель</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Начальная цена: </span>46 800 BYN</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Конечная цена: </span>37 800 BYN</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Экономия: </span>9 000 BYN</p>
-              </div>
-              <h3 class="examples__subtitle">Отзыв клиента</h3>
-              <p class="examples__text">Родился у нас второй ребенок и появилась необходимость в большой
-                машине, рассматривал вояджер, джиэлку и мазду CX9, так как вариантов было много, а времени
-                у меня на выбор слишком мало решил обратиться за помощь. <br> Бонусом был получен от продавца
-                комплект двадцати дюймовых оригинальных литых дисков с летней резиной.</p>
-              <div class="examples__customer">
-                <p class="examples__customer_info_name">Максим</p>
-                <p class="examples__customer_info_name">Минск, 29 марта, 2020 года</p>
-              </div>
+            </div>
+          </div>
+          <div class="comment__wrapper second">
+            <h3 class="examples__subtitle">Отзыв клиента</h3>
+            <p class="examples__text">Родился у нас второй ребенок и появилась необходимость в большой
+              машине, рассматривал вояджер, джиэлку и мазду CX9, так как вариантов было много, а времени
+              у меня на выбор слишком мало решил обратиться за помощь. <br> Бонусом был получен от продавца
+              комплект двадцати дюймовых оригинальных литых дисков с летней резиной.</p>
+            <div class="examples__customer">
+              <p class="examples__customer_info_name">Максим</p>
+              <p class="examples__customer_info_name">Минск, 29 марта, 2020 года</p>
             </div>
           </div>
         </div>
@@ -573,19 +752,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-1.jpg">
+                      <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-2.jpg">
+                      <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-3.jpg">
+                      <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-4.jpg">
+                      <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-5.jpg">
+                      <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
                     </li>
                   </ul>
                 </div>
@@ -594,19 +773,19 @@
                 <div class="splide__track">
                   <ul class="splide__list">
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-1.jpg">
+                      <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-2.jpg">
+                      <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-3.jpg">
+                      <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-4.jpg">
+                      <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
                     </li>
                     <li class="splide__slide">
-                      <img src="./images/slides/third-car-5.jpg">
+                      <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
                     </li>
                   </ul>
                 </div>
@@ -632,26 +811,28 @@
               <div class="examples__description_item">
                 <p><span class="examples__description_text-color">Экономия: </span>1 000 BYN</p>
               </div>
-              <h3 class="examples__subtitle">Отзыв клиента</h3>
-              <p class="examples__text">После Peugeot 308 хотелось машину побольше, так как подрастает
-                будущее поколение, но в то же время такую же неприхотливую как мой львенок. Парни молодцы,
-                нашли машину за пару дней, немного не вписались в бюджет, но оно того стоило, я даже не
-                думала, что мой новый Равик я так сильно полюблю.</p>
-              <div class="examples__customer">
-                <p>Таня</p>
-                <p>Минск, 29 марта 2020 года</p>
-              </div>
+            </div>
+          </div>
+          <div class="comment__wrapper third">
+            <h3 class="examples__subtitle">Отзыв клиента</h3>
+            <p class="examples__text">После Peugeot 308 хотелось машину побольше, так как подрастает
+              будущее поколение, но в то же время такую же неприхотливую как мой львенок. Парни молодцы,
+              нашли машину за пару дней, немного не вписались в бюджет, но оно того стоило, я даже не
+              думала, что мой новый Равик я так сильно полюблю.</p>
+            <div class="examples__customer">
+              <p>Таня</p>
+              <p>Минск, 29 марта 2020 года</p>
             </div>
           </div>
         </div>
         <div class="social">
           <h3 class="social__header">Больше отзывов и примеров наших подборов смотрите в наших соц. сетях:</h3>
           <div class="social__icons">
-            <a href="#"><img src="./images/social/insta-icon.png" alt="instagram" class="social__icon"></a>
-            <a href="#"><img src="./images/social/tik-tok-icon.png" alt="tik-tok" class="social__icon"></a>
-            <a href="#"><img src="./images/social/vk-icon.png" alt="vk" class="social__icon"></a>
-            <a href="#"><img src="./images/social/youTube-icon.png" alt="youTube" class="social__icon"></a>
-            <a href="#"><img src="./images/social/facebook-icon.png" alt="facebook" class="social__icon"></a>
+            <a href="#"><img src="./images/social/insta-icon.svg" alt="instagram" class="social__icon"></a>
+            <a href="#"><img src="./images/social/tik-tok-icon.svg" alt="tik-tok" class="social__icon"></a>
+            <a href="#"><img src="./images/social/vk-icon.svg" alt="vk" class="social__icon"></a>
+            <a href="#"><img src="./images/social/youTube-icon.svg" alt="youTube" class="social__icon"></a>
+            <a href="#"><img src="./images/social/facebook-icon.svg" alt="facebook" class="social__icon"></a>
           </div>
         </div>
       </div>
@@ -719,10 +900,68 @@
             </div>
           </div>
         </div>
+        <div id="questions-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Можете ли вы осмотреть авто без моего присутствия?</h3>
+                  <span class="description__item_info_text">
+                    — да, конечно, мы досконально осмотрим авто и по итогу предоставим вам 
+                    подробные отчет (фото и техническая часть).
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Сколько времени занимает подбор автомобиля?</h3>
+                  <span class="description__item_info_text">
+                    — исходя из нашей практики поиск и подбор авто может занимать от 1 – 2 дней 
+                    до 2 – 3 недель, все зависит от популярности модели.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Я не знаю какое авто хочу. Поможете?</h3>
+                  <span class="description__item_info_text">
+                    — во время консультации мы выясним у вас потребности, желания, бюджет,
+                    на основании этого предложим для вас наиболее подходящие варианты.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Требуемое авто не в Минске, как быть?</h3>
+                  <span class="description__item_info_text">
+                    — любой вопрос решаем, мы всегда можем выехать в любую точку Беларуси для осмотра конкретного
+                    автомобиля.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Какие бонусы я могу получить после обращения к вам?</h3>
+                  <span class="description__item_info_text">
+                    — периодически мы проводим различные акции, о которых вы можете узнать в наших социальных сетях.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Вы заключаете договор с заказчиком?</h3>
+                  <span class="description__item_info_text">
+                    — да, мы работаем в соответствии с законодательством Республики Беларусь.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer id="contacts" class="footer">
     <div class="wrapper">
       <h2 class="footer__header">Наши контакты</h2>
       <div class="footer__contacts">
@@ -744,17 +983,17 @@
             <span>Время работы:</span>
             <p class="footer__contacts_link">Ежедневно с 9:00 до 21:00</p>
           </div>
-          <div class="footer__contacts_info_subtitle">
+          <div class="footer__contacts_info_subtitle footer__contacts_social">
             <span>Присоединяйся к нам:</span>
-            <div class="social__icons ">
-              <a href="#"><img src="./images/social/insta-icon.png" alt="instagram"
+            <div class="social__icons">
+              <a href="#"><img src="./images/social/insta-icon.svg" alt="instagram"
                   class="social__icon social__footer_icon"></a>
-              <a href="#"><img src="./images/social/tik-tok-icon.png" alt="tik-tok"
+              <a href="#"><img src="./images/social/tik-tok-icon.svg" alt="tik-tok"
                   class="social__icon social__footer_icon"></a>
-              <a href="#"><img src="./images/social/vk-icon.png" alt="vk" class="social__icon social__footer_icon"></a>
-              <a href="#"><img src="./images/social/youTube-icon.png" alt="youTube"
+              <a href="#"><img src="./images/social/vk-icon.svg" alt="vk" class="social__icon social__footer_icon"></a>
+              <a href="#"><img src="./images/social/youTube-icon.svg" alt="youTube"
                   class="social__icon social__footer_icon"></a>
-              <a href="#"><img src="./images/social/facebook-icon.png" alt="facebook"
+              <a href="#"><img src="./images/social/facebook-icon.svg" alt="facebook"
                   class="social__icon social__footer_icon"></a>
             </div>
           </div>
@@ -782,6 +1021,25 @@
             <button class="question__form_button" type="submit"> ОТПРАВИТЬ</button>
           </form>
         </div>
+      </div>
+      <div class="mobile__footer">
+        <div class="mobile__footer_contacts">
+          <span>Присоединяйся к нам:</span>
+          <div class="social__icons">
+            <a href="#"><img src="./images/social/insta-icon.svg" alt="instagram"
+                class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/tik-tok-icon.svg" alt="tik-tok"
+                class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/vk-icon.svg" alt="vk" class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/youTube-icon.svg" alt="youTube"
+                class="social__icon social__footer_icon"></a>
+            <a href="#"><img src="./images/social/facebook-icon.svg" alt="facebook"
+                class="social__icon social__footer_icon"></a>
+          </div>
+        </div>
+        <button class="information__button information__button_footer">
+          ЗАКАЗАТЬ ПОДБОР
+        </button>
       </div>
       <span class="rights">
         PROpodbor.by 2021. Все права защищены.
