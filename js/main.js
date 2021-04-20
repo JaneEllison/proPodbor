@@ -24,8 +24,6 @@ popupButton.forEach((button) => {
     switch (button.className) {
       case "price__order_button first__price_button":
         contactTitle.innerText = 'Оставьте заявку на пакет «Охотник» и мы свяжемся с вами в ближайшее время'
-
-        console.log(contactTitle.innerText)
         break;
       case "price__order_button second__price_button":
         contactTitle.innerText = 'Оставьте заявку на пакет «Дневной дозор» и мы свяжемся с вами в ближайшее время'
