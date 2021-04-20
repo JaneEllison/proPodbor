@@ -40,7 +40,35 @@ const primarySliderOptions = {
   },
 };
 
-document.addEventListener('DOMContentLoaded', function () {
+const advantagesSliderOptions = {
+  rewind: true,
+  fixedWidth: 470,
+  fixedHeight: 80,
+  gap: 0,
+  focus: 'left',
+  trimSpace: false,
+  arrows: false,
+  easing: 'linear',
+  pagination: true,
+  pauseOnHover: true,
+  drag: true,
+  isNavigation: true,
+  direction: 'ltr',
+  padding: {
+    bottom: '10px',
+  },
+  breakpoints: {
+    640: {
+      perPage: 3,
+    },
+  },
+  classes: {
+    pagination: 'splide__pagination advantages-pagination',
+  }
+}
+
+const advantagesSlider = new Splide('#advantages-slider', advantagesSliderOptions).mount();
+const createExampleSlider = () => {
   var secondarySlider = new Splide('#secondary-slider', secondarySliderOptions).mount();
   var primarySlider = new Splide('#primary-slider', primarySliderOptions);
 
@@ -55,4 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
   var primarySlider3 = new Splide('#primary-slider-3', primarySliderOptions);
 
   primarySlider3.sync(secondarySlider3).mount();
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  createExampleSlider();
+  addAdvantagesSlider();
 });
