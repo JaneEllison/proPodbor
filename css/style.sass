@@ -195,6 +195,7 @@ ul
     justify-content: center
     align-items: start
     margin-top: 40px
+    flex-direction: row
 
     &-part
       margin-top: 50px
@@ -224,7 +225,6 @@ ul
           max-height: 100vh
 
       & label
-        color: #131313
         position: relative
         display: flex
         padding: 26px 0
@@ -232,6 +232,13 @@ ul
         font-weight: 500
         font-size: 24px
         line-height: 38px
+        color: #131313
+
+        & span
+          color: #131313
+
+      &-hide
+        display: none
 
       &_content
         max-height: 0
@@ -247,6 +254,34 @@ ul
           margin: 0
           width: 336px
           margin-bottom: 26px
+
+label.description__add_items
+  align-items: center
+  justify-content: center
+
+  & img
+    margin-left: 22px
+
+.description__add_items-block
+  display: none
+  border-bottom: 1px solid rgba(77, 77, 77, 0.3)
+
+.description__info_item input[type=checkbox] + label::after
+  display: none
+
+.description__number
+  margin-right: 20px
+  font-weight: normal
+  font-size: 14px
+  line-height: 22px
+  color: #322F37
+  display: none
+
+.description_down-arrow
+  transform: rotateX(180deg)
+
+  &-hide
+    transform: rotateX(360deg)
 
 /* Icon */
 .description__info_item, .price__item_description
@@ -889,9 +924,6 @@ svg
     &-part
       margin-top: 0
 
-  .description__info_item label
-    padding-bottom: 10px
-
   .description__info_item_content p
     width: 90%
 
@@ -996,6 +1028,21 @@ svg
 
   .advantages__description
     column-gap: 40px
+
+  .description__info
+    flex-direction: column
+
+  .description__header_subtitle
+    width: 100%
+
+  .description__info_item
+    width: 100%
+
+  .description__number
+    display: flex
+
+  .description__info_item.description__add_items-block
+    display: flex
 
 .splide__slide img
   width: 80px !important

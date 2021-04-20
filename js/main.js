@@ -1,3 +1,7 @@
+const descriptionAddItemsButton = document.querySelector('.description__add_items-block');
+const descriptionInfoItems = document.querySelectorAll('.hidden-item');
+const descriptionDownArrow = document.querySelector('.description_down-arrow');
+
 const secondarySliderOptions = {
   rewind: true,
   fixedWidth: 90,
@@ -67,7 +71,7 @@ const advantagesSliderOptions = {
   }
 }
 
-const advantagesSlider = new Splide('#advantages-slider', advantagesSliderOptions).mount();
+const advantagesSlider = new Splide('#advantages-slider', advantagesSliderOptions);
 const createExampleSlider = () => {
   var secondarySlider = new Splide('#secondary-slider', secondarySliderOptions).mount();
   var primarySlider = new Splide('#primary-slider', primarySliderOptions);
@@ -87,5 +91,12 @@ const createExampleSlider = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   createExampleSlider();
-  addAdvantagesSlider();
+  advantagesSlider.mount()
 });
+
+descriptionAddItemsButton.addEventListener('click', () => {
+  descriptionInfoItems.forEach((item) => {
+    item.classList.toggle('description__info_item-hide');
+  });
+  descriptionDownArrow.classList.toggle('description_down-arrow-hide')
+})
