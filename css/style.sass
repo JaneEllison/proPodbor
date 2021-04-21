@@ -1,5 +1,13 @@
+$base-color-dark: #0B0B0B
+$base-color-light: #FFFFFF
+$base-color-theme: #F44D34
+$base-color-subtitle: #CCCCCC
+$base-color-lines: #322F37
+$additional-color-subtitle: #666666
+$additional-color-lines: #131313
+
 *
-  color: #fff
+  color: $base-color-light
   font-family: Ubuntu, sans-serif
   box-sizing: border-box
 
@@ -8,7 +16,7 @@ label, button, input
   outline: none
 
 body
-  background-color: #0B0B0B
+  background-color: $base-color-dark
 
 ul
   padding: 0
@@ -46,7 +54,7 @@ ul
         display: none
 
       &:hover
-        color: #F44D34
+        color: $base-color-theme
 
   &__company_info
     display: flex
@@ -66,7 +74,7 @@ ul
   &.on
     .one
       transform: (rotate(45deg) translate(4px, 6px))
-      background: #000
+      background: $base-color-dark
       width: 50%
       height: 2px
 
@@ -75,7 +83,7 @@ ul
 
     .three
       transform: (rotate(-45deg) translate(7px, -10px))
-      background: #0B0B0B
+      background: $base-color-dark
       width: 50%
       height: 2px
 
@@ -90,7 +98,7 @@ ul
   transition-duration: 0.5s
 
 .phone__discription:hover
-  color: #F44D34
+  color: $base-color-theme
   cursor: pointer
 
 .phone__number
@@ -102,7 +110,7 @@ ul
 
   &:hover
     transform: scale(1.1)
-    color: #F44D34
+    color: $base-color-theme
 
   &-image
     display: none
@@ -131,7 +139,7 @@ ul
   position: fixed
   width: 100%
   height: 100%
-  background: #fff
+  background: $base-color-light
   z-index: 999
   top: 0
   margin: auto
@@ -170,11 +178,11 @@ ul
     margin: 0
 
     &-color
-      color: #F44D34
+      color: $base-color-theme
 
   &__subtitle
     width: 453px
-    color: #CCCCCC
+    color: $base-color-subtitle
     margin: 50px 0
     font-size: 24px
 
@@ -185,15 +193,15 @@ ul
     font-size: 24px
     line-height: 38px
     letter-spacing: 0.02rem
-    color: #F44D34
-    border: 1px solid #F44D34
+    color: $base-color-theme
+    border: 1px solid $base-color-theme
     background: transparent
     transition: 0.5s linear
 
     &:hover
-      color: #FFFFFF
-      background: #F44D34
-      border: 1px solid #F44D34
+      color: $base-color-light
+      background: $base-color-theme
+      border: 1px solid $base-color-theme
       cursor: pointer
 
 #advantages-slider
@@ -261,14 +269,14 @@ ul
       font-weight: 500
       font-size: 24px
       line-height: 38px
-      color: #F44D34
+      color: $base-color-theme
 
     &_text
       line-height: 30px
-      color: #CCCCCC
+      color: $base-color-subtitle
 
 .description
-  background: #ffffff
+  background: $base-color-light
   margin: 0 auto
   display: flex
   flex-direction: column
@@ -284,7 +292,7 @@ ul
       font-weight: bold
       font-size: 38px
       line-height: 50px
-      color: #131313
+      color: $additional-color-lines
 
     &_subtitle
       font-size: 16px
@@ -311,7 +319,7 @@ ul
       overflow: hidden
       display: flex
       flex-direction: column
-      color: #131313
+      color: $additional-color-lines
       width: 368px
       border-top: 1px solid rgba(77, 77, 77, 0.3)
 
@@ -330,14 +338,14 @@ ul
         position: relative
         display: flex
         padding: 26px 0
-        background: #ffffff
+        background: $base-color-light
         font-weight: 500
         font-size: 24px
         line-height: 38px
-        color: #131313
+        color: $additional-color-lines
 
         & span
-          color: #131313
+          color: $additional-color-lines
 
       &-hide
         display: flex
@@ -345,17 +353,23 @@ ul
       &_content
         max-height: 0
         overflow: hidden
-        background: #ffffff
+        background: $base-color-light
         -webkit-transition: max-height .7s
         -o-transition: max-height .7s
         transition: max-height .7s
         & p
-          color: #131313
+          color: $additional-color-lines
           font-size: 16px
           line-height: 30px
           margin: 0
           width: 336px
           margin-bottom: 26px
+
+// .splide__slide.description__item, .splide__slide 
+//   opacity: 0.5
+
+// .splide__slide.description__item.is-visible, .splide__slide.is-visible
+//   opacity: 1
 
 label.description__add_items
   align-items: center
@@ -376,7 +390,7 @@ label.description__add_items
   font-weight: normal
   font-size: 14px
   line-height: 22px
-  color: #322F37
+  color: $base-color-lines
   display: none
 
 .description_down-arrow
@@ -424,7 +438,7 @@ label.description__add_items
     margin-top: 60px
 
     &_description
-      color: #fff
+      color: $base-color-light
       width: 100%
       border-top: 1px solid rgba(204, 204, 204, 0.5)
 
@@ -440,7 +454,7 @@ label.description__add_items
           max-height: 100vh
 
       & label
-        color: #ffffff
+        color: $base-color-light
         position: relative
         display: flex
         padding: 30px 0
@@ -476,7 +490,7 @@ label.description__add_items
       position: relative
       font-size: 16px
       line-height: 30px
-      color: #CCCCCC
+      color: $base-color-subtitle
       list-style-type: none
       padding-left: 20px
       margin-bottom: 10px
@@ -517,28 +531,28 @@ label.description__add_items
     line-height: 38px
     text-align: center
     letter-spacing: 0.02em
-    color: #F44D34
+    color: $base-color-theme
     background: transparent
-    border: 1px solid #F44D34
+    border: 1px solid $base-color-theme
     transition: 0.5s linear
 
     &:hover
-      color: #FFFFFF
-      background: #F44D34
-      border: 1px solid #F44D34
+      color: $base-color-light
+      background: $base-color-theme
+      border: 1px solid $base-color-theme
       cursor: pointer
 
 .contact
   width: 100%
   padding: 120px 0
-  background: #fff
+  background: $base-color-light
 
   &__title
     margin: 0
     font-weight: bold
     font-size: 38px
     line-height: 50px
-    color: #131313
+    color: $additional-color-lines
 
   &-form
     display: flex
@@ -554,8 +568,8 @@ label.description__add_items
       padding: 7px 2px
       width: 370px
       border: none
-      border-bottom: 1px solid #131313
-      color: #131313
+      border-bottom: 1px solid $additional-color-lines
+      color: $additional-color-lines
 
       &::placeholder
         font-size: 16px
@@ -569,17 +583,17 @@ label.description__add_items
       line-height: 38px
       text-align: center
       letter-spacing: 0.02em
-      color: #F44D34
+      color: $base-color-theme
       padding: 20px 0
       background: transparent
-      border: 2px solid #F44D34
+      border: 2px solid $base-color-theme
       margin-top: 10px
       transition: 0.5s linear
 
       &:hover
-        color: #FFFFFF
-        background: #F44D34
-        border: 2px solid #F44D34
+        color: $base-color-light
+        background: $base-color-theme
+        border: 2px solid $base-color-theme
         cursor: pointer
 
   &__subttile
@@ -642,7 +656,7 @@ label.description__add_items
 
   &__subtitle
     margin: 30px 0 10px 0
-    color: #F44D34
+    color: $base-color-theme
     font-weight: bold
     font-size: 24px
     line-height: 38px
@@ -663,7 +677,7 @@ label.description__add_items
       color: rgba(204, 204, 204, 0.7)
 
 .examples__description_text-color
-  color: #F44D34
+  color: $base-color-theme
   margin-right: 3px
 
 .comment__wrapper
@@ -690,7 +704,7 @@ label.description__add_items
     font-weight: 500
     font-size: 24px
     line-height: 38px
-    color: #FFFFFF
+    color: $base-color-light
 
   &__icon
     margin-right: 15px
@@ -703,14 +717,14 @@ label.description__add_items
 .questions
   width: 100%
   padding: 120px 0
-  background: #fff
+  background: $base-color-light
 
   &__title
     margin: 0
     font-weight: bold
     font-size: 38px
     line-height: 50px
-    color: #131313
+    color: $additional-color-lines
 
   &__items
     margin-top: 60px
@@ -727,7 +741,7 @@ label.description__add_items
   justify-content: center
   width: 364px
   height: fit-content
-  border: 1px solid #CCCCCC
+  border: 1px solid $base-color-subtitle
   padding: 26px 0
 
   & input
@@ -746,7 +760,7 @@ label.description__add_items
     font-weight: bold
     font-size: 16px
     line-height: 26px
-    color: #131313
+    color: $additional-color-lines
 
   &_content
     display: flex
@@ -758,7 +772,7 @@ label.description__add_items
     transition: max-height .7s
 
     & p
-      color: #131313
+      color: $additional-color-lines
       margin: 20px 0 0 0
       width: 304px
 
@@ -800,7 +814,7 @@ label.description__add_items
     font-weight: bold
     font-size: 38px
     line-height: 50px
-    color: #FFFFFF
+    color: $base-color-light
 
   &__contact_subtitle
     color: rgba(204, 204, 204, 0.7)
@@ -823,7 +837,7 @@ label.description__add_items
         font-weight: normal
         font-size: 16px
         line-height: 30px
-        color: #CCCCCC
+        color: $base-color-subtitle
 
     &_form
       border: 1px solid rgba(204, 204, 204, 0.5)
@@ -836,13 +850,13 @@ label.description__add_items
       font-weight: normal
       font-size: 24px
       line-height: 38px
-      color: #FFFFFF
+      color: $base-color-light
       margin: 0
       margin-bottom: 30px
 
     &_subtitle
       font-size: 14px
-      color: #CCCCCC
+      color: $base-color-subtitle
       margin-bottom: 30px
 
 .footer__contacts_link
@@ -850,7 +864,7 @@ label.description__add_items
   font-weight: 500
   font-size: 24px
   line-height: 38px
-  color: #FFFFFF
+  color: $base-color-light
   text-decoration: none
 
 .social__footer_icon
@@ -868,14 +882,14 @@ label.description__add_items
 
   & span
     line-height: 30px
-    color: #CCCCCC
+    color: $base-color-subtitle
 
 .rights
   margin-top: 63px
   font-weight: normal
   font-size: 14px
   line-height: 22px
-  color: #CCCCCC
+  color: $base-color-subtitle
 
 .question__form
   display: flex
@@ -883,10 +897,10 @@ label.description__add_items
 
   &_input
     width: 370px
-    background: #0B0B0B
+    background: $base-color-dark
     border: none
-    color: #FFFFFF
-    border-bottom: 1px solid #FFFFFF
+    color: $base-color-light
+    border-bottom: 1px solid $base-color-light
     font-size: 16px
     line-height: 30px
 
@@ -904,20 +918,20 @@ label.description__add_items
     line-height: 38px
     text-align: center
     letter-spacing: 0.02em
-    color: #F44D34
-    border: 2px solid #F44D34
+    color: $base-color-theme
+    border: 2px solid $base-color-theme
     background: transparent
     margin-top: 50px
     transition: 0.5s linear
 
     &:hover
-      background: #F44D34
-      color: #FFFFFF
+      background: $base-color-theme
+      color: $base-color-light
 
 .form-error
   font-size: 12px
   line-height: 19px
-  color: #F44D34
+  color: $base-color-theme
   margin-bottom: 6px
 
 .splide__track
@@ -932,18 +946,18 @@ label.description__add_items
 
 .splide__arrow
   background: transparent !important
-  border: 3px solid #fff !important
+  border: 3px solid $base-color-light !important
   opacity: 1 !important
 
 svg
-  fill: #fff !important
+  fill: $base-color-light !important
 
 .secondary>.splide__track>.splide__list>.splide__slide.is-active
-  border-color: #F44D34 !important
+  border-color: $base-color-theme !important
 
 .splide__arrow
   & svg:hover
-    fill: #F44D34 !important
+    fill: $base-color-theme !important
 
 @media (max-width: 1240px)
   .question__item
@@ -1121,7 +1135,7 @@ svg
     display: flex
     flex-direction: column
     z-index: 10
-    background-color: #fff
+    background-color: $base-color-light
     height: 100%
     width: 100%
     position: absolute
@@ -1131,13 +1145,13 @@ svg
     font-weight: 500
     font-size: 24px
     line-height: 38px
-    color: #000
+    color: $base-color-dark
     margin-right: 0
     margin-bottom: 30px
     transition: 0.5s linear
 
     &:hover
-      color: #F44D34
+      color: $base-color-theme
 
     &-mobile
       display: flex
@@ -1316,7 +1330,7 @@ svg
   .description__item_info_text
     font-size: 14px
     line-height: 22px
-    color: #666666
+    color: $additional-color-subtitle
 
   .footer__contacts_social
     display: none
@@ -1339,6 +1353,7 @@ svg
     &_subtitle
       margin-bottom: 2px
       width: 280px
+      margin-top: 0
 
       &:nth-child(1)
         order: 1

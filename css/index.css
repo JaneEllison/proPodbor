@@ -1477,6 +1477,7 @@ svg {
   .footer__contacts_info_subtitle {
     margin-bottom: 2px;
     width: 280px;
+    margin-top: 0;
   }
   .footer__contacts_info_subtitle:nth-child(1) {
     order: 1;

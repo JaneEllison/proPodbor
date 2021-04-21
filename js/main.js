@@ -6,7 +6,6 @@ const headerNav = document.querySelector('.header__navigation');
 
 const phone = document.querySelectorAll('.phone');
 const phoneForm = document.querySelectorAll('.phone__form');
-const questionsButtons = document.querySelectorAll('.send-phone__button');
 const questionFormError = document.querySelectorAll('.form-error');
 
 const closePopapIcon = document.querySelector('.close-popap_icon');
@@ -50,7 +49,6 @@ phone.forEach((input) => {
     const check = pattern.test(input.value);
 
     if (!check) {
-      console.log(questionFormError)
       questionFormError.forEach((error) => error.innerText = 'Номер телефона введен некорректно');
       input.style.borderBottomColor = '#F44D34';
     }
@@ -140,8 +138,6 @@ const advantagesSliderOptions = {
   drag: true,
   isNavigation: true,
   direction: 'ltr',
-  autoplay: true,
-  interval: '10000',
   perMove: 1,
   padding: {
     bottom: '10px',
@@ -174,8 +170,6 @@ const questionsSliderOptions = {
   drag: true,
   isNavigation: true,
   direction: 'ltr',
-  autoplay: true,
-  interval: '10000',
   classes: {
     pagination: 'splide__pagination advantages-pagination',
   },
