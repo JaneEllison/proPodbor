@@ -90,7 +90,12 @@ const secondarySliderOptions = {
     '980': {
       fixedWidth: 60,
       fixedHeight: 50,
-    }
+    },
+    '510': {
+      fixedWidth: 40,
+      fixedHeight: 35,
+      gap: 0,
+    },
   },
 };
 
@@ -113,7 +118,11 @@ const primarySliderOptions = {
       fixedWidth: '100%',
       height: '50%',
       focus: 'center',
-    }
+    },
+    '510': {
+      fixedWidth: 320,
+      height: '60%',
+    },
   },
 };
 
@@ -139,6 +148,15 @@ const advantagesSliderOptions = {
   },
   classes: {
     pagination: 'splide__pagination advantages-pagination',
+  },
+  breakpoints: {
+    '510': {
+      fixedWidth: 300,
+      fixedHeight: 85,
+      padding: {
+        bottom: '0',
+      },
+    },
   }
 };
 
@@ -160,6 +178,13 @@ const questionsSliderOptions = {
   interval: '10000',
   classes: {
     pagination: 'splide__pagination advantages-pagination',
+  },
+  breakpoints: {
+    '510': {
+      fixedWidth: 275,
+      fixedHeight: 80,
+      focus: 'left',
+    },
   }
 };
 
