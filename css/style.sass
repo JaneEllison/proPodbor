@@ -1,5 +1,13 @@
+$base-color-dark: #0B0B0B
+$base-color-light: #FFFFFF
+$base-color-theme: #F44D34
+$base-color-subtitle: #CCCCCC
+$base-color-lines: #322F37
+$additional-color-subtitle: #666666
+$additional-color-lines: #131313
+
 *
-  color: #fff
+  color: $base-color-light
   font-family: Ubuntu, sans-serif
   box-sizing: border-box
 
@@ -8,7 +16,7 @@ label, button, input
   outline: none
 
 body
-  background-color: #0B0B0B
+  background-color: $base-color-dark
 
 ul
   padding: 0
@@ -46,7 +54,7 @@ ul
         display: none
 
       &:hover
-        color: #F44D34
+        color: $base-color-theme
 
   &__company_info
     display: flex
@@ -66,7 +74,7 @@ ul
   &.on
     .one
       transform: (rotate(45deg) translate(4px, 6px))
-      background: #000
+      background: $base-color-dark
       width: 50%
       height: 2px
 
@@ -75,7 +83,7 @@ ul
 
     .three
       transform: (rotate(-45deg) translate(7px, -10px))
-      background: #0B0B0B
+      background: $base-color-dark
       width: 50%
       height: 2px
 
@@ -89,6 +97,10 @@ ul
   backface-visibility: hidden
   transition-duration: 0.5s
 
+.phone__discription:hover
+  color: $base-color-theme
+  cursor: pointer
+
 .phone__number
   font-size: 24px
   font-weight: 500
@@ -98,7 +110,7 @@ ul
 
   &:hover
     transform: scale(1.1)
-    color: #F44D34
+    color: $base-color-theme
 
   &-image
     display: none
@@ -123,6 +135,31 @@ ul
     top: 218px
     background-color: transparent
 
+.contact__popap
+  position: fixed
+  width: 100%
+  height: 100%
+  background: $base-color-light
+  z-index: 999
+  top: 0
+  margin: auto
+  display: flex
+  align-items: center
+  justify-content: center
+
+.wrapper__popap
+  width: 1200px
+  position: relative
+
+.close-popap_icon
+  position: absolute
+  right: 0
+  top: -80px
+  z-index: 1000
+
+.hide__popup
+  display: none
+
 .information
   display: flex
   margin: 0 auto
@@ -141,11 +178,11 @@ ul
     margin: 0
 
     &-color
-      color: #F44D34
+      color: $base-color-theme
 
   &__subtitle
     width: 453px
-    color: #CCCCCC
+    color: $base-color-subtitle
     margin: 50px 0
     font-size: 24px
 
@@ -156,19 +193,36 @@ ul
     font-size: 24px
     line-height: 38px
     letter-spacing: 0.02rem
-    color: #F44D34
-    border: 1px solid #F44D34
+    color: $base-color-theme
+    border: 1px solid $base-color-theme
     background: transparent
     transition: 0.5s linear
 
     &:hover
-      color: #FFFFFF
-      background: #F44D34
-      border: 1px solid #F44D34
+      color: $base-color-light
+      background: $base-color-theme
+      border: 1px solid $base-color-theme
       cursor: pointer
 
 #advantages-slider
   display: none
+
+.nav__buttons
+  display: none
+  justify-content: center
+  align-items: center
+
+.arrow__slider
+  background: transparent
+  border: none
+  transition: 0.5s linear
+
+  &:hover
+    cursor: pointer
+    transform: scale(1.2)
+
+.slider__count
+  margin: 0 50px
 
 .advantages
   margin: 0 auto
@@ -215,14 +269,14 @@ ul
       font-weight: 500
       font-size: 24px
       line-height: 38px
-      color: #F44D34
+      color: $base-color-theme
 
     &_text
       line-height: 30px
-      color: #CCCCCC
+      color: $base-color-subtitle
 
 .description
-  background: #ffffff
+  background: $base-color-light
   margin: 0 auto
   display: flex
   flex-direction: column
@@ -238,7 +292,7 @@ ul
       font-weight: bold
       font-size: 38px
       line-height: 50px
-      color: #131313
+      color: $additional-color-lines
 
     &_subtitle
       font-size: 16px
@@ -265,7 +319,7 @@ ul
       overflow: hidden
       display: flex
       flex-direction: column
-      color: #131313
+      color: $additional-color-lines
       width: 368px
       border-top: 1px solid rgba(77, 77, 77, 0.3)
 
@@ -284,14 +338,14 @@ ul
         position: relative
         display: flex
         padding: 26px 0
-        background: #ffffff
+        background: $base-color-light
         font-weight: 500
         font-size: 24px
         line-height: 38px
-        color: #131313
+        color: $additional-color-lines
 
         & span
-          color: #131313
+          color: $additional-color-lines
 
       &-hide
         display: flex
@@ -299,17 +353,23 @@ ul
       &_content
         max-height: 0
         overflow: hidden
-        background: #ffffff
+        background: $base-color-light
         -webkit-transition: max-height .7s
         -o-transition: max-height .7s
         transition: max-height .7s
         & p
-          color: #131313
+          color: $additional-color-lines
           font-size: 16px
           line-height: 30px
           margin: 0
           width: 336px
           margin-bottom: 26px
+
+// .splide__slide.description__item, .splide__slide 
+//   opacity: 0.5
+
+// .splide__slide.description__item.is-visible, .splide__slide.is-visible
+//   opacity: 1
 
 label.description__add_items
   align-items: center
@@ -330,7 +390,7 @@ label.description__add_items
   font-weight: normal
   font-size: 14px
   line-height: 22px
-  color: #322F37
+  color: $base-color-lines
   display: none
 
 .description_down-arrow
@@ -378,7 +438,7 @@ label.description__add_items
     margin-top: 60px
 
     &_description
-      color: #fff
+      color: $base-color-light
       width: 100%
       border-top: 1px solid rgba(204, 204, 204, 0.5)
 
@@ -394,7 +454,7 @@ label.description__add_items
           max-height: 100vh
 
       & label
-        color: #ffffff
+        color: $base-color-light
         position: relative
         display: flex
         padding: 30px 0
@@ -430,7 +490,7 @@ label.description__add_items
       position: relative
       font-size: 16px
       line-height: 30px
-      color: #CCCCCC
+      color: $base-color-subtitle
       list-style-type: none
       padding-left: 20px
       margin-bottom: 10px
@@ -471,28 +531,28 @@ label.description__add_items
     line-height: 38px
     text-align: center
     letter-spacing: 0.02em
-    color: #F44D34
+    color: $base-color-theme
     background: transparent
-    border: 1px solid #F44D34
+    border: 1px solid $base-color-theme
     transition: 0.5s linear
 
     &:hover
-      color: #FFFFFF
-      background: #F44D34
-      border: 1px solid #F44D34
+      color: $base-color-light
+      background: $base-color-theme
+      border: 1px solid $base-color-theme
       cursor: pointer
 
 .contact
   width: 100%
   padding: 120px 0
-  background: #fff
+  background: $base-color-light
 
   &__title
     margin: 0
     font-weight: bold
     font-size: 38px
     line-height: 50px
-    color: #131313
+    color: $additional-color-lines
 
   &-form
     display: flex
@@ -508,8 +568,8 @@ label.description__add_items
       padding: 7px 2px
       width: 370px
       border: none
-      border-bottom: 1px solid #131313
-      color: #131313
+      border-bottom: 1px solid $additional-color-lines
+      color: $additional-color-lines
 
       &::placeholder
         font-size: 16px
@@ -523,17 +583,17 @@ label.description__add_items
       line-height: 38px
       text-align: center
       letter-spacing: 0.02em
-      color: #F44D34
+      color: $base-color-theme
       padding: 20px 0
       background: transparent
-      border: 2px solid #F44D34
+      border: 2px solid $base-color-theme
       margin-top: 10px
       transition: 0.5s linear
 
       &:hover
-        color: #FFFFFF
-        background: #F44D34
-        border: 2px solid #F44D34
+        color: $base-color-light
+        background: $base-color-theme
+        border: 2px solid $base-color-theme
         cursor: pointer
 
   &__subttile
@@ -596,7 +656,7 @@ label.description__add_items
 
   &__subtitle
     margin: 30px 0 10px 0
-    color: #F44D34
+    color: $base-color-theme
     font-weight: bold
     font-size: 24px
     line-height: 38px
@@ -617,7 +677,7 @@ label.description__add_items
       color: rgba(204, 204, 204, 0.7)
 
 .examples__description_text-color
-  color: #F44D34
+  color: $base-color-theme
   margin-right: 3px
 
 .comment__wrapper
@@ -644,7 +704,7 @@ label.description__add_items
     font-weight: 500
     font-size: 24px
     line-height: 38px
-    color: #FFFFFF
+    color: $base-color-light
 
   &__icon
     margin-right: 15px
@@ -657,14 +717,14 @@ label.description__add_items
 .questions
   width: 100%
   padding: 120px 0
-  background: #fff
+  background: $base-color-light
 
   &__title
     margin: 0
     font-weight: bold
     font-size: 38px
     line-height: 50px
-    color: #131313
+    color: $additional-color-lines
 
   &__items
     margin-top: 60px
@@ -681,7 +741,7 @@ label.description__add_items
   justify-content: center
   width: 364px
   height: fit-content
-  border: 1px solid #CCCCCC
+  border: 1px solid $base-color-subtitle
   padding: 26px 0
 
   & input
@@ -700,7 +760,7 @@ label.description__add_items
     font-weight: bold
     font-size: 16px
     line-height: 26px
-    color: #131313
+    color: $additional-color-lines
 
   &_content
     display: flex
@@ -712,7 +772,7 @@ label.description__add_items
     transition: max-height .7s
 
     & p
-      color: #131313
+      color: $additional-color-lines
       margin: 20px 0 0 0
       width: 304px
 
@@ -754,7 +814,7 @@ label.description__add_items
     font-weight: bold
     font-size: 38px
     line-height: 50px
-    color: #FFFFFF
+    color: $base-color-light
 
   &__contact_subtitle
     color: rgba(204, 204, 204, 0.7)
@@ -771,13 +831,13 @@ label.description__add_items
       &_subtitle
         display: flex
         flex-direction: column
-        margin-bottom: 30px
+        margin: 30px 0
 
       & span
         font-weight: normal
         font-size: 16px
         line-height: 30px
-        color: #CCCCCC
+        color: $base-color-subtitle
 
     &_form
       border: 1px solid rgba(204, 204, 204, 0.5)
@@ -790,13 +850,13 @@ label.description__add_items
       font-weight: normal
       font-size: 24px
       line-height: 38px
-      color: #FFFFFF
+      color: $base-color-light
       margin: 0
       margin-bottom: 30px
 
     &_subtitle
       font-size: 14px
-      color: #CCCCCC
+      color: $base-color-subtitle
       margin-bottom: 30px
 
 .footer__contacts_link
@@ -804,7 +864,7 @@ label.description__add_items
   font-weight: 500
   font-size: 24px
   line-height: 38px
-  color: #FFFFFF
+  color: $base-color-light
   text-decoration: none
 
 .social__footer_icon
@@ -822,14 +882,14 @@ label.description__add_items
 
   & span
     line-height: 30px
-    color: #CCCCCC
+    color: $base-color-subtitle
 
 .rights
   margin-top: 63px
   font-weight: normal
   font-size: 14px
   line-height: 22px
-  color: #CCCCCC
+  color: $base-color-subtitle
 
 .question__form
   display: flex
@@ -837,13 +897,15 @@ label.description__add_items
 
   &_input
     width: 370px
-    background: #0B0B0B
+    background: $base-color-dark
     border: none
-    color: #FFFFFF
-    border-bottom: 1px solid #FFFFFF
+    color: $base-color-light
+    border-bottom: 1px solid $base-color-light
     font-size: 16px
     line-height: 30px
-    margin-bottom: 30px
+
+    &:first-child
+      margin-top: 30px
 
     &::placeholder
       color: rgba(204, 204, 204, 0.3)
@@ -856,15 +918,21 @@ label.description__add_items
     line-height: 38px
     text-align: center
     letter-spacing: 0.02em
-    color: #F44D34
-    border: 2px solid #F44D34
+    color: $base-color-theme
+    border: 2px solid $base-color-theme
     background: transparent
     margin-top: 50px
     transition: 0.5s linear
 
     &:hover
-      background: #F44D34
-      color: #FFFFFF
+      background: $base-color-theme
+      color: $base-color-light
+
+.form-error
+  font-size: 12px
+  line-height: 19px
+  color: $base-color-theme
+  margin-bottom: 6px
 
 .splide__track
   margin-top: 12px
@@ -878,18 +946,18 @@ label.description__add_items
 
 .splide__arrow
   background: transparent !important
-  border: 3px solid #fff !important
+  border: 3px solid $base-color-light !important
   opacity: 1 !important
 
 svg
-  fill: #fff !important
+  fill: $base-color-light !important
 
 .secondary>.splide__track>.splide__list>.splide__slide.is-active
-  border-color: #F44D34 !important
+  border-color: $base-color-theme !important
 
 .splide__arrow
   & svg:hover
-    fill: #F44D34 !important
+    fill: $base-color-theme !important
 
 @media (max-width: 1240px)
   .question__item
@@ -906,55 +974,8 @@ svg
   .wrapper
     width: 972px
 
-  .description__info_image
-    width: 40%
-
-  .information__title
-    font-size: 40px
-
-  .advantages__description
-    column-gap: 0px
-
-  .description__item
-    width: 450px
-
-  .description__info_item
-    width: 290px
-
-  .contact-form__input
-    width: 300px
-
-  .phone__number
-    font-size: 18px
-
-  .comment__wrapper
-    position: relative
-    width: 100%
-    top: 0
-
-  .examples__content_item
-    padding: 45px 0 40px 0
-
-    &:nth-child(4)
-      padding: 45px 0 40px 0
-
-  .examples__description_item
-    margin-bottom: 20px
-
-  .footer
-    padding: 100px 0 20px 0
-
-    &__contacts
-      margin-top: 50px
-
-      &_form
-        padding: 50px 20px 42px 30px
-        width: 450px
-        height: fit-content
-
-@media (max-width: 1190px)
-  .wrapper
-    width: 972px
+  .wrapper__popap
+    width: 970px
 
   .main__bg
     top: 0
@@ -984,9 +1005,12 @@ svg
   .advantages__title
     margin-top: 50px
 
-  .description__item_image
-    width: 100px
-    height: 100px
+  .description__item
+    width: 450px
+
+    &_image
+      width: 100px
+      height: 100px
 
   .advantages__description
     column-gap: 60px
@@ -1048,6 +1072,11 @@ svg
     font-size: 16px
     line-height: 24px
 
+  .comment__wrapper
+    position: relative
+    width: 100%
+    top: 0
+
   .phone__number
     display: none
 
@@ -1057,6 +1086,26 @@ svg
   .phone__discription
     display: none
 
+  .examples__content_item
+    padding: 45px 0 40px 0
+
+    &:nth-child(4)
+      padding: 45px 0 40px 0
+
+  .examples__description_item
+    margin-bottom: 20px
+
+  .footer
+    padding: 100px 0 20px 0
+
+    &__contacts
+      margin-top: 50px
+
+      &_form
+        padding: 50px 20px 42px 30px
+        width: 450px
+        height: fit-content
+
 @media (max-width: 980px)
   .advantages__description_desktop
     display: none
@@ -1065,6 +1114,9 @@ svg
     display: flex
 
   .wrapper
+    width: 700px
+
+  .wrapper__popap
     width: 700px
 
   .description__info_item-hide
@@ -1083,7 +1135,7 @@ svg
     display: flex
     flex-direction: column
     z-index: 10
-    background-color: #fff
+    background-color: $base-color-light
     height: 100%
     width: 100%
     position: absolute
@@ -1093,13 +1145,13 @@ svg
     font-weight: 500
     font-size: 24px
     line-height: 38px
-    color: #000
+    color: $base-color-dark
     margin-right: 0
     margin-bottom: 30px
     transition: 0.5s linear
 
     &:hover
-      color: #F44D34
+      color: $base-color-theme
 
     &-mobile
       display: flex
@@ -1278,7 +1330,7 @@ svg
   .description__item_info_text
     font-size: 14px
     line-height: 22px
-    color: #666666
+    color: $additional-color-subtitle
 
   .footer__contacts_social
     display: none
@@ -1301,6 +1353,7 @@ svg
     &_subtitle
       margin-bottom: 2px
       width: 280px
+      margin-top: 0
 
       &:nth-child(1)
         order: 1
@@ -1326,6 +1379,30 @@ svg
     line-height: 24px
     height: fit-content
 
+  .nav__buttons
+    display: flex
+
+  .slider__mobile
+    width: 600px
+    height: fit-content
+    overflow: hidden
+
+  .slider
+    position: relative
+    transition: 500ms
+    width: calc(100% * 3)
+    height: fit-content
+    display: flex
+    justify-content: start
+    flex-wrap: nowrap
+
+  .slide
+    width: 600px
+    height: fit-content
+
+  .examples__content_item
+    border: none
+
 .splide__slide img
   width: 80px !important
   height: 80px !important
@@ -1342,3 +1419,265 @@ svg
 @media (max-width: 720px)
   .wrapper
     width: 600px
+
+  .wrapper__popap
+    width: 570px
+
+  .description__header
+    max-width: 520px
+    margin-right: 0
+
+    &_title
+      margin-right: 0
+
+  .slider__mobile, .slide
+    width: 600px
+
+  .slider
+    width: 1800px
+
+@media (max-width: 610px)
+  .wrapper, .wrapper__popap
+    width: 500px
+
+  .mobile__footer
+    flex-direction: column
+    align-items: flex-start
+
+  .mobile__footer_contacts
+    order: 2
+    margin-top: 30px
+
+  .main__bg
+    opacity: 0.5
+
+  .slider__mobile, .slide
+    width: 500px
+
+  .slider
+    width: 1500px
+
+@media (max-width: 510px)
+  .wrapper, .wrapper__popap, .examples__content_items, .social__header
+    width: 320px
+
+  .information__wrapper, .description, .price, .contact, .examples, .questions, .footer
+    padding: 60px 0
+
+  .slider__mobile, .slide
+    width: 320px
+
+  .main__bg
+    width: 320px
+    height: 317px
+    right: 0
+
+  .header__navigation_link
+    font-size: 16px
+
+  .header__navigation_link
+    margin-bottom: 5px
+
+  .information__title
+    font-size: 16px
+    line-height: 24px
+
+  .information__subtitle
+    font-size: 14px
+    line-height: 22px
+    width: fit-content
+
+  .advantages__title
+    font-size: 16px
+    line-height: 26px
+    margin-bottom: 0
+
+  .splide__slide img
+    width: 50px !important
+    height: 50px !important
+
+  .description__item_info_title
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 0
+
+  .description__item_info_text
+    font-size: 12px
+    line-height: 19px
+
+  .description__header_title
+    font-size: 16px
+    line-height: 26px
+    margin-bottom: 10px
+
+  .description__header_subtitle
+    font-size: 12px
+    line-height: 19px
+
+  .description__info
+    margin-bottom: 0
+
+  .description__info_item label
+    font-weight: bold
+    font-size: 14px
+    line-height: 22px
+
+  .description__number
+    font-size: 10px
+    line-height: 16px
+
+  .description__info_item_content p
+    font-size: 14px
+    line-height: 22px
+    width: 90%
+
+  .description_down-arrow
+    width: 19px
+    height: 19px
+
+  .price__header
+    font-size: 16px
+    line-height: 26px
+
+  .price__item
+    margin-top: 30px
+
+  .price__text
+    font-size: 14px
+    line-height: 22px
+    width: 70%
+
+  .price__list
+    margin-bottom: 30px
+
+  .price__list_part li
+    font-size: 12px
+    line-height: 19px
+
+  .price__item_description_content
+    height: 100%
+
+  .price__order
+    flex-direction: column
+    align-items: start
+
+    &_coast_title
+      font-size: 12px
+      line-height: 19px
+
+    &_coast_subtitle
+      font-size: 22px
+      line-height: 38px
+      margin-bottom: 30px
+
+  .price__order_button
+    font-size: 14px
+
+  .contact__title
+    font-size: 16px
+    line-height: 26px
+
+  .contact-form__info_input
+    margin-top: 30px
+
+  .contact-form__input
+    &::placeholder
+      font-size: 14px
+      line-height: 22px
+
+  .contact-form__button
+    font-size: 14px
+    line-height: 20px
+
+  .examples__title
+    font-size: 16px
+    line-height: 26px
+
+  .examples__content_item
+    padding: 0
+    margin-top: 30px
+
+  .splide__track
+    margin-top: 0
+
+  .examples__description_item
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 10px
+
+  .examples__subtitle
+    font-size: 14px
+    line-height: 22px
+    margin: 20px 0 10px 0
+
+  .examples__text
+    font-size: 12px
+    line-height: 19px
+
+  .examples__customer
+    align-items: center
+
+  .examples__customer p
+    font-size: 12px
+    line-height: 19px
+
+  .examples__content_item:nth-child(4)
+    padding: 0
+
+  .social__header
+    font-size: 14px
+    line-height: 22px
+    margin-bottom: 10px
+
+  .social__icon
+    margin-right: 10px
+
+  .questions__title
+    font-size: 16px
+    line-height: 26px
+    margin-bottom: 27px
+
+  .footer__header
+    font-size: 16px
+    line-height: 26px
+
+  .footer__contacts
+    margin-top: 30px
+
+  .footer__contacts_info_subtitle
+    margin: 0
+
+  .footer__contacts_info span
+    font-size: 14px
+    line-height: 22px
+
+  .footer__contacts_link
+    font-size: 14px
+    line-height: 22px
+    margin-top: 5px
+
+  .information__button_footer
+    font-size: 14px
+    line-height: 20px
+    width: 100%
+
+  .mobile__footer
+    margin-top: 40px
+
+  @media (max-width: 320px)
+    .wrapper, .wrapper__popap, .examples__content_items, .social__header
+      width: 300px
+
+    .slider__mobile, .slide
+      width: 300px
+
+  @media (max-width: 280px)
+    .wrapper, .wrapper__popap, .examples__content_items, .social__header
+      width: 270px
+
+    .slider__mobile, .slide
+      width: 270px
+
+    .social__icon
+      width: 30px
+      height: 30px
