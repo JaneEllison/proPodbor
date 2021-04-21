@@ -217,6 +217,26 @@ ul {
   display: none;
 }
 
+.nav__buttons {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow__slider {
+  background: transparent;
+  border: none;
+  transition: 0.5s linear;
+}
+.arrow__slider:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.slider__count {
+  margin: 0 50px;
+}
+
 .advantages {
   margin: 0 auto;
   margin-top: 285px;
@@ -1485,6 +1505,35 @@ svg {
     line-height: 24px;
     height: fit-content;
   }
+
+  .nav__buttons {
+    display: flex;
+  }
+
+  .slider__mobile {
+    width: 600px;
+    height: fit-content;
+    overflow: hidden;
+  }
+
+  .slider {
+    position: relative;
+    transition: 500ms;
+    width: calc(100% * 3);
+    height: fit-content;
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
+
+  .slide {
+    width: 600px;
+    height: fit-content;
+  }
+
+  .examples__content_item {
+    border: none;
+  }
 }
 .splide__slide img {
   width: 80px !important;
@@ -1519,6 +1568,14 @@ svg {
   .description__header_title {
     margin-right: 0;
   }
+
+  .slider__mobile, .slide {
+    width: 600px;
+  }
+
+  .slider {
+    width: 1800px;
+  }
 }
 @media (max-width: 610px) {
   .wrapper, .wrapper__popap {
@@ -1538,6 +1595,14 @@ svg {
   .main__bg {
     opacity: 0.5;
   }
+
+  .slider__mobile, .slide {
+    width: 500px;
+  }
+
+  .slider {
+    width: 1500px;
+  }
 }
 @media (max-width: 510px) {
   .wrapper, .wrapper__popap, .examples__content_items, .social__header {
@@ -1546,6 +1611,10 @@ svg {
 
   .information__wrapper, .description, .price, .contact, .examples, .questions, .footer {
     padding: 60px 0;
+  }
+
+  .slider__mobile, .slide {
+    width: 320px;
   }
 
   .main__bg {
@@ -1795,9 +1864,17 @@ svg {
   .wrapper, .wrapper__popap, .examples__content_items, .social__header {
     width: 300px;
   }
+
+  .slider__mobile, .slide {
+    width: 300px;
+  }
 }
 @media (max-width: 510px) and (max-width: 280px) {
   .wrapper, .wrapper__popap, .examples__content_items, .social__header {
+    width: 270px;
+  }
+
+  .slider__mobile, .slide {
     width: 270px;
   }
 

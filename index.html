@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/slider.js" defer></script>
 </head>
 
 <body>
@@ -617,237 +618,251 @@
     <section id="examples" class="examples">
       <div class="wrapper">
         <h2 class="examples__title">Недавно решенные задачи</h2>
-        <div class="examples__content_item">
-          <div class="examples__content">
-            <div class="examples__content_slider">
-              <div id="primary-slider" class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
-                    </li>
-                  </ul>
+        <div class="slider__mobile" style="left: 0">
+          <div class="slider">
+            <div class="slide examples__content_item">
+              <div class="examples__content">
+                <div class="examples__content_slider">
+                  <div id="primary-slider" class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="secondary-slider" class="splide secondary">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="examples__content_items">
+                  <div class="examples__content_description">
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Задача: </span>машина для девушки до 34 000 BYN,
+                        не старше 7 – 10 лет</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Результат: </span>Nissan Juke Nismo 2013 года
+                        выпуска,
+                        объем 1.6 турбо бензин</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Начальная цена: </span>28 400 BYN</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Конечная цена: </span>25 000 BYN</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Экономия: </span>3 400 BYN</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div id="secondary-slider" class="splide secondary">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
-                    </li>
-                  </ul>
+              <div class="comment__wrapper first">
+                <h3 class="examples__subtitle">Отзыв клиента</h3>
+                <p class="examples__text">
+                  Долго мечтала о машине-зажигалке, самостоятельно определиться
+                  с выбором не отважилась, друг посоветовал обратиться за помощью к этой фирме,
+                  которая ему подбирала машину.<br> Через 3 дня после заключения договора поступил
+                  долгожданный звонок: «Есть идеальный вариант для вас!». Пригласили на дополнительный
+                  просмотр и вот ключи от жука в моих руках. Спасибо большое, обнимаю :*
+                </p>
+                <div class="examples__customer">
+                  <p class="examples__customer_info_name">Гертруда</p>
+                  <p class="examples__customer_info_name">Минск, 29 марта 2020 года</p>
                 </div>
               </div>
             </div>
-            <div class="examples__content_items">
-              <div class="examples__content_description">
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Задача: </span>машина для девушки до 34 000 BYN,
-                    не старше 7 – 10 лет</p>
+            <div class="slide examples__content_item">
+              <div class="examples__content">
+                <div class="examples__content_slider">
+                  <div id="primary-slider-2" class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="secondary-slider-2" class="splide secondary">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Результат: </span>Nissan Juke Nismo 2013 года
-                    выпуска,
-                    объем 1.6 турбо бензин</p>
+                <div class="examples__content_items">
+                  <div class="examples__content_description">
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Задача: </span>большая семейная машина
+                        в отличном состоянии на сумму до 52 000 BYN</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Результат: </span>Mercedes-Benz GL 350
+                        2010 года выпуска, дизель</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Начальная цена: </span>46 800 BYN</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Конечная цена: </span>37 800 BYN</p>
+                    </div>
+                    <div class="examples__description_item">
+                      <p><span class="examples__description_text-color">Экономия: </span>9 000 BYN</p>
+                    </div>
+                  </div>
                 </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Начальная цена: </span>28 400 BYN</p>
-                </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Конечная цена: </span>25 000 BYN</p>
-                </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Экономия: </span>3 400 BYN</p>
+              </div>
+              <div class="comment__wrapper second">
+                <h3 class="examples__subtitle">Отзыв клиента</h3>
+                <p class="examples__text">Родился у нас второй ребенок и появилась необходимость в большой
+                  машине, рассматривал вояджер, джиэлку и мазду CX9, так как вариантов было много, а времени
+                  у меня на выбор слишком мало решил обратиться за помощь. <br> Бонусом был получен от продавца
+                  комплект двадцати дюймовых оригинальных литых дисков с летней резиной.</p>
+                <div class="examples__customer">
+                  <p class="examples__customer_info_name">Максим</p>
+                  <p class="examples__customer_info_name">Минск, 29 марта, 2020 года</p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="comment__wrapper first">
-            <h3 class="examples__subtitle">Отзыв клиента</h3>
-            <p class="examples__text">
-              Долго мечтала о машине-зажигалке, самостоятельно определиться
-              с выбором не отважилась, друг посоветовал обратиться за помощью к этой фирме,
-              которая ему подбирала машину.<br> Через 3 дня после заключения договора поступил
-              долгожданный звонок: «Есть идеальный вариант для вас!». Пригласили на дополнительный
-              просмотр и вот ключи от жука в моих руках. Спасибо большое, обнимаю :*
-            </p>
-            <div class="examples__customer">
-              <p class="examples__customer_info_name">Гертруда</p>
-              <p class="examples__customer_info_name">Минск, 29 марта 2020 года</p>
+            <div class="slide examples__content_item">
+              <div class="examples__content">
+                <div class="examples__content_slider">
+                  <div id="primary-slider-3" class="splide">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div id="secondary-slider-3" class="splide secondary">
+                    <div class="splide__track">
+                      <ul class="splide__list">
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
+                        </li>
+                        <li class="splide__slide">
+                          <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="examples__content_description">
+                  <div class="examples__description_item">
+                    <p><span class="examples__description_text-color">Задача: </span>автомобиль для девушки не старше 5
+                      – 7 лет, с маленьким
+                      расходом и последующим недорогим техническим обслуживанием</p>
+                  </div>
+                  <div class="examples__description_item">
+                    <p><span class="examples__description_text-color">Результат: </span>Toyota RAV4 2016 года выпуска,
+                      2.0
+                      бензин, вариатор,
+                      96 000 оригинального пробега, 1 хозяин, вся сервисная история на «Toyota Center Minsk»</p>
+                  </div>
+                  <div class="examples__description_item">
+                    <p><span class="examples__description_text-color">Начальная цена: </span>54 400 BYN</p>
+                  </div>
+                  <div class="examples__description_item">
+                    <p><span class="examples__description_text-color">Конечная цена: </span>53 400 BYN</p>
+                  </div>
+                  <div class="examples__description_item">
+                    <p><span class="examples__description_text-color">Экономия: </span>1 000 BYN</p>
+                  </div>
+                </div>
+              </div>
+              <div class="comment__wrapper third">
+                <h3 class="examples__subtitle">Отзыв клиента</h3>
+                <p class="examples__text">После Peugeot 308 хотелось машину побольше, так как подрастает
+                  будущее поколение, но в то же время такую же неприхотливую как мой львенок. Парни молодцы,
+                  нашли машину за пару дней, немного не вписались в бюджет, но оно того стоило, я даже не
+                  думала, что мой новый Равик я так сильно полюблю.</p>
+                <div class="examples__customer">
+                  <p>Таня</p>
+                  <p>Минск, 29 марта 2020 года</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div class="examples__content_item">
-          <div class="examples__content">
-            <div class="examples__content_slider">
-              <div id="primary-slider-2" class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div id="secondary-slider-2" class="splide secondary">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="examples__content_items">
-              <div class="examples__content_description">
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Задача: </span>большая семейная машина
-                    в отличном состоянии на сумму до 52 000 BYN</p>
-                </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Результат: </span>Mercedes-Benz GL 350
-                    2010 года выпуска, дизель</p>
-                </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Начальная цена: </span>46 800 BYN</p>
-                </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Конечная цена: </span>37 800 BYN</p>
-                </div>
-                <div class="examples__description_item">
-                  <p><span class="examples__description_text-color">Экономия: </span>9 000 BYN</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="comment__wrapper second">
-            <h3 class="examples__subtitle">Отзыв клиента</h3>
-            <p class="examples__text">Родился у нас второй ребенок и появилась необходимость в большой
-              машине, рассматривал вояджер, джиэлку и мазду CX9, так как вариантов было много, а времени
-              у меня на выбор слишком мало решил обратиться за помощь. <br> Бонусом был получен от продавца
-              комплект двадцати дюймовых оригинальных литых дисков с летней резиной.</p>
-            <div class="examples__customer">
-              <p class="examples__customer_info_name">Максим</p>
-              <p class="examples__customer_info_name">Минск, 29 марта, 2020 года</p>
-            </div>
-          </div>
-        </div>
-        <div class="examples__content_item">
-          <div class="examples__content">
-            <div class="examples__content_slider">
-              <div id="primary-slider-3" class="splide">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div id="secondary-slider-3" class="splide secondary">
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
-                    </li>
-                    <li class="splide__slide">
-                      <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="examples__content_description">
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Задача: </span>автомобиль для девушки не старше 5
-                  – 7 лет, с маленьким
-                  расходом и последующим недорогим техническим обслуживанием</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Результат: </span>Toyota RAV4 2016 года выпуска, 2.0
-                  бензин, вариатор,
-                  96 000 оригинального пробега, 1 хозяин, вся сервисная история на «Toyota Center Minsk»</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Начальная цена: </span>54 400 BYN</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Конечная цена: </span>53 400 BYN</p>
-              </div>
-              <div class="examples__description_item">
-                <p><span class="examples__description_text-color">Экономия: </span>1 000 BYN</p>
-              </div>
-            </div>
-          </div>
-          <div class="comment__wrapper third">
-            <h3 class="examples__subtitle">Отзыв клиента</h3>
-            <p class="examples__text">После Peugeot 308 хотелось машину побольше, так как подрастает
-              будущее поколение, но в то же время такую же неприхотливую как мой львенок. Парни молодцы,
-              нашли машину за пару дней, немного не вписались в бюджет, но оно того стоило, я даже не
-              думала, что мой новый Равик я так сильно полюблю.</p>
-            <div class="examples__customer">
-              <p>Таня</p>
-              <p>Минск, 29 марта 2020 года</p>
-            </div>
-          </div>
+        <div class="nav__buttons">
+          <button class="arrow__slider prev" id="prev">
+            <img src="./images/arrow-left.svg" alt="arrow-left">
+          </button>
+          <span class="slider__count">01/03</span>
+          <button class="arrow__slider next" id="next">
+            <img src="./images/arrow-right.svg" alt="arrow-right">
+          </button>
         </div>
         <div class="social">
           <h3 class="social__header">Больше отзывов и примеров наших подборов смотрите в наших соц. сетях:</h3>
