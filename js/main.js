@@ -215,6 +215,16 @@ descriptionAddItemsButton.addEventListener('click', () => {
   descriptionDownArrow.classList.toggle('description_down-arrow-hide')
 });
 
+const headerNavigationLinks = document.querySelectorAll('.header__navigation_link');
+
+headerNavigationLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    document.body.style.overflow = 'auto';
+    toggleMenu.classList.remove('on');
+    headerNav.classList.remove('on');
+  })
+});
+
 toggleMenu.addEventListener('click', (event) => {
   toggleMenu.classList.toggle('on');
   headerNav.classList.toggle('on');
