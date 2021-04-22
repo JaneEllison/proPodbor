@@ -44,7 +44,11 @@ ul {
   font-size: 16px;
   letter-spacing: 0.1rem;
   line-height: 24px;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .header__navigation_link:last-child {
   margin-right: 0;
@@ -95,7 +99,11 @@ ul {
   background: white;
   margin: 6px auto;
   backface-visibility: hidden;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 
 .phone__discription:hover {
@@ -108,7 +116,11 @@ ul {
   font-weight: 500;
   text-decoration: none;
   line-height: 38px;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .phone__number:hover {
   transform: scale(1.1);
@@ -119,7 +131,11 @@ ul {
   width: 60px;
   height: 60px;
   cursor: pointer;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .phone__number-image:hover {
   transform: scale(1.1);
@@ -204,7 +220,11 @@ ul {
   color: #F44D34;
   border: 1px solid #F44D34;
   background: transparent;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .information__button:hover {
   color: #FFFFFF;
@@ -226,7 +246,11 @@ ul {
 .arrow__slider {
   background: transparent;
   border: none;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .arrow__slider:hover {
   cursor: pointer;
@@ -369,6 +393,8 @@ ul {
   max-height: 0;
   overflow: hidden;
   background: #FFFFFF;
+  -ms-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
   -webkit-transition: max-height 0.7s;
   -o-transition: max-height 0.7s;
   transition: max-height 0.7s;
@@ -422,7 +448,9 @@ label.description__add_items img {
   display: block;
   text-align: center;
   -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
   -o-transition: all 0.7s;
+  -ms-transition: all 0.7s;
   transition: all 0.7s;
 }
 .description__info_item input[type=checkbox] + label::after, .price__item_description input[type=checkbox] + label::after {
@@ -484,7 +512,9 @@ label.description__add_items img {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
   -o-transition: max-height 0.7s;
+  -ms-transition: max-height 0.7s;
   transition: max-height 0.7s;
 }
 
@@ -552,7 +582,11 @@ label.description__add_items img {
   color: #F44D34;
   background: transparent;
   border: 1px solid #F44D34;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .price__order_button:hover {
   color: #FFFFFF;
@@ -607,7 +641,11 @@ label.description__add_items img {
   background: transparent;
   border: 2px solid #F44D34;
   margin-top: 10px;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .contact-form__button:hover {
   color: #FFFFFF;
@@ -736,7 +774,11 @@ label.description__add_items img {
 .social__icon {
   margin-right: 15px;
   cursor: pointer;
-  transition: 0.3s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .social__icon:hover {
   transform: scale(1.2);
@@ -797,7 +839,9 @@ label.description__add_items img {
   max-height: 0;
   overflow: hidden;
   -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
   -o-transition: max-height 0.7s;
+  -ms-transition: max-height 0.7s;
   transition: max-height 0.7s;
 }
 .question__item_content p {
@@ -810,7 +854,9 @@ label.description__add_items img {
   margin-left: 30px;
   text-align: center;
   -webkit-transition: all 0.7s;
+  -moz-transition: all 0.7s;
   -o-transition: all 0.7s;
+  -ms-transition: all 0.7s;
   transition: all 0.7s;
 }
 .question__item input[type=checkbox] + label::after {
@@ -959,7 +1005,11 @@ label.description__add_items img {
   border: 2px solid #F44D34;
   background: transparent;
   margin-top: 50px;
-  transition: 0.5s linear;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  transition: 0.4s linear;
 }
 .question__form_button:hover {
   background: #F44D34;
@@ -1231,7 +1281,11 @@ svg {
     color: #0B0B0B;
     margin-right: 0;
     margin-bottom: 30px;
-    transition: 0.5s linear;
+    -webkit-transition: 0.4s linear;
+    -moz-transition: 0.4s linear;
+    -o-transition: 0.4s linear;
+    -ms-transition: 0.4s linear;
+    transition: 0.4s linear;
   }
   .header__navigation_link:hover {
     color: #F44D34;
@@ -1519,12 +1573,16 @@ svg {
 
   .slider {
     position: relative;
-    transition: 500ms;
     width: calc(100% * 3);
     height: fit-content;
     display: flex;
     justify-content: start;
     flex-wrap: nowrap;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -o-transition: 500ms;
+    -ms-transition: 500ms;
+    transition: 500ms;
   }
 
   .slide {

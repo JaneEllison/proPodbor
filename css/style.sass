@@ -6,8 +6,9 @@ $base-color-lines: #322F37
 $additional-color-subtitle: #666666
 $additional-color-lines: #131313
 
-$transition-change-color: 0.5s linear
+$transition-change-color: 0.4s linear
 $transition-open-block: max-height .7s
+$transition-icon: all .7s
 
 *
   color: $base-color-light
@@ -48,6 +49,10 @@ ul
       font-size: 16px
       letter-spacing: 0.1rem
       line-height: 24px
+      -webkit-transition: $transition-change-color
+      -moz-transition: $transition-change-color
+      -o-transition: $transition-change-color
+      -ms-transition: $transition-change-color
       transition: $transition-change-color
 
       &:last-child
@@ -98,6 +103,10 @@ ul
   background: white
   margin: 6px auto
   backface-visibility: hidden
+  -webkit-transition: $transition-change-color
+  -moz-transition: $transition-change-color
+  -o-transition: $transition-change-color
+  -ms-transition: $transition-change-color
   transition: $transition-change-color
 
 .phone__discription:hover
@@ -109,6 +118,10 @@ ul
   font-weight: 500
   text-decoration: none
   line-height: 38px
+  -webkit-transition: $transition-change-color
+  -moz-transition: $transition-change-color
+  -o-transition: $transition-change-color
+  -ms-transition: $transition-change-color
   transition: $transition-change-color
 
   &:hover
@@ -120,6 +133,10 @@ ul
     width: 60px
     height: 60px
     cursor: pointer
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
     transition: $transition-change-color
 
     &:hover
@@ -199,6 +216,10 @@ ul
     color: $base-color-theme
     border: 1px solid $base-color-theme
     background: transparent
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
     transition: $transition-change-color
 
     &:hover
@@ -218,6 +239,10 @@ ul
 .arrow__slider
   background: transparent
   border: none
+  -webkit-transition: $transition-change-color
+  -moz-transition: $transition-change-color
+  -o-transition: $transition-change-color
+  -ms-transition: $transition-change-color
   transition: $transition-change-color
 
   &:hover
@@ -357,6 +382,8 @@ ul
         max-height: 0
         overflow: hidden
         background: $base-color-light
+        -ms-transition: $transition-open-block
+        -moz-transition: $transition-open-block
         -webkit-transition: $transition-open-block
         -o-transition: $transition-open-block
         transition: $transition-open-block
@@ -409,9 +436,11 @@ label.description__add_items
     right: 0
     display: block
     text-align: center
-    -webkit-transition: all .7s
-    -o-transition: all .7s
-    transition: all .7s
+    -webkit-transition: $transition-icon
+    -moz-transition: $transition-icon
+    -o-transition: $transition-icon
+    -ms-transition: $transition-icon
+    transition: $transition-icon
 
   & input[type=checkbox] + label::after
     content: "+"
@@ -471,7 +500,9 @@ label.description__add_items
         max-height: 0
         overflow: hidden
         -webkit-transition: $transition-open-block
+        -moz-transition: $transition-open-block
         -o-transition: $transition-open-block
+        -ms-transition: $transition-open-block
         transition: $transition-open-block
 
 .price__list
@@ -537,6 +568,10 @@ label.description__add_items
     color: $base-color-theme
     background: transparent
     border: 1px solid $base-color-theme
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
     transition: $transition-change-color
 
     &:hover
@@ -591,6 +626,10 @@ label.description__add_items
       background: transparent
       border: 2px solid $base-color-theme
       margin-top: 10px
+      -webkit-transition: $transition-change-color
+      -moz-transition: $transition-change-color
+      -o-transition: $transition-change-color
+      -ms-transition: $transition-change-color
       transition: $transition-change-color
 
       &:hover
@@ -712,7 +751,11 @@ label.description__add_items
   &__icon
     margin-right: 15px
     cursor: pointer
-    transition: 0.3s linear
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
+    transition: $transition-change-color
 
     &:hover
       transform: scale(1.2)
@@ -771,7 +814,9 @@ label.description__add_items
     max-height: 0
     overflow: hidden
     -webkit-transition: $transition-open-block
+    -moz-transition: $transition-open-block
     -o-transition: $transition-open-block
+    -ms-transition: $transition-open-block
     transition: $transition-open-block
 
     & p
@@ -783,9 +828,11 @@ label.description__add_items
   & label::after
     margin-left: 30px
     text-align: center
-    -webkit-transition: all .7s
-    -o-transition: all .7s
-    transition: all .7s
+    -webkit-transition: $transition-icon
+    -moz-transition: $transition-icon
+    -o-transition: $transition-icon
+    -ms-transition: $transition-icon
+    transition: $transition-icon
 
   & input[type=checkbox] + label::after
     font-size: 24px
@@ -925,6 +972,10 @@ label.description__add_items
     border: 2px solid $base-color-theme
     background: transparent
     margin-top: 50px
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
     transition: $transition-change-color
 
     &:hover
@@ -1151,6 +1202,10 @@ svg
     color: $base-color-dark
     margin-right: 0
     margin-bottom: 30px
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
     transition: $transition-change-color
 
     &:hover
@@ -1392,12 +1447,16 @@ svg
 
   .slider
     position: relative
-    transition: 500ms
     width: calc(100% * 3)
     height: fit-content
     display: flex
     justify-content: start
     flex-wrap: nowrap
+    -webkit-transition: 500ms
+    -moz-transition: 500ms
+    -o-transition: 500ms
+    -ms-transition: 500ms
+    transition: 500ms
 
   .slide
     width: 600px
