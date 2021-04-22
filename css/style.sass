@@ -6,6 +6,9 @@ $base-color-lines: #322F37
 $additional-color-subtitle: #666666
 $additional-color-lines: #131313
 
+$transition-change-color: 0.5s linear
+$transition-open-block: max-height .7s
+
 *
   color: $base-color-light
   font-family: Ubuntu, sans-serif
@@ -45,7 +48,7 @@ ul
       font-size: 16px
       letter-spacing: 0.1rem
       line-height: 24px
-      transition: 0.5s linear
+      transition: $transition-change-color
 
       &:last-child
         margin-right: 0
@@ -95,7 +98,7 @@ ul
   background: white
   margin: 6px auto
   backface-visibility: hidden
-  transition-duration: 0.5s
+  transition: $transition-change-color
 
 .phone__discription:hover
   color: $base-color-theme
@@ -106,7 +109,7 @@ ul
   font-weight: 500
   text-decoration: none
   line-height: 38px
-  transition: 0.5s linear
+  transition: $transition-change-color
 
   &:hover
     transform: scale(1.1)
@@ -117,7 +120,7 @@ ul
     width: 60px
     height: 60px
     cursor: pointer
-    transition: 0.5s linear
+    transition: $transition-change-color
 
     &:hover
       transform: scale(1.1)
@@ -196,7 +199,7 @@ ul
     color: $base-color-theme
     border: 1px solid $base-color-theme
     background: transparent
-    transition: 0.5s linear
+    transition: $transition-change-color
 
     &:hover
       color: $base-color-light
@@ -215,7 +218,7 @@ ul
 .arrow__slider
   background: transparent
   border: none
-  transition: 0.5s linear
+  transition: $transition-change-color
 
   &:hover
     cursor: pointer
@@ -354,9 +357,9 @@ ul
         max-height: 0
         overflow: hidden
         background: $base-color-light
-        -webkit-transition: max-height .7s
-        -o-transition: max-height .7s
-        transition: max-height .7s
+        -webkit-transition: $transition-open-block
+        -o-transition: $transition-open-block
+        transition: $transition-open-block
         & p
           color: $additional-color-lines
           font-size: 16px
@@ -467,9 +470,9 @@ label.description__add_items
         flex-direction: column
         max-height: 0
         overflow: hidden
-        -webkit-transition: max-height .7s
-        -o-transition: max-height .7s
-        transition: max-height .7s
+        -webkit-transition: $transition-open-block
+        -o-transition: $transition-open-block
+        transition: $transition-open-block
 
 .price__list
   display: flex
@@ -534,7 +537,7 @@ label.description__add_items
     color: $base-color-theme
     background: transparent
     border: 1px solid $base-color-theme
-    transition: 0.5s linear
+    transition: $transition-change-color
 
     &:hover
       color: $base-color-light
@@ -588,7 +591,7 @@ label.description__add_items
       background: transparent
       border: 2px solid $base-color-theme
       margin-top: 10px
-      transition: 0.5s linear
+      transition: $transition-change-color
 
       &:hover
         color: $base-color-light
@@ -767,9 +770,9 @@ label.description__add_items
     flex-direction: column
     max-height: 0
     overflow: hidden
-    -webkit-transition: max-height .7s
-    -o-transition: max-height .7s
-    transition: max-height .7s
+    -webkit-transition: $transition-open-block
+    -o-transition: $transition-open-block
+    transition: $transition-open-block
 
     & p
       color: $additional-color-lines
@@ -922,7 +925,7 @@ label.description__add_items
     border: 2px solid $base-color-theme
     background: transparent
     margin-top: 50px
-    transition: 0.5s linear
+    transition: $transition-change-color
 
     &:hover
       background: $base-color-theme
@@ -1148,7 +1151,7 @@ svg
     color: $base-color-dark
     margin-right: 0
     margin-bottom: 30px
-    transition: 0.5s linear
+    transition: $transition-change-color
 
     &:hover
       color: $base-color-theme
