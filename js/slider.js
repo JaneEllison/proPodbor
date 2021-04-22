@@ -5,11 +5,6 @@ const sliderCount = document.querySelector('.slider__count');
 let viewSlide = 0;
 let viewport;
 
-window.addEventListener('resize', () => {
-  viewport = document.querySelector('.slider__mobile').offsetWidth;
-  slider.style.left = -viewSlide * viewport + 'px';
-});
-
 btnNext.addEventListener('click', function () {
   if (viewSlide < 2) { 
       viewSlide++;
@@ -28,4 +23,9 @@ btnPrev.addEventListener('click', function () {
   }
   slider.style.left = -viewSlide * viewport + 'px';
   sliderCount.innerText = `0${viewSlide +1 }/03`;
+});
+
+window.addEventListener('resize', () => {
+  viewport = document.querySelector('.slider__mobile').offsetWidth;
+  slider.style.left = -viewSlide * viewport + 'px';
 });
