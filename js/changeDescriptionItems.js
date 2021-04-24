@@ -3,7 +3,7 @@ const descriptionInfoItems = document.querySelectorAll('.hidden-item');
 const descriptionDownArrow = document.querySelector('.description_down-arrow');
 
 const changeDescriptionAddItems = () => {
-  if (window.matchMedia("(max-width: 980px)").matches) {
+  if (window.matchMedia('(max-width: 980px)').matches) {
     descriptionInfoItems.forEach((item) => {
       item.classList.add('description__info_item-hide');
     });
@@ -20,4 +20,7 @@ descriptionAddItemsButton.addEventListener('click', () => {
   descriptionDownArrow.classList.toggle('description_down-arrow-hide')
 });
 
-window.addEventListener('resize', () => changeDescriptionAddItems);
+window.addEventListener('resize', () => {
+  console.log('yep')
+  changeDescriptionAddItems();
+})
