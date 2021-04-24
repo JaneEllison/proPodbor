@@ -6,6 +6,10 @@ $base-color-lines: #322F37
 $additional-color-subtitle: #666666
 $additional-color-lines: #131313
 
+$transition-change-color: 0.4s linear
+$transition-open-block: max-height .7s
+$transition-icon: all .7s
+
 *
   color: $base-color-light
   font-family: Ubuntu, sans-serif
@@ -45,7 +49,11 @@ ul
       font-size: 16px
       letter-spacing: 0.1rem
       line-height: 24px
-      transition: 0.5s linear
+      -webkit-transition: $transition-change-color
+      -moz-transition: $transition-change-color
+      -o-transition: $transition-change-color
+      -ms-transition: $transition-change-color
+      transition: $transition-change-color
 
       &:last-child
         margin-right: 0
@@ -95,7 +103,11 @@ ul
   background: white
   margin: 6px auto
   backface-visibility: hidden
-  transition-duration: 0.5s
+  -webkit-transition: $transition-change-color
+  -moz-transition: $transition-change-color
+  -o-transition: $transition-change-color
+  -ms-transition: $transition-change-color
+  transition: $transition-change-color
 
 .phone__discription:hover
   color: $base-color-theme
@@ -106,7 +118,11 @@ ul
   font-weight: 500
   text-decoration: none
   line-height: 38px
-  transition: 0.5s linear
+  -webkit-transition: $transition-change-color
+  -moz-transition: $transition-change-color
+  -o-transition: $transition-change-color
+  -ms-transition: $transition-change-color
+  transition: $transition-change-color
 
   &:hover
     transform: scale(1.1)
@@ -117,7 +133,11 @@ ul
     width: 60px
     height: 60px
     cursor: pointer
-    transition: 0.5s linear
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
+    transition: $transition-change-color
 
     &:hover
       transform: scale(1.1)
@@ -196,7 +216,11 @@ ul
     color: $base-color-theme
     border: 1px solid $base-color-theme
     background: transparent
-    transition: 0.5s linear
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
+    transition: $transition-change-color
 
     &:hover
       color: $base-color-light
@@ -215,7 +239,11 @@ ul
 .arrow__slider
   background: transparent
   border: none
-  transition: 0.5s linear
+  -webkit-transition: $transition-change-color
+  -moz-transition: $transition-change-color
+  -o-transition: $transition-change-color
+  -ms-transition: $transition-change-color
+  transition: $transition-change-color
 
   &:hover
     cursor: pointer
@@ -245,15 +273,16 @@ ul
     margin: 0 auto
     display: flex
     flex-wrap: wrap
-    justify-content: center
-    row-gap: 40px
-    column-gap: 60px
+    justify-content: space-between
 
 .description__item
   display: flex
   align-items: center
-  width: 574px
-  height: 128px
+  width: 45%
+  margin-bottom: 60px
+
+  &:nth-child(5), &:nth-child(6)
+    margin-bottom: 0
 
   &___image
     width: 128px
@@ -354,9 +383,11 @@ ul
         max-height: 0
         overflow: hidden
         background: $base-color-light
-        -webkit-transition: max-height .7s
-        -o-transition: max-height .7s
-        transition: max-height .7s
+        -ms-transition: $transition-open-block
+        -moz-transition: $transition-open-block
+        -webkit-transition: $transition-open-block
+        -o-transition: $transition-open-block
+        transition: $transition-open-block
         & p
           color: $additional-color-lines
           font-size: 16px
@@ -406,9 +437,11 @@ label.description__add_items
     right: 0
     display: block
     text-align: center
-    -webkit-transition: all .7s
-    -o-transition: all .7s
-    transition: all .7s
+    -webkit-transition: $transition-icon
+    -moz-transition: $transition-icon
+    -o-transition: $transition-icon
+    -ms-transition: $transition-icon
+    transition: $transition-icon
 
   & input[type=checkbox] + label::after
     content: "+"
@@ -467,9 +500,11 @@ label.description__add_items
         flex-direction: column
         max-height: 0
         overflow: hidden
-        -webkit-transition: max-height .7s
-        -o-transition: max-height .7s
-        transition: max-height .7s
+        -webkit-transition: $transition-open-block
+        -moz-transition: $transition-open-block
+        -o-transition: $transition-open-block
+        -ms-transition: $transition-open-block
+        transition: $transition-open-block
 
 .price__list
   display: flex
@@ -534,7 +569,11 @@ label.description__add_items
     color: $base-color-theme
     background: transparent
     border: 1px solid $base-color-theme
-    transition: 0.5s linear
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
+    transition: $transition-change-color
 
     &:hover
       color: $base-color-light
@@ -588,7 +627,11 @@ label.description__add_items
       background: transparent
       border: 2px solid $base-color-theme
       margin-top: 10px
-      transition: 0.5s linear
+      -webkit-transition: $transition-change-color
+      -moz-transition: $transition-change-color
+      -o-transition: $transition-change-color
+      -ms-transition: $transition-change-color
+      transition: $transition-change-color
 
       &:hover
         color: $base-color-light
@@ -709,7 +752,11 @@ label.description__add_items
   &__icon
     margin-right: 15px
     cursor: pointer
-    transition: 0.3s linear
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
+    transition: $transition-change-color
 
     &:hover
       transform: scale(1.2)
@@ -730,9 +777,7 @@ label.description__add_items
     margin-top: 60px
     display: flex
     flex-wrap: wrap
-    justify-content: center
-    row-gap: 40px
-    column-gap: 54px
+    justify-content: space-between
 
 .question__item
   display: flex
@@ -743,6 +788,10 @@ label.description__add_items
   height: fit-content
   border: 1px solid $base-color-subtitle
   padding: 26px 0
+  margin-bottom: 40px
+
+  &:nth-child(4), &:nth-child(5), &:nth-child(6)
+    margin-bottom: 0
 
   & input
     position: absolute
@@ -767,9 +816,11 @@ label.description__add_items
     flex-direction: column
     max-height: 0
     overflow: hidden
-    -webkit-transition: max-height .7s
-    -o-transition: max-height .7s
-    transition: max-height .7s
+    -webkit-transition: $transition-open-block
+    -moz-transition: $transition-open-block
+    -o-transition: $transition-open-block
+    -ms-transition: $transition-open-block
+    transition: $transition-open-block
 
     & p
       color: $additional-color-lines
@@ -780,9 +831,11 @@ label.description__add_items
   & label::after
     margin-left: 30px
     text-align: center
-    -webkit-transition: all .7s
-    -o-transition: all .7s
-    transition: all .7s
+    -webkit-transition: $transition-icon
+    -moz-transition: $transition-icon
+    -o-transition: $transition-icon
+    -ms-transition: $transition-icon
+    transition: $transition-icon
 
   & input[type=checkbox] + label::after
     font-size: 24px
@@ -922,7 +975,11 @@ label.description__add_items
     border: 2px solid $base-color-theme
     background: transparent
     margin-top: 50px
-    transition: 0.5s linear
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
+    transition: $transition-change-color
 
     &:hover
       background: $base-color-theme
@@ -960,9 +1017,11 @@ svg
     fill: $base-color-theme !important
 
 @media (max-width: 1240px)
+  .questions__items
+    justify-content: space-around
+
   .question__item
-    width: 450px
-    column-gap: 60px
+    width: 500px
 
     &_content p
       width: 420px
@@ -1012,8 +1071,11 @@ svg
       width: 100px
       height: 100px
 
-  .advantages__description
-    column-gap: 60px
+  .questions__items
+    justify-content: space-between
+
+  .question__item
+    width: 450px
 
   .description__header_title
     margin-bottom: 20px
@@ -1148,7 +1210,11 @@ svg
     color: $base-color-dark
     margin-right: 0
     margin-bottom: 30px
-    transition: 0.5s linear
+    -webkit-transition: $transition-change-color
+    -moz-transition: $transition-change-color
+    -o-transition: $transition-change-color
+    -ms-transition: $transition-change-color
+    transition: $transition-change-color
 
     &:hover
       color: $base-color-theme
@@ -1202,9 +1268,6 @@ svg
   .description__item_info_text
     font-size: 14px
     line-height: 22px
-
-  .advantages__description
-    column-gap: 40px
 
   .description__info
     flex-direction: column
@@ -1294,9 +1357,7 @@ svg
 
       &-wrapper:first-child
         margin-right: 0
-
-      &:first-child
-        margin-bottom: 30px
+        margin-bottom: 20px
 
   .contact-form__info_input
     flex-direction: column
@@ -1346,14 +1407,13 @@ svg
     width: 100%
     flex-wrap: wrap
     justify-content: space-between
-    row-gap: 20px
-    column-gap: 40px
     flex-direction: row
 
     &_subtitle
       margin-bottom: 2px
       width: 280px
       margin-top: 0
+      margin-bottom: 20px
 
       &:nth-child(1)
         order: 1
@@ -1363,9 +1423,11 @@ svg
 
       &:nth-child(3)
         order: 4
+        margin-bottom: 0
 
       &:nth-child(4)
         order: 2
+        margin-bottom: 0
 
   .mobile__footer
     display: flex
@@ -1389,12 +1451,16 @@ svg
 
   .slider
     position: relative
-    transition: 500ms
     width: calc(100% * 3)
     height: fit-content
     display: flex
     justify-content: start
     flex-wrap: nowrap
+    -webkit-transition: 500ms
+    -moz-transition: 500ms
+    -o-transition: 500ms
+    -ms-transition: 500ms
+    transition: 500ms
 
   .slide
     width: 600px
@@ -1402,6 +1468,9 @@ svg
 
   .examples__content_item
     border: none
+
+  .examples__customer p
+    margin-bottom: 5px
 
 .splide__slide img
   width: 80px !important
@@ -1437,7 +1506,7 @@ svg
     width: 1800px
 
 @media (max-width: 610px)
-  .wrapper, .wrapper__popap
+  .wrapper, .wrapper__popap, .examples__content_items
     width: 500px
 
   .mobile__footer
@@ -1447,6 +1516,9 @@ svg
   .mobile__footer_contacts
     order: 2
     margin-top: 30px
+
+  .footer__contacts_info_subtitle
+    margin-bottom: 20px !important
 
   .main__bg
     opacity: 0.5
@@ -1644,8 +1716,8 @@ svg
   .footer__contacts
     margin-top: 30px
 
-  .footer__contacts_info_subtitle
-    margin: 0
+    &_info_subtitle
+      margin-bottom: 20px
 
   .footer__contacts_info span
     font-size: 14px
