@@ -752,14 +752,14 @@ label.description__add_items
   &__icon
     margin-right: 15px
     cursor: pointer
-    -webkit-transition: $transition-change-color
-    -moz-transition: $transition-change-color
-    -o-transition: $transition-change-color
-    -ms-transition: $transition-change-color
-    transition: $transition-change-color
+    -webkit-transition: .3
+    -moz-transition: .3
+    -o-transition: .3
+    -ms-transition: .3
+    transition: .3
 
     &:hover
-      transform: scale(1.2)
+      transform: scale(1.1)
 
 .questions
   width: 100%
@@ -854,6 +854,19 @@ label.description__add_items
 #questions-slider
   display: none
 
+.questions__wrapper
+  position: relative
+
+.toTop-dark
+  position: absolute
+  bottom: -85px
+  right: 0
+
+.toTop-light
+  position: absolute
+  top: 0
+  right: 0
+
 .splide__slide__container
   display: flex
   flex-direction: column
@@ -861,6 +874,9 @@ label.description__add_items
 .footer
   width: 100%
   padding: 120px 0 30px 0
+
+  &_wrapper
+    position: relative
 
   &__header
     margin: 0
@@ -874,8 +890,10 @@ label.description__add_items
 
   &__contacts
     margin-top: 60px
+    margin-bottom: 20px
     display: flex
     justify-content: space-between
+    align-items: center
 
     &_info
       display: flex
@@ -884,7 +902,7 @@ label.description__add_items
       &_subtitle
         display: flex
         flex-direction: column
-        margin: 30px 0
+        margin: 0 0 30px 0
 
       & span
         font-weight: normal
@@ -898,6 +916,7 @@ label.description__add_items
       width: 568px
       display: flex
       flex-direction: column
+      height: fit-content
 
     &_title
       font-weight: normal
@@ -910,7 +929,6 @@ label.description__add_items
     &_subtitle
       font-size: 14px
       color: $base-color-subtitle
-      margin-bottom: 30px
 
 .footer__contacts_link
   margin: 0
@@ -974,7 +992,7 @@ label.description__add_items
     color: $base-color-theme
     border: 2px solid $base-color-theme
     background: transparent
-    margin-top: 50px
+    margin-top: 30px
     -webkit-transition: $transition-change-color
     -moz-transition: $transition-change-color
     -o-transition: $transition-change-color
@@ -1504,6 +1522,17 @@ svg
 
   .slider
     width: 1800px
+
+  .toTop-dark
+    bottom: -55px
+
+  .toTop-dark > img
+    width: 50px
+    height: 50px
+
+  .toTop-light > img
+    width: 50px
+    height: 50px
 
 @media (max-width: 610px)
   .wrapper, .wrapper__popap, .examples__content_items
