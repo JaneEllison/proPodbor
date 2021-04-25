@@ -1,3 +1,5 @@
+const buttonsToTop = document.querySelectorAll('.toTop');
+
 const secondarySliderOptions = {
   rewind: true,
   fixedWidth: 90,
@@ -141,4 +143,41 @@ const showExampleSlider = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   showExampleSlider();
+});
+
+const scrollTo = (to, duration) => {
+  const
+    element = document.scrollingElement || document.documentElement,
+    start = element.scrollTop,
+    change = to - start,
+    startDate = +new Date(),
+    // t = current time
+    // b = start value
+    // c = change in value
+    // d = duration
+    easeInOutQuad = function (t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    },
+    animateScroll = function () {
+      const currentDate = +new Date();
+      const currentTime = currentDate - startDate;
+      element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+      if (currentTime < duration) {
+        requestAnimationFrame(animateScroll);
+      }
+      else {
+        element.scrollTop = to;
+      }
+    };
+  animateScroll();
+};
+
+buttonsToTop.forEach(button => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    scrollTo(0, 700);
+  });
 });
