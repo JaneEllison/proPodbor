@@ -1,4 +1,4 @@
-const buttonsToTop = document.querySelectorAll('.toTop');
+let buttonToTop = document.querySelector('.toTop');
 
 const secondarySliderOptions = {
   rewind: true,
@@ -38,6 +38,7 @@ const primarySliderOptions = {
   type: 'fade',
   fixedWidth: 570,
   fixedHeight: 336,
+  focus: 'center',
   pagination: false,
   arrows: true,
   cover: true,
@@ -151,10 +152,6 @@ const scrollTo = (to, duration) => {
     start = element.scrollTop,
     change = to - start,
     startDate = +new Date(),
-    // t = current time
-    // b = start value
-    // c = change in value
-    // d = duration
     easeInOutQuad = function (t, b, c, d) {
       t /= d / 2;
       if (t < 1) return c / 2 * t * t + b;
@@ -175,9 +172,17 @@ const scrollTo = (to, duration) => {
   animateScroll();
 };
 
-buttonsToTop.forEach(button => {
-  button.addEventListener('click', (event) => {
-    event.preventDefault();
-    scrollTo(0, 700);
+document.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('scroll', function () {
+    if (pageYOffset > 100) {
+      buttonToTop.classList.add('show');
+    } else {
+      buttonToTop.classList.remove('show');
+    }
   });
+
+  buttonToTop.onclick = function (click) {
+    click.preventDefault();
+    scrollTo(0, 700);
+  }
 });

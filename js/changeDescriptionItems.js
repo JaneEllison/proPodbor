@@ -21,6 +21,5 @@ descriptionAddItemsButton.addEventListener('click', () => {
 });
 
 window.addEventListener('resize', () => {
-  console.log('yep')
   changeDescriptionAddItems();
-})
+});
