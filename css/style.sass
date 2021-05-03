@@ -26,6 +26,9 @@ ul
   padding: 0
 
 .toTop
+  display: flex
+  align-items: center
+  justify-content: center
   position: fixed
   bottom: 20px
   right: 0
@@ -34,15 +37,18 @@ ul
   opacity: 0
   visibility: hidden
   transition: all .3s ease-in-out
-
-  & img
-    width: 56px
-    height: 56px
+  width: 52px
+  height: 52px
+  border-radius: 50%
+  border: 4px solid rgba(244, 77, 52, 0.5)
 
   &.show
     opacity: 1
     visibility: visible
     right: calc(2%)
+
+    &:hover
+      border: 4px solid rgba(244, 77, 52, 1)
 
 .main
   overflow: hidden
@@ -147,17 +153,6 @@ ul
   &:hover
     transform: scale(1.1)
     color: $base-color-theme
-
-  &-image
-    display: none
-    width: 60px
-    height: 60px
-    cursor: pointer
-    -webkit-transition: $transition-change-color
-    -moz-transition: $transition-change-color
-    -o-transition: $transition-change-color
-    -ms-transition: $transition-change-color
-    transition: $transition-change-color
 
     &:hover
       transform: scale(1.1)
@@ -1068,6 +1063,9 @@ svg
     top: 0
     right: -240px
 
+  .header__navigation_link
+    margin-right: 15px
+
   .information__wrapper
     padding: 100px 0
 
@@ -1168,13 +1166,7 @@ svg
     top: 0
 
   .phone__number
-    display: none
-
-    &-image
-      display: flex
-
-  .phone__discription
-    display: none
+    font-size: 20px
 
   .examples__content_item
     padding: 45px 0 40px 0
@@ -1533,9 +1525,10 @@ svg
   .slider
     width: 1800px
 
-  .toTop img
+  .social__icon
     width: 40px
     height: 40px
+
 
 @media (max-width: 610px)
   .wrapper, .wrapper__popap, .examples__content_items
