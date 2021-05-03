@@ -38,6 +38,7 @@ const primarySliderOptions = {
   type: 'fade',
   fixedWidth: 570,
   fixedHeight: 336,
+  focus: 'center',
   pagination: false,
   arrows: true,
   cover: true,
