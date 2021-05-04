@@ -1,3 +1,18 @@
+const slidersData = [
+  {
+    primarySliderId: '#primary-slider-1',
+    secondarySliderId: '#secondary-slider-1',
+  },
+  {
+    primarySliderId: '#primary-slider-2',
+    secondarySliderId: '#secondary-slider-2',
+  },
+  {
+    primarySliderId: '#primary-slider-3',
+    secondarySliderId: '#secondary-slider-3',
+  },
+];
+
 let buttonToTop = document.querySelector('.toTop');
 
 const secondarySliderOptions = {
@@ -120,32 +135,6 @@ const questionsSliderOptions = {
 const advantagesSlider = new Splide('#advantages-slider', advantagesSliderOptions);
 const questionsSlider = new Splide('#questions-slider', questionsSliderOptions);
 
-const primarySliderFirst = new Splide('#primary-slider', primarySliderOptions);
-const primarySliderSecond = new Splide('#primary-slider-2', primarySliderOptions);
-const primarySliderThird = new Splide('#primary-slider-3', primarySliderOptions);
-
-const secondarySliderFirst = new Splide('#secondary-slider', secondarySliderOptions);
-const secondarySliderSecond = new Splide('#secondary-slider-2', secondarySliderOptions);
-const secondarySliderThird = new Splide('#secondary-slider-3', secondarySliderOptions);
-
-const showExampleSlider = () => {
-  secondarySliderFirst.mount();
-  primarySliderFirst.sync(secondarySliderFirst).mount();
-
-  secondarySliderSecond.mount();
-  primarySliderSecond.sync(secondarySliderSecond).mount();
-
-  secondarySliderThird.mount();
-  primarySliderThird.sync(secondarySliderThird).mount();
-
-  advantagesSlider.mount();
-  questionsSlider.mount();
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  showExampleSlider();
-});
-
 const scrollTo = (to, duration) => {
   const
     element = document.scrollingElement || document.documentElement,
@@ -184,5 +173,25 @@ document.addEventListener('DOMContentLoaded', function () {
   buttonToTop.onclick = function (click) {
     click.preventDefault();
     scrollTo(0, 700);
-  }
+  };
+
+  syncSliders(buildSliders(slidersData));
+  advantagesSlider.mount();
+  questionsSlider.mount();
 });
+
+function buildSliders(data) {
+  return data.map((slide) => {
+    const primarySlider = new Splide(slide.primarySliderId, primarySliderOptions);
+    const secondarySlider = new Splide(slide.secondarySliderId, secondarySliderOptions);
+    return [primarySlider, secondarySlider]
+  });
+};
+
+function syncSliders(buildSlidersArray) {
+  buildSlidersArray.forEach((slider) => {
+    const [primarySlider, secondarySlider] = slider;
+    secondarySlider.mount();
+    primarySlider.sync(secondarySlider).mount();
+  })
+};
