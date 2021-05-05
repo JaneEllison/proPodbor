@@ -62,7 +62,7 @@ ul
   display: flex
   align-items: center
   justify-content: space-around
-  padding-top: 10px
+  padding-top: 25px
 
   &__navigation
     display: flex
@@ -149,13 +149,11 @@ ul
   -o-transition: $transition-change-color
   -ms-transition: $transition-change-color
   transition: $transition-change-color
+  pointer-events: none
 
   &:hover
     transform: scale(1.1)
     color: $base-color-theme
-
-    &:hover
-      transform: scale(1.1)
 
 .main
   position: relative
@@ -202,7 +200,7 @@ ul
 
   &__wrapper
     flex-direction: column
-    padding-top: 180px
+    padding-top: 125px
 
   &__title
     display: flex
@@ -214,12 +212,14 @@ ul
 
     &-color
       color: $base-color-theme
+      margin-top: 5px
 
   &__subtitle
     width: 453px
     color: $base-color-subtitle
     margin: 50px 0
     font-size: 24px
+    line-height: 38px
 
   &__button
     width: 453px
@@ -275,7 +275,6 @@ ul
     display: flex
     width: 1208px
     padding-bottom: 120px
-    display: flex
     flex-direction: column
 
   &__title
@@ -324,7 +323,7 @@ ul
   margin: 0 auto
   display: flex
   flex-direction: column
-  padding: 100px 0
+  padding: 120px 0
 
   &__header
     max-width: 570px
@@ -1029,6 +1028,9 @@ label.description__add_items
   border: 3px solid $base-color-light !important
   opacity: 1 !important
 
+  &:hover
+    border-color: $base-color-theme !important
+
 svg
   fill: $base-color-light !important
 
@@ -1053,6 +1055,9 @@ svg
       width: 420px
 
 @media (max-width: 1190px)
+  .header
+    padding-top: 20px
+
   .wrapper
     width: 972px
 
@@ -1526,7 +1531,6 @@ svg
     width: 40px
     height: 40px
 
-
 @media (max-width: 610px)
   .wrapper, .wrapper__popap, .examples__content_items
     width: 500px
@@ -1547,9 +1551,6 @@ svg
 
   .slider__mobile, .slide
     width: 500px
-
-  // .slider
-  //   width: 1500px
 
 @media (max-width: 510px)
   .wrapper, .wrapper__popap, .examples__content_items, .social__header

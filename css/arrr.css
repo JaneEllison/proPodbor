@@ -1,0 +1,360 @@
+<?php 
+/*Template Name: Pagina de Start*/
+
+get_header(); 
+?>
+
+  <main class="main">
+    <img src="<?php echo get_template_directory_uri(); ?>/images/bg-main.png" alt="bg" class="main__bg">
+    <section class="contact__popap hide__popup">
+      <div class="wrapper__popap">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/cross-icon.svg" class="close-popap_icon" alt="close_popap">
+        <h2 class="contact__title contact__title_popup">
+          Оставьте заявку на подбор автомобиля
+          и получите бесплатную консультацию
+        </h2>
+        <form id="contact-form_2" class="contact-form">
+          <div class="contact-form__info">
+            <div class="contact-form__info_input">
+              <div class="contact-form__input-wrapper">
+                <input name="name" type="text" class="contact-form__input contact-form__input_name phone__popup"
+                  placeholder="Ваше имя">
+              </div>
+              <div class="contact-form__input-wrapper">
+                <input name="tel" type="tel" class="phone contact-form__input contact-form__input_tel" required
+                  pattern='^[+]375 [0-9]{2} *[0-9]{3} *[0-9]{2} *[0-9]{2}$' placeholder="Ваш номер телефона">
+                <div class="form-error"></div>
+              </div>
+            </div>
+            <span class="contact__subttile">Отправляя форму вы даете согласие на обработку персональных данных</span>
+          </div>
+          <button class="contact-form__button questions_button" type="submit"> ОТПРАВИТЬ </button>
+        </form>
+      </div>
+    </section>
+    <section class="information">
+      <div class="wrapper information__wrapper">
+        <h1 class="information__title">
+          <span class="information__title-light">
+            ПРОФЕССИОНАЛЬНАЯ ПОМОЩЬ
+          </span>
+          <span class="information__title-color">
+            В ПОДБОРЕ АВТОМОБИЛЯ
+          </span>
+        </h1>
+        <p class="information__subtitle">
+          Поможем найти тот самый автомобиль и сэкономить ваше время
+        </p>
+        <button class="information__button price__order_button">
+          ЗАКАЗАТЬ ПОДБОР
+        </button>
+      </div>
+    </section>
+    <section id="advantages" class="advantages">
+      <div class="advantages__wrapper wrapper">
+        <h2 class="advantages__title">Почему работать с нами выгодно</h2>
+        <div id="advantages-slider" class="splide">
+          <div class="splide__track advantages__splide_track">
+            <ul class="splide__list advantages__description">
+              <li class="splide__slide description__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/time-icon.svg" alt="time-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Экономия вашего времени</h3>
+                  <span class="description__item_info_text">
+                    мы сделаем все, чтобы в кратчайшие сроки найти для вас подходящий автомобиль
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/belarus-icon.svg" alt="belarus-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Работаем по всей Беларуси</h3>
+                  <span class="description__item_info_text">
+                    выезжаем в любую точку Беларуси, <br>
+                    чтобы найти для вас лучший вариант
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/guarantee-icon.svg" alt="guarantee-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Даем 2 месяца гарантии</h3>
+                  <span class="description__item_info_text">
+                    на основные узлы и агрегаты подобранного нами авто
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/money-icon.svg" alt="money-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Переговоры с продавцом</h3>
+                  <span class="description__item_info_text">
+                    сделаем все возможное, чтобы сэкономить ваши деньги
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/service-icon.svg" alt="service-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Диагностика на СТО</h3>
+                  <span class="description__item_info_text">от партнерских до диллерских на выбор заказчика</span>
+                </div>
+              </li>
+              <li class="splide__slide description__item">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/documents-icon.svg" alt="documents-icon" class="description__item_image">
+                <div class="description__item_info">
+                  <h3 class="description__item_info_title">Отчетность</h3>
+                  <span class="description__item_info_text">
+                    предоставляем подробный отчет на выбранный автомобиль
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="advantages__description_desktop">
+          <div class=" advantages__description">
+            <div class="description__item">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/time-icon.svg" alt="time-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Экономия вашего времени</h3>
+                <span class="description__item_info_text">
+                  мы сделаем все, чтобы в кратчайшие сроки найти для вас подходящий автомобиль
+                </span>
+              </div>
+            </div>
+            <div class="description__item">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/belarus-icon.svg" alt="belarus-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Работаем по всей Беларуси</h3>
+                <span class="description__item_info_text">
+                  выезжаем в любую точку Беларуси, <br>
+                  чтобы найти для вас лучший вариант
+                </span>
+              </div>
+            </div>
+            <div class="description__item">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/guarantee-icon.svg" alt="guarantee-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Даем 2 месяца гарантии</h3>
+                <span class="description__item_info_text">
+                  на основные узлы и агрегаты подобранного нами авто
+                </span>
+              </div>
+            </div>
+            <div class="description__item">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/money-icon.svg" alt="money-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Переговоры с продавцом</h3>
+                <span class="description__item_info_text">
+                  сделаем все возможное, чтобы сэкономить ваши деньги
+                </span>
+              </div>
+            </div>
+            <div class="description__item">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/service-icon.svg" alt="service-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Диагностика на СТО</h3>
+                <span class="description__item_info_text">от партнерских до диллерских на выбор заказчика</span>
+              </div>
+            </div>
+            <div class="description__item">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/advantages/documents-icon.svg" alt="documents-icon" class="description__item_image">
+              <div class="description__item_info">
+                <h3 class="description__item_info_title">Отчетность</h3>
+                <span class="description__item_info_text">
+                  предоставляем подробный отчет на выбранный автомобиль
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="description" class="description">
+      <div class="wrapper">
+        <div class="description__header">
+          <h2 class="description__header_title">
+            Что мы проверяем?
+          </h2>
+          <p class="description__header_subtitle">
+            На основании проверки по данным пунктам мы дадим вам
+            заключение о технической части выбранного авто и рекомендации
+            стоит ли его приобретать.
+          </p>
+        </div>
+        <div class="description__info">
+          <div class="description__info-part">
+            <?php if ( is_active_sidebar( 'check_parts_left' ) ) : ?>
+                <?php dynamic_sidebar( 'check_parts_left' ); ?>
+            <?php endif; ?>
+            
+            <div class="description__info_item description__add_items-block">
+              <label class="description__add_items">
+                <span>
+                  Смотреть ещё
+                </span>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/down-arrow.svg" alt="down-arrow"
+                  class="description_down-arrow description_down-arrow-hide">
+              </label>
+            </div>
+            
+          </div>
+          
+          <img src="<?php echo get_template_directory_uri(); ?>/images/description-bg.png" alt="car" class="description__info_image">
+          <div class="description__info-part">
+            <?php if ( is_active_sidebar( 'check_parts_right' ) ) : ?>
+                <?php dynamic_sidebar( 'check_parts_right' ); ?>
+            <?php endif; ?>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="price" class="price">
+      <div class="wrapper">
+        <h2 class="price__header">Стоимость услуг</h2>
+        <div class="price__item">
+            
+            <?php if ( is_active_sidebar( 'services_price' ) ) : ?>
+                <?php dynamic_sidebar( 'services_price' ); ?>
+            <?php endif; ?>
+     
+        </div>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="wrapper">
+        <h2 class="contact__title">
+          Оставьте заявку на подбор автомобиля
+          и получите бесплатную консультацию
+        </h2>
+        <form id="contact-form_1" class="contact-form">
+          <div class="contact-form__info">
+            <div class="contact-form__info_input">
+              <div class="contact-form__input-wrapper">
+                <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                  placeholder="Ваше имя">
+              </div>
+              <div class="contact-form__input-wrapper">
+                <input name="tel" type="tel" required pattern='^[+]375 [0-9]{2} *[0-9]{3} *[0-9]{2} *[0-9]{2}$'
+                  class="phone contact-form__input contact-form__input_tel" placeholder="Ваш номер телефона">
+                <div class="form-error"></div>
+              </div>
+            </div>
+            <span class="contact__subttile">Отправляя форму вы даете согласие на обработку персональных данных</span>
+          </div>
+          <button class="contact-form__button" type="submit"> ОТПРАВИТЬ </button>
+        </form>
+      </div>
+    </section>
+    <section id="examples" class="examples">
+      <div class="wrapper">
+        <h2 class="examples__title">Недавно решенные задачи</h2>
+        <?php echo get_template_part('includes/templates/tasks', '') ?>
+
+        <div class="nav__buttons">
+          <button class="arrow__slider prev" id="prev">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-left.svg" alt="arrow-left">
+          </button>
+          <span class="slider__count">01/03</span>
+          <button class="arrow__slider next" id="next">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-right.svg" alt="arrow-right">
+          </button>
+        </div>
+        <div class="social">
+          <h3 class="social__header">Больше отзывов и примеров наших подборов смотрите в наших соц. сетях:</h3>
+          <div class="social__icons">
+            <?php if (isset(get_option('smartstudio_contact_options')['instagram'])): ?>
+                <a href="<?php echo get_option('smartstudio_contact_options')['instagram']; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/insta-icon.svg" alt="instagram" class="social__icon social__footer_icon"></a>
+            <?php endif ?>
+            <?php if (isset(get_option('smartstudio_contact_options')['tik_tok'])): ?>
+                <a href="<?php echo get_option('smartstudio_contact_options')['tik_tok']; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/tik-tok-icon.svg" alt="tik-tok" class="social__icon social__footer_icon"></a>
+            <?php endif ?>
+            <?php if (isset(get_option('smartstudio_contact_options')['vk'])): ?>
+                <a href="<?php echo get_option('smartstudio_contact_options')['vk']; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/vk-icon.svg" alt="vk" class="social__icon social__footer_icon"></a>
+            <?php endif ?>
+            <?php if (isset(get_option('smartstudio_contact_options')['youtube'])): ?>
+                <a href="<?php echo get_option('smartstudio_contact_options')['youtube']; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/youTube-icon.svg" alt="youTube" class="social__icon social__footer_icon"></a>
+            <?php endif ?>
+            <?php if (isset(get_option('smartstudio_contact_options')['facebook'])): ?>
+                <a href="<?php echo get_option('smartstudio_contact_options')['facebook']; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/social/facebook-icon.svg" alt="facebook" class="social__icon social__footer_icon"></a>
+            <?php endif ?>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="questions">
+      <div class="wrapper questions__wrapper">
+        <a href="#" class="toTop toTop-dark">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-up-circle-light.svg" alt="arrow-up">
+        </a>
+        <h2 class="questions__title">Часто задаваемые вопросы</h2>
+        <div class="questions__items">
+            <?php if ( is_active_sidebar( 'faq' ) ) : ?>
+                <?php dynamic_sidebar( 'faq' ); ?>
+            <?php endif; ?>
+        </div>
+        <div id="questions-slider" class="splide">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Можете ли вы осмотреть авто без моего присутствия?</h3>
+                  <span class="description__item_info_text">
+                    — да, конечно, мы досконально осмотрим авто и по итогу предоставим вам 
+                    подробные отчет (фото и техническая часть).
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Сколько времени занимает подбор автомобиля?</h3>
+                  <span class="description__item_info_text">
+                    — исходя из нашей практики поиск и подбор авто может занимать от 1 – 2 дней 
+                    до 2 – 3 недель, все зависит от популярности модели.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Я не знаю какое авто хочу. Поможете?</h3>
+                  <span class="description__item_info_text">
+                    — во время консультации мы выясним у вас потребности, желания, бюджет,
+                    на основании этого предложим для вас наиболее подходящие варианты.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Требуемое авто не в Минске, как быть?</h3>
+                  <span class="description__item_info_text">
+                    — любой вопрос решаем, мы всегда можем выехать в любую точку Беларуси для осмотра конкретного
+                    автомобиля.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Какие бонусы я могу получить после обращения к вам?</h3>
+                  <span class="description__item_info_text">
+                    — периодически мы проводим различные акции, о которых вы можете узнать в наших социальных сетях.
+                  </span>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="question__item-splide splide__slide__container">
+                  <h3 class="description__item_info_title">Вы заключаете договор с заказчиком?</h3>
+                  <span class="description__item_info_text">
+                    — да, мы работаем в соответствии с законодательством Республики Беларусь.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<?php get_footer(); ?>

@@ -26,16 +26,19 @@ const changePopupText = () => {
           contactTitle.innerText = 'Оставьте заявку на подбор автомобиля  и мы свяжемся с вами в ближайшее время'
       }
       contactPopap.classList.remove('hide__popup');
+      document.body.style.overflow = 'hidden';
     })
   });
 };
 
 askToPhoneBtn.addEventListener('click', () => {
   contactPopap.classList.remove('hide__popup');
+  document.body.style.overflow = 'hidden';
 });
 
 closePopapIcon.addEventListener('click', () => {
   contactPopap.classList.add('hide__popup');
+  document.body.style.overflow = 'auto';
 });
 
 changePopupText();
