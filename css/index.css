@@ -153,9 +153,6 @@ ul {
   transform: scale(1.1);
   color: #F44D34;
 }
-.phone__number:hover:hover {
-  transform: scale(1.1);
-}
 
 .main {
   position: relative;
@@ -285,7 +282,6 @@ ul {
   display: flex;
   width: 1208px;
   padding-bottom: 120px;
-  display: flex;
   flex-direction: column;
 }
 .advantages__title {
