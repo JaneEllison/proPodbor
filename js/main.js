@@ -135,6 +135,20 @@ const questionsSliderOptions = {
 const advantagesSlider = new Splide('#advantages-slider', advantagesSliderOptions);
 const questionsSlider = new Splide('#questions-slider', questionsSliderOptions);
 
+const anchors = document.querySelectorAll('a[href*="#"]');
+for (let anchor of anchors){
+  anchor.addEventListener('click', (event) => {
+    event.preventDefault();
+    
+    const blockId = anchor.getAttribute('href').substr(1);
+
+    document.getElementById(blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  });
+};
+
 const scrollTo = (to, duration) => {
   const
     element = document.scrollingElement || document.documentElement,
