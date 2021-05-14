@@ -5,8 +5,13 @@
   box-sizing: border-box;
 }
 
-label, button, input {
+label, button {
   cursor: pointer;
+  outline: none;
+}
+
+input {
+  cursor: text;
   outline: none;
 }
 
@@ -377,9 +382,7 @@ ul {
   color: #131313;
   width: 368px;
   border-top: 1px solid rgba(77, 77, 77, 0.3);
-}
-.description__info_item:last-child, .description__info .price__item_description:last-child {
-  border-bottom: 1px solid rgba(77, 77, 77, 0.3);
+  border-bottom: 1px solid rgba(77, 77, 77, 0);
 }
 .description__info_item input, .description__info .price__item_description input {
   position: absolute;
@@ -419,6 +422,19 @@ ul {
   margin: 0;
   width: 336px;
   margin-bottom: 26px;
+}
+
+.description__info_item:hover {
+  border-top: 1px solid #F44D34;
+  border-bottom: 1px solid #F44D34;
+}
+
+.description__info_item:hover.description__info_item label {
+  color: #F44D34;
+}
+
+.description__info_item:hover.description__info_item label span {
+  color: #F44D34;
 }
 
 .hidden__block {
@@ -526,6 +542,7 @@ label.description__add_items img {
   color: #FFFFFF;
   width: 100%;
   border-top: 1px solid rgba(204, 204, 204, 0.5);
+  border-bottom: 1px solid rgba(77, 77, 77, 0);
 }
 .price__item_description:last-child {
   border-bottom: 1px solid rgba(204, 204, 204, 0.5);
@@ -557,6 +574,19 @@ label.description__add_items img {
   -o-transition: max-height 0.7s;
   -ms-transition: max-height 0.7s;
   transition: max-height 0.7s;
+}
+
+.price__item_description:hover.price__item_description label span {
+  color: #F44D34;
+}
+
+.price__item_description:hover.price__item_description label {
+  color: #F44D34;
+}
+
+.price__item_description:hover {
+  border-top: 1px solid #F44D34;
+  border-bottom: 1px solid #F44D34;
 }
 
 .price__list {
@@ -815,14 +845,17 @@ label.description__add_items img {
 .social__icon {
   margin-right: 15px;
   cursor: pointer;
-  -webkit-transition: 0.3;
-  -moz-transition: 0.3;
-  -o-transition: 0.3;
-  -ms-transition: 0.3;
-  transition: 0.3;
+  -webkit-transition: 0.4;
+  -moz-transition: 0.4;
+  -o-transition: 0.4;
+  -ms-transition: 0.4;
+  transition: 0.4;
 }
 .social__icon:hover {
-  transform: scale(1.1);
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  transform: translate(0, -10px);
 }
 
 .questions {
@@ -891,6 +924,16 @@ label.description__add_items img {
   color: #131313;
   margin: 20px 0 0 0;
   width: 304px;
+}
+
+.question__item:hover {
+  border: 1px solid #F44D34;
+}
+.question__item:hover.question__item label {
+  color: #F44D34;
+}
+.question__item:hover.question__item_content p {
+  color: #F44D34;
 }
 
 .question__item label::after {
@@ -1118,6 +1161,10 @@ label.description__add_items img {
 
 .secondary > .splide__track > .splide__list > .splide__slide.is-active {
   border-color: #F44D34 !important;
+}
+
+.secondary > .splide__track > .splide__list > .splide__slide {
+  cursor: pointer;
 }
 
 @media (max-width: 1240px) {
@@ -1991,6 +2038,16 @@ label.description__add_items img {
 
   .mobile__footer {
     margin-top: 40px;
+  }
+
+  .splide__arrowso {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .splide__arrowso::before {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
   }
 }
 @media (max-width: 510px) and (max-width: 320px) {

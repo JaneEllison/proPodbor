@@ -15,8 +15,12 @@ $transition-icon: all .7s
   font-family: Ubuntu, sans-serif
   box-sizing: border-box
 
-label, button, input
+label, button
   cursor: pointer
+  outline: none
+
+input
+  cursor: text
   outline: none
 
 body
@@ -365,9 +369,7 @@ ul
       color: $additional-color-lines
       width: 368px
       border-top: 1px solid rgba(77, 77, 77, 0.3)
-
-      &:last-child
-        border-bottom: 1px solid rgba(77, 77, 77, 0.3)
+      border-bottom: 1px solid rgba(77, 77, 77, 0.0)
 
       & input
         position: absolute
@@ -406,6 +408,16 @@ ul
           margin: 0
           width: 336px
           margin-bottom: 26px
+
+.description__info_item:hover
+  border-top: 1px solid #F44D34
+  border-bottom: 1px solid #F44D34
+
+.description__info_item:hover.description__info_item label
+  color: #F44D34
+
+.description__info_item:hover.description__info_item label span
+  color: #F44D34
 
 .hidden__block
   max-height: fit-content
@@ -501,6 +513,7 @@ label.description__add_items
       color: $base-color-light
       width: 100%
       border-top: 1px solid rgba(204, 204, 204, 0.5)
+      border-bottom: 1px solid rgba(77, 77, 77, 0.0)
 
       &:last-child
         border-bottom: 1px solid rgba(204, 204, 204, 0.5)
@@ -532,6 +545,17 @@ label.description__add_items
         -o-transition: $transition-open-block
         -ms-transition: $transition-open-block
         transition: $transition-open-block
+
+.price__item_description:hover.price__item_description label span
+  color: #F44D34
+
+.price__item_description:hover.price__item_description label
+  color: #F44D34
+
+.price__item_description:hover
+  border-top: 1px solid #F44D34
+  border-bottom: 1px solid #F44D34
+
 
 .price__list
   display: flex
@@ -779,14 +803,17 @@ label.description__add_items
   &__icon
     margin-right: 15px
     cursor: pointer
-    -webkit-transition: .3
-    -moz-transition: .3
-    -o-transition: .3
-    -ms-transition: .3
-    transition: .3
+    -webkit-transition: .4
+    -moz-transition: .4
+    -o-transition: .4
+    -ms-transition: .4
+    transition: .4
 
     &:hover
-      transform: scale(1.1)
+      -webkit-transform: translate(0,-10px)
+      -moz-transform: translate(0,-10px)
+      -o-transform: translate(0,-10px)
+      transform: translate(0, -10px)
 
 .questions
   width: 100%
@@ -853,6 +880,15 @@ label.description__add_items
       color: $additional-color-lines
       margin: 20px 0 0 0
       width: 304px
+
+.question__item:hover
+  border: 1px solid #F44D34
+
+  &.question__item label
+    color: #F44D34
+
+  &.question__item_content p
+    color: #F44D34
 
 .question__item
   & label::after
@@ -1064,6 +1100,9 @@ label.description__add_items
 
 .secondary>.splide__track>.splide__list>.splide__slide.is-active
   border-color: $base-color-theme !important
+
+.secondary > .splide__track > .splide__list > .splide__slide
+  cursor: pointer
 
 @media (max-width: 1240px)
   .questions__items
@@ -1783,6 +1822,15 @@ label.description__add_items
 
   .mobile__footer
     margin-top: 40px
+
+  .splide__arrowso
+    width: 30px !important
+    height: 30px !important
+
+    &::before
+      width: 30px
+      height: 30px
+      background-size: contain
 
   @media (max-width: 320px)
     .wrapper, .wrapper__popap, .examples__content_items, .social__header
