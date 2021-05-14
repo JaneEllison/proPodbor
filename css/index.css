@@ -1090,23 +1090,34 @@ label.description__add_items img {
 
 .splide__arrow {
   background: transparent !important;
-  border: 3px solid #FFFFFF !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: none !important;
   opacity: 1 !important;
 }
-.splide__arrow:hover {
-  border-color: #F44D34 !important;
+.splide__arrow:hover::before {
+  background-image: url(../images/bi_arrow-left-circle-color.svg);
+}
+.splide__arrow:disabled {
+  opacity: 0.4 !important;
+  cursor: default !important;
+}
+.splide__arrow:disabled:hover::before {
+  background-image: url(../images/bi_arrow-left-circle.svg);
+}
+.splide__arrow::before {
+  content: "";
+  background-image: url(../images/bi_arrow-left-circle.svg);
+  width: 40px;
+  height: 40px;
 }
 
-svg {
-  fill: #FFFFFF !important;
+.arrow--prev::before {
+  transform: rotateY(180deg);
 }
 
 .secondary > .splide__track > .splide__list > .splide__slide.is-active {
   border-color: #F44D34 !important;
-}
-
-.splide__arrow svg:hover {
-  fill: #F44D34 !important;
 }
 
 @media (max-width: 1240px) {

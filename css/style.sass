@@ -1038,21 +1038,32 @@ label.description__add_items
 
 .splide__arrow
   background: transparent !important
-  border: 3px solid $base-color-light !important
+  width: 40px !important
+  height: 40px !important
+  border: none !important
   opacity: 1 !important
 
-  &:hover
-    border-color: $base-color-theme !important
+  &:hover::before
+    background-image: url(../images/bi_arrow-left-circle-color.svg)
 
-svg
-  fill: $base-color-light !important
+  &:disabled
+    opacity: 0.4 !important
+    cursor: default !important
+
+    &:hover::before
+      background-image: url(../images/bi_arrow-left-circle.svg)
+
+  &::before
+    content: ''
+    background-image: url(../images/bi_arrow-left-circle.svg)
+    width: 40px
+    height: 40px
+
+.arrow--prev::before
+  transform: rotateY(180deg)
 
 .secondary>.splide__track>.splide__list>.splide__slide.is-active
   border-color: $base-color-theme !important
-
-.splide__arrow
-  & svg:hover
-    fill: $base-color-theme !important
 
 @media (max-width: 1240px)
   .questions__items

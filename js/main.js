@@ -16,7 +16,6 @@ const slidersData = [
 let buttonToTop = document.querySelector('.toTop');
 
 const secondarySliderOptions = {
-  rewind: true,
   fixedWidth: 90,
   fixedHeight: 80,
   gap: 12,
@@ -49,7 +48,6 @@ const secondarySliderOptions = {
   },
 };
 const primarySliderOptions = {
-  rewind: true,
   type: 'fade',
   fixedWidth: 570,
   fixedHeight: 336,
