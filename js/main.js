@@ -174,6 +174,8 @@ const scrollTo = (to, duration) => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+  new WOW().init();
+
   window.addEventListener('scroll', function () {
     if (pageYOffset > 100) {
       buttonToTop.classList.add('show');
