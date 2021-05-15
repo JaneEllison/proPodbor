@@ -9,9 +9,16 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
+
+
 </head>
 
 <body>
@@ -19,7 +26,7 @@
     <img src="./images/arr-to-top.svg" alt="arrow-up">
   </div>
 
-  <header class="header">
+  <header class="header wow fadeInUp" data-wow-duration="1.5s">
     <a href="./index.html" class="header__logo">
       <img src="./images/logo.svg" alt="ProPodbor" class="logo">
     </a>
@@ -69,7 +76,7 @@
         </form>
       </div>
     </section>
-    <section class="information">
+    <section class="information wow fadeInUp" data-wow-duration="1.5s">
       <div class="wrapper information__wrapper">
         <h1 class="information__title">
           <span class="information__title-light">
@@ -87,7 +94,7 @@
         </button>
       </div>
     </section>
-    <section id="advantages" class="advantages">
+    <section id="advantages" class="advantages wow fadeInUp" data-wow-duration="1.5s">
       <div class="advantages__wrapper wrapper">
         <h2 class="advantages__title">Почему работать с нами выгодно</h2>
         <div id="advantages-slider" class="splide">
@@ -208,7 +215,7 @@
         </div>
       </div>
     </section>
-    <section id="description" class="description">
+    <section id="description" class="description wow fadeInUp" data-wow-duration="1.5s">
       <div class="wrapper">
         <div class="description__header">
           <h2 class="description__header_title">
@@ -433,7 +440,7 @@
         </div>
       </div>
     </section>
-    <section id="price" class="price">
+    <section id="price" class="price wow fadeInUp" data-wow-duration="1.5s">
       <div class="wrapper">
         <h2 class="price__header">Стоимость услуг</h2>
         <div class="price__item">
@@ -596,7 +603,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact wow fadeInUp" data-wow-duration="1.5s">
       <div class="wrapper">
         <h2 class="contact__title">
           Оставьте заявку на подбор автомобиля
@@ -621,31 +628,48 @@
         </form>
       </div>
     </section>
-    <section id="examples" class="examples">
+    <section id="examples" class="examples wow fadeInUp" data-wow-duration="1.5s">
       <div class="wrapper">
         <h2 class="examples__title">Недавно решенные задачи</h2>
         <div class="slider__mobile" style="left: 0">
           <div class="slider">
-            <div class="slide examples__content_item">
+            <div class="slide examples__content_item wow fadeInUp" data-wow-duration="1.5s">
               <div class="examples__content">
                 <div class="examples__content_slider">
                   <div id="primary-slider-1" class="splide">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev arrow--prev">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next arrow--next">
+                      </button>
+                    </div>
                     <div class="splide__track">
-                      <ul class="splide__list">
+                      <img src="./images/zoom-icon.svg" alt="zoom image" class="zoom__icon">
+                      <ul class="splide__list gallery">
                         <li class="splide__slide">
-                          <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
+                          <a href="./images/slides/first-car-1.jpg" data-caption="Nissan Juke Nismo">
+                            <img src="./images/slides/first-car-1.jpg" alt="first-car-1">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
+                          <a href="./images/slides/first-car-2.jpg" data-caption="Nissan Juke Nismo">
+                            <img src="./images/slides/first-car-2.jpg" alt="first-car-2">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
+                          <a href="./images/slides/first-car-3.jpg" data-caption="Nissan Juke Nismo">
+                            <img src="./images/slides/first-car-3.jpg" alt="first-car-3">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
+                          <a href="./images/slides/first-car-4.jpg" data-caption="Nissan Juke Nismo">
+                            <img src="./images/slides/first-car-4.jpg" alt="first-car-4">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
+                          <a href="./images/slides/first-car-5.jpg" data-caption="Nissan Juke Nismo">
+                            <img src="./images/slides/first-car-5.jpg" alt="first-car-5">
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -710,20 +734,33 @@
                 </div>
               </div>
             </div>
-            <div class="slide examples__content_item">
+            <div class="slide examples__content_item wow fadeInUp" data-wow-duration="1.5s">
               <div class="examples__content">
                 <div class="examples__content_slider">
                   <div id="primary-slider-2" class="splide">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev arrow--prev">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next arrow--next">
+                      </button>
+                    </div>
                     <div class="splide__track">
-                      <ul class="splide__list">
+                      <img src="./images/zoom-icon.svg" alt="zoom image" class="zoom__icon">
+                      <ul class="splide__list gallery-2">
                         <li class="splide__slide">
-                          <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
+                          <a href="./images/slides/second-car-1.jpg" data-caption="Mercedes-Benz GL 350">
+                            <img src="./images/slides/second-car-1.jpg" alt="second-car-1">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
+                          <a href="./images/slides/second-car-2.jpg" data-caption="Mercedes-Benz GL 350">
+                            <img src="./images/slides/second-car-2.jpg" alt="second-car-2">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
+                          <a href="./images/slides/second-car-3.jpg" data-caption="Mercedes-Benz GL 350">
+                            <img src="./images/slides/second-car-3.jpg" alt="second-car-3">
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -778,26 +815,43 @@
                 </div>
               </div>
             </div>
-            <div class="slide examples__content_item">
+            <div class="slide examples__content_item wow fadeInUp" data-wow-duration="1.5s">
               <div class="examples__content">
                 <div class="examples__content_slider">
                   <div id="primary-slider-3" class="splide">
+                    <div class="splide__arrows">
+                      <button class="splide__arrow splide__arrow--prev arrow--prev">
+                      </button>
+                      <button class="splide__arrow splide__arrow--next arrow--next">
+                      </button>
+                    </div>
                     <div class="splide__track">
-                      <ul class="splide__list">
+                      <img src="./images/zoom-icon.svg" alt="zoom image" class="zoom__icon">
+                      <ul class="splide__list gallery-3">
                         <li class="splide__slide">
-                          <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
+                          <a href="./images/slides/third-car-1.jpg" data-caption="Toyota RAV4">
+                            <img src="./images/slides/third-car-1.jpg" alt="third-car-1">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
+                          <a href="./images/slides/third-car-2.jpg" data-caption="Toyota RAV4">
+                            <img src="./images/slides/third-car-2.jpg" alt="third-car-2">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
+                          <a href="./images/slides/third-car-3.jpg" data-caption="Toyota RAV4">
+                            <img src="./images/slides/third-car-3.jpg" alt="third-car-3">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
+                          <a href="./images/slides/third-car-4.jpg" data-caption="Toyota RAV4">
+                            <img src="./images/slides/third-car-4.jpg" alt="third-car-4">
+                          </a>
                         </li>
                         <li class="splide__slide">
-                          <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
+                          <a href="./images/slides/third-car-5.jpg" data-caption="Toyota RAV4">
+                            <img src="./images/slides/third-car-5.jpg" alt="third-car-5">
+                          </a>
                         </li>
                       </ul>
                     </div>
@@ -886,7 +940,7 @@
         </div>
       </div>
     </section>
-    <section class="questions">
+    <section class="questions wow fadeInUp" data-wow-duration="1.5s">
       <div class="wrapper questions__wrapper">
         <h2 class="questions__title">Часто задаваемые вопросы</h2>
         <div class="questions__items">
@@ -1010,7 +1064,7 @@
       </div>
     </section>
   </main>
-  <footer id="contacts" class="footer">
+  <footer id="contacts" class="footer wow fadeInUp" data-wow-duration="1.5s">
     <div class="wrapper footer_wrapper">
       <h2 class="footer__header">Наши контакты</h2>
       <div class="footer__contacts">
@@ -1098,6 +1152,14 @@
     </div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js"></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/checkCorrectPhone.js"></script>
   <script src="js/changeDescriptionItems.js"></script>

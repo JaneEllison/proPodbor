@@ -5,8 +5,13 @@
   box-sizing: border-box;
 }
 
-label, button, input {
+label, button {
   cursor: pointer;
+  outline: none;
+}
+
+input {
+  cursor: text;
   outline: none;
 }
 
@@ -103,7 +108,7 @@ ul {
   cursor: pointer;
 }
 .menu-toggle.on .one {
-  transform: rotate(45deg) translate(4px, 6px);
+  transform: rotate(45deg) translate(4px, 5px);
   background: #0B0B0B;
   width: 50%;
   height: 2px;
@@ -112,7 +117,7 @@ ul {
   opacity: 0;
 }
 .menu-toggle.on .three {
-  transform: rotate(-45deg) translate(7px, -10px);
+  transform: rotate(-45deg) translate(7px, -8px);
   background: #0B0B0B;
   width: 50%;
   height: 2px;
@@ -122,7 +127,7 @@ ul {
 .two,
 .three {
   width: 100%;
-  height: 5px;
+  height: 3px;
   background: white;
   margin: 6px auto;
   backface-visibility: hidden;
@@ -377,9 +382,7 @@ ul {
   color: #131313;
   width: 368px;
   border-top: 1px solid rgba(77, 77, 77, 0.3);
-}
-.description__info_item:last-child, .description__info .price__item_description:last-child {
-  border-bottom: 1px solid rgba(77, 77, 77, 0.3);
+  border-bottom: 1px solid rgba(77, 77, 77, 0);
 }
 .description__info_item input, .description__info .price__item_description input {
   position: absolute;
@@ -419,6 +422,19 @@ ul {
   margin: 0;
   width: 336px;
   margin-bottom: 26px;
+}
+
+.description__info_item:hover {
+  border-top: 1px solid #F44D34;
+  border-bottom: 1px solid #F44D34;
+}
+
+.description__info_item:hover.description__info_item label {
+  color: #F44D34;
+}
+
+.description__info_item:hover.description__info_item label span {
+  color: #F44D34;
 }
 
 .hidden__block {
@@ -503,7 +519,7 @@ label.description__add_items img {
   content: "▼";
 }
 .description__info_item input[type=checkbox]:checked + label::after, .price__item_description input[type=checkbox]:checked + label::after {
-  transform: rotate(315deg);
+  transform: rotate(45deg);
 }
 .description__info_item input[type=radio]:checked + label::after, .price__item_description input[type=radio]:checked + label::after {
   transform: rotateX(180deg);
@@ -526,6 +542,7 @@ label.description__add_items img {
   color: #FFFFFF;
   width: 100%;
   border-top: 1px solid rgba(204, 204, 204, 0.5);
+  border-bottom: 1px solid rgba(77, 77, 77, 0);
 }
 .price__item_description:last-child {
   border-bottom: 1px solid rgba(204, 204, 204, 0.5);
@@ -557,6 +574,24 @@ label.description__add_items img {
   -o-transition: max-height 0.7s;
   -ms-transition: max-height 0.7s;
   transition: max-height 0.7s;
+}
+
+.price__item_description:hover.price__item_description label span {
+  color: #F44D34;
+}
+
+.price__item_description:hover.price__item_description label {
+  color: #F44D34;
+}
+
+.price__item_description:hover {
+  border-top: 1px solid #F44D34;
+  border-bottom: 1px solid #F44D34;
+}
+
+.splide__slide a img {
+  width: 100% !important;
+  height: auto !important;
 }
 
 .price__list {
@@ -815,14 +850,17 @@ label.description__add_items img {
 .social__icon {
   margin-right: 15px;
   cursor: pointer;
-  -webkit-transition: 0.3;
-  -moz-transition: 0.3;
-  -o-transition: 0.3;
-  -ms-transition: 0.3;
-  transition: 0.3;
+  -webkit-transition: 0.4;
+  -moz-transition: 0.4;
+  -o-transition: 0.4;
+  -ms-transition: 0.4;
+  transition: 0.4;
 }
 .social__icon:hover {
-  transform: scale(1.1);
+  -webkit-transform: translate(0, -10px);
+  -moz-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  transform: translate(0, -10px);
 }
 
 .questions {
@@ -888,9 +926,19 @@ label.description__add_items img {
   transition: max-height 0.7s;
 }
 .question__item_content p {
-  color: #131313;
+  color: #666666;
   margin: 20px 0 0 0;
   width: 304px;
+}
+
+.question__item:hover {
+  border: 1px solid #F44D34;
+}
+.question__item:hover.question__item label {
+  color: #F44D34;
+}
+.question__item:hover.question__item_content p {
+  color: #F44D34;
 }
 
 .question__item label::after {
@@ -911,7 +959,7 @@ label.description__add_items img {
   content: "▼";
 }
 .question__item input[type=checkbox]:checked + label::after {
-  transform: rotate(315deg);
+  transform: rotate(45deg);
 }
 .question__item input[type=radio]:checked + label::after {
   transform: rotateX(180deg);
@@ -1077,6 +1125,33 @@ label.description__add_items img {
 
 .splide__track {
   margin-top: 12px;
+  position: relative;
+}
+
+.zoom__icon {
+  display: none;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.splide__track:hover .zoom__icon {
+  display: flex;
+}
+
+#previous-button {
+  background: none;
+  transform: rotateY(180deg);
+}
+
+#next-button {
+  background: none;
+}
+
+#close-button {
+  background: none;
 }
 
 .splide__list {
@@ -1090,23 +1165,38 @@ label.description__add_items img {
 
 .splide__arrow {
   background: transparent !important;
-  border: 3px solid #FFFFFF !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: none !important;
   opacity: 1 !important;
 }
-.splide__arrow:hover {
-  border-color: #F44D34 !important;
+.splide__arrow:hover::before {
+  background-image: url(../images/bi_arrow-left-circle-color.svg);
+}
+.splide__arrow:disabled {
+  opacity: 0.4 !important;
+  cursor: default !important;
+}
+.splide__arrow:disabled:hover::before {
+  background-image: url(../images/bi_arrow-left-circle.svg);
+}
+.splide__arrow::before {
+  content: "";
+  background-image: url(../images/bi_arrow-left-circle.svg);
+  width: 40px;
+  height: 40px;
 }
 
-svg {
-  fill: #FFFFFF !important;
+.arrow--prev::before {
+  transform: rotateY(180deg);
 }
 
 .secondary > .splide__track > .splide__list > .splide__slide.is-active {
   border-color: #F44D34 !important;
 }
 
-.splide__arrow svg:hover {
-  fill: #F44D34 !important;
+.secondary > .splide__track > .splide__list > .splide__slide {
+  cursor: pointer;
 }
 
 @media (max-width: 1240px) {
@@ -1980,6 +2070,16 @@ svg {
 
   .mobile__footer {
     margin-top: 40px;
+  }
+
+  .splide__arrowso {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .splide__arrowso::before {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
   }
 }
 @media (max-width: 510px) and (max-width: 320px) {

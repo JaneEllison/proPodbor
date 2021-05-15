@@ -16,7 +16,6 @@ const slidersData = [
 let buttonToTop = document.querySelector('.toTop');
 
 const secondarySliderOptions = {
-  rewind: true,
   fixedWidth: 90,
   fixedHeight: 80,
   gap: 12,
@@ -49,7 +48,6 @@ const secondarySliderOptions = {
   },
 };
 const primarySliderOptions = {
-  rewind: true,
   type: 'fade',
   fixedWidth: 570,
   fixedHeight: 336,
@@ -136,10 +134,10 @@ const advantagesSlider = new Splide('#advantages-slider', advantagesSliderOption
 const questionsSlider = new Splide('#questions-slider', questionsSliderOptions);
 
 const anchors = document.querySelectorAll('a[href*="#"]');
-for (let anchor of anchors){
+for (let anchor of anchors) {
   anchor.addEventListener('click', (event) => {
     event.preventDefault();
-    
+
     const blockId = anchor.getAttribute('href').substr(1);
 
     document.getElementById(blockId).scrollIntoView({
@@ -176,6 +174,8 @@ const scrollTo = (to, duration) => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+  new WOW().init();
+
   window.addEventListener('scroll', function () {
     if (pageYOffset > 100) {
       buttonToTop.classList.add('show');
@@ -209,3 +209,18 @@ function syncSliders(buildSlidersArray) {
     primarySlider.sync(secondarySlider).mount();
   })
 };
+
+const settings = {
+  noScrollbars: true,
+  buttons: true,
+  // fullScreen: true,
+};
+
+baguetteBox.run('.gallery', settings);
+baguetteBox.run('.gallery-2', settings);
+baguetteBox.run('.gallery-3', settings);
+
+const btnPrevGallery = document.getElementById('previous-button');
+btnPrevGallery.innerHTML = `<img src="./images/bi_arrow-left-circle.svg" alt="previous-button">`;
+const btnNextGallery = document.getElementById('next-button');
+btnNextGallery.innerHTML = `<img src="./images/bi_arrow-left-circle.svg" alt="next-button">`;

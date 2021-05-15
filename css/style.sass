@@ -15,8 +15,12 @@ $transition-icon: all .7s
   font-family: Ubuntu, sans-serif
   box-sizing: border-box
 
-label, button, input
+label, button
   cursor: pointer
+  outline: none
+
+input
+  cursor: text
   outline: none
 
 body
@@ -107,7 +111,7 @@ ul
 
   &.on
     .one
-      transform: (rotate(45deg) translate(4px, 6px))
+      transform: (rotate(45deg) translate(4px, 5px))
       background: $base-color-dark
       width: 50%
       height: 2px
@@ -116,7 +120,7 @@ ul
       opacity: 0
 
     .three
-      transform: (rotate(-45deg) translate(7px, -10px))
+      transform: (rotate(-45deg) translate(7px, -8px))
       background: $base-color-dark
       width: 50%
       height: 2px
@@ -125,7 +129,7 @@ ul
 .two,
 .three
   width: 100%
-  height: 5px
+  height: 3px
   background: white
   margin: 6px auto
   backface-visibility: hidden
@@ -365,9 +369,7 @@ ul
       color: $additional-color-lines
       width: 368px
       border-top: 1px solid rgba(77, 77, 77, 0.3)
-
-      &:last-child
-        border-bottom: 1px solid rgba(77, 77, 77, 0.3)
+      border-bottom: 1px solid rgba(77, 77, 77, 0.0)
 
       & input
         position: absolute
@@ -406,6 +408,16 @@ ul
           margin: 0
           width: 336px
           margin-bottom: 26px
+
+.description__info_item:hover
+  border-top: 1px solid #F44D34
+  border-bottom: 1px solid #F44D34
+
+.description__info_item:hover.description__info_item label
+  color: #F44D34
+
+.description__info_item:hover.description__info_item label span
+  color: #F44D34
 
 .hidden__block
   max-height: fit-content
@@ -479,7 +491,7 @@ label.description__add_items
     content: "\25BC"
 
   & input[type=checkbox]:checked + label::after
-    transform: rotate(315deg)
+    transform: rotate(45deg)
 
   & input[type=radio]:checked + label::after
     transform: rotateX(180deg)
@@ -501,6 +513,7 @@ label.description__add_items
       color: $base-color-light
       width: 100%
       border-top: 1px solid rgba(204, 204, 204, 0.5)
+      border-bottom: 1px solid rgba(77, 77, 77, 0.0)
 
       &:last-child
         border-bottom: 1px solid rgba(204, 204, 204, 0.5)
@@ -532,6 +545,20 @@ label.description__add_items
         -o-transition: $transition-open-block
         -ms-transition: $transition-open-block
         transition: $transition-open-block
+
+.price__item_description:hover.price__item_description label span
+  color: #F44D34
+
+.price__item_description:hover.price__item_description label
+  color: #F44D34
+
+.price__item_description:hover
+  border-top: 1px solid #F44D34
+  border-bottom: 1px solid #F44D34
+
+.splide__slide a img
+  width: 100% !important
+  height: auto !important
 
 .price__list
   display: flex
@@ -779,14 +806,17 @@ label.description__add_items
   &__icon
     margin-right: 15px
     cursor: pointer
-    -webkit-transition: .3
-    -moz-transition: .3
-    -o-transition: .3
-    -ms-transition: .3
-    transition: .3
+    -webkit-transition: .4
+    -moz-transition: .4
+    -o-transition: .4
+    -ms-transition: .4
+    transition: .4
 
     &:hover
-      transform: scale(1.1)
+      -webkit-transform: translate(0,-10px)
+      -moz-transform: translate(0,-10px)
+      -o-transform: translate(0,-10px)
+      transform: translate(0, -10px)
 
 .questions
   width: 100%
@@ -850,9 +880,18 @@ label.description__add_items
     transition: $transition-open-block
 
     & p
-      color: $additional-color-lines
+      color: #666666
       margin: 20px 0 0 0
       width: 304px
+
+.question__item:hover
+  border: 1px solid #F44D34
+
+  &.question__item label
+    color: #F44D34
+
+  &.question__item_content p
+    color: #F44D34
 
 .question__item
   & label::after
@@ -873,7 +912,7 @@ label.description__add_items
     content: "\25BC"
 
   & input[type=checkbox]:checked + label::after
-    transform: rotate(315deg)
+    transform: rotate(45deg)
 
   & input[type=radio]:checked + label::after
     transform: rotateX(180deg)
@@ -1028,6 +1067,28 @@ label.description__add_items
 
 .splide__track
   margin-top: 12px
+  position: relative
+
+.zoom__icon
+  display: none
+  position: absolute
+  right: 5px
+  bottom: 5px
+  z-index: 999
+  cursor: pointer
+
+.splide__track:hover .zoom__icon
+  display: flex
+
+#previous-button
+  background: none
+  transform: rotateY(180deg)
+
+#next-button
+  background: none
+
+#close-button
+  background: none
 
 .splide__list
   display: flex
@@ -1038,21 +1099,35 @@ label.description__add_items
 
 .splide__arrow
   background: transparent !important
-  border: 3px solid $base-color-light !important
+  width: 40px !important
+  height: 40px !important
+  border: none !important
   opacity: 1 !important
 
-  &:hover
-    border-color: $base-color-theme !important
+  &:hover::before
+    background-image: url(../images/bi_arrow-left-circle-color.svg)
 
-svg
-  fill: $base-color-light !important
+  &:disabled
+    opacity: 0.4 !important
+    cursor: default !important
+
+    &:hover::before
+      background-image: url(../images/bi_arrow-left-circle.svg)
+
+  &::before
+    content: ''
+    background-image: url(../images/bi_arrow-left-circle.svg)
+    width: 40px
+    height: 40px
+
+.arrow--prev::before
+  transform: rotateY(180deg)
 
 .secondary>.splide__track>.splide__list>.splide__slide.is-active
   border-color: $base-color-theme !important
 
-.splide__arrow
-  & svg:hover
-    fill: $base-color-theme !important
+.secondary > .splide__track > .splide__list > .splide__slide
+  cursor: pointer
 
 @media (max-width: 1240px)
   .questions__items
@@ -1772,6 +1847,15 @@ svg
 
   .mobile__footer
     margin-top: 40px
+
+  .splide__arrowso
+    width: 30px !important
+    height: 30px !important
+
+    &::before
+      width: 30px
+      height: 30px
+      background-size: contain
 
   @media (max-width: 320px)
     .wrapper, .wrapper__popap, .examples__content_items, .social__header
