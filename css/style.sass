@@ -556,6 +556,9 @@ label.description__add_items
   border-top: 1px solid #F44D34
   border-bottom: 1px solid #F44D34
 
+.splide__slide a img
+  width: 100% !important
+  height: auto !important
 
 .price__list
   display: flex
@@ -1064,6 +1067,28 @@ label.description__add_items
 
 .splide__track
   margin-top: 12px
+  position: relative
+
+.zoom__icon
+  display: none
+  position: absolute
+  right: 5px
+  bottom: 5px
+  z-index: 999
+  cursor: pointer
+
+.splide__track:hover .zoom__icon
+  display: flex
+
+#previous-button
+  background: none
+  transform: rotateY(180deg)
+
+#next-button
+  background: none
+
+#close-button
+  background: none
 
 .splide__list
   display: flex
